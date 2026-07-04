@@ -1,0 +1,55 @@
+{
+  "variants": {
+    "style=0": {
+      "model": "extradelightlegacy:cosmetics/lid/copper_block"
+    },
+    "style=1": {
+      "model": "extradelightlegacy:cosmetics/lid/white_terracotta"
+    },
+    "style=2": {
+      "model": "extradelightlegacy:cosmetics/lid/light_gray_terracotta"
+    },
+    "style=3": {
+      "model": "extradelightlegacy:cosmetics/lid/gray_terracotta"
+    },
+    "style=4": {
+      "model": "extradelightlegacy:cosmetics/lid/black_terracotta"
+    },
+    "style=5": {
+      "model": "extradelightlegacy:cosmetics/lid/brown_terracotta"
+    },
+    "style=6": {
+      "model": "extradelightlegacy:cosmetics/lid/red_terracotta"
+    },
+    "style=7": {
+      "model": "extradelightlegacy:cosmetics/lid/orange_terracotta"
+    },
+    "style=8": {
+      "model": "extradelightlegacy:cosmetics/lid/yellow_terracotta"
+    },
+    "style=9": {
+      "model": "extradelightlegacy:cosmetics/lid/lime_terracotta"
+    },
+    "style=10": {
+      "model": "extradelightlegacy:cosmetics/lid/green_terracotta"
+    },
+    "style=11": {
+      "model": "extradelightlegacy:cosmetics/lid/cyan_terracotta"
+    },
+    "style=12": {
+      "model": "extradelightlegacy:cosmetics/lid/light_blue_terracotta"
+    },
+    "style=13": {
+      "model": "extradelightlegacy:cosmetics/lid/blue_terracotta"
+    },
+    "style=14": {
+      "model": "extradelightlegacy:cosmetics/lid/magenta_terracotta"
+    },
+    "style=15": {
+      "model": "extradelightlegacy:cosmetics/lid/pink_terracotta"
+    },
+    "style=16": {
+      "model": "extradelightlegacy:cosmetics/lid/purple_terracotta"
+    }
+  }
+}

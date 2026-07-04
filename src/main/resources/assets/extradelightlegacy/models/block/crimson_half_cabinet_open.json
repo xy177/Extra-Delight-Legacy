@@ -1,0 +1,9 @@
+{
+  "parent": "extradelightlegacy:block/half_cabinet",
+  "textures": {
+    "0": "extradelightlegacy:block/crimson_trapdoor",
+    "1": "extradelightlegacy:block/crimson_planks",
+    "2": "extradelightlegacy:block/crimson_planks",
+    "particle": "extradelightlegacy:block/crimson_planks"
+  }
+}

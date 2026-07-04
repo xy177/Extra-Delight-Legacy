@@ -1,0 +1,6 @@
+{
+  "parent": "block/flower_pot_cross",
+  "textures": {
+    "plant": "extradelightlegacy:block/crops/fruit/cinnamon/cinnamon_sapling"
+  }
+}

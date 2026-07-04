@@ -1,0 +1,18 @@
+{
+  "credit": "Made with Blockbench",
+  "textures": {
+    "3": "extradelightlegacy:block/cornmeal_dust3",
+    "particle": "extradelightlegacy:block/cornmeal_dust2"
+  },
+  "elements": [
+    {
+      "name": "cornmeal",
+      "from": [0, 0, 0],
+      "to": [16, 0.1, 16],
+      "faces": {
+        "up": {"uv": [0, 0, 16, 16], "texture": "#3"},
+        "down": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#3"}
+      }
+    }
+  ]
+}

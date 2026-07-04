@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "normal": [
+      { "model": "extradelightlegacy:apple_petal_litter" },
+      { "model": "extradelightlegacy:apple_petal_litter", "y": 90 },
+      { "model": "extradelightlegacy:apple_petal_litter", "y": 180 },
+      { "model": "extradelightlegacy:apple_petal_litter", "y": 270 }
+    ]
+  }
+}

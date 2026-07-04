@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "extradelightlegacy:block/fruit_log_top",
+    "side": "extradelightlegacy:block/fruit_log"
+  }
+}

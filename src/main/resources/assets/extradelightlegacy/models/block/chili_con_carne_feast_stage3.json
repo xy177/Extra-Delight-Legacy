@@ -1,0 +1,7 @@
+{
+  "parent": "extradelightlegacy:block/curry_block_stage3",
+  "textures": {
+    "1": "extradelightlegacy:block/chili_con_carne",
+    "particle": "extradelightlegacy:block/chili_con_carne"
+  }
+}

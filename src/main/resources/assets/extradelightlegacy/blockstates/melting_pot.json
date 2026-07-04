@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "extradelightlegacy:melting_pot" },
+    "facing=east": { "model": "extradelightlegacy:melting_pot", "y": 90 },
+    "facing=south": { "model": "extradelightlegacy:melting_pot", "y": 180 },
+    "facing=west": { "model": "extradelightlegacy:melting_pot", "y": 270 }
+  }
+}

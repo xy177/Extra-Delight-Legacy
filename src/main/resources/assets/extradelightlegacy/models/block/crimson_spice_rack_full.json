@@ -1,0 +1,9 @@
+{
+  "parent": "extradelightlegacy:block/oak_spice_rack_full",
+  "textures": {
+    "0": "extradelightlegacy:block/crimson_planks",
+    "1": "extradelightlegacy:block/spicerack",
+    "2": "extradelightlegacy:block/crimson_ornate",
+    "particle": "extradelightlegacy:block/crimson_planks"
+  }
+}

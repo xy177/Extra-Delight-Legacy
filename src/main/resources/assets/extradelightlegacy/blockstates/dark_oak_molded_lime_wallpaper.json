@@ -1,0 +1,10 @@
+{
+    "variants":  {
+                     "half=top":  {
+                                      "model":  "extradelightlegacy:dark_oak_molded_lime_wallpaper_top"
+                                  },
+                     "half=bottom":  {
+                                         "model":  "extradelightlegacy:dark_oak_molded_lime_wallpaper_bottom"
+                                     }
+                 }
+}

@@ -1,0 +1,156 @@
+{
+    "variants":  {
+                     "facing=west,in_wall=true,open=true,powered=true":  {
+                                                                             "uvlock":  true,
+                                                                             "model":  "extradelightlegacy:dark_chocolate_fence_gate_open",
+                                                                             "y":  270
+                                                                         },
+                     "facing=north,in_wall=false,open=false,powered=true":  {
+                                                                                "model":  "extradelightlegacy:dark_chocolate_fence_gate",
+                                                                                "uvlock":  true
+                                                                            },
+                     "facing=east,in_wall=false,open=false,powered=true":  {
+                                                                               "uvlock":  true,
+                                                                               "model":  "extradelightlegacy:dark_chocolate_fence_gate",
+                                                                               "y":  90
+                                                                           },
+                     "facing=east,in_wall=true,open=false,powered=true":  {
+                                                                              "uvlock":  true,
+                                                                              "model":  "extradelightlegacy:dark_chocolate_fence_gate_wall",
+                                                                              "y":  90
+                                                                          },
+                     "facing=west,in_wall=true,open=false,powered=true":  {
+                                                                              "uvlock":  true,
+                                                                              "model":  "extradelightlegacy:dark_chocolate_fence_gate_wall",
+                                                                              "y":  270
+                                                                          },
+                     "facing=north,in_wall=true,open=true,powered=true":  {
+                                                                              "model":  "extradelightlegacy:dark_chocolate_fence_gate_open",
+                                                                              "uvlock":  true
+                                                                          },
+                     "facing=east,in_wall=false,open=false,powered=false":  {
+                                                                                "uvlock":  true,
+                                                                                "model":  "extradelightlegacy:dark_chocolate_fence_gate",
+                                                                                "y":  90
+                                                                            },
+                     "facing=south,in_wall=true,open=true,powered=false":  {
+                                                                               "uvlock":  true,
+                                                                               "model":  "extradelightlegacy:dark_chocolate_fence_gate_open",
+                                                                               "y":  180
+                                                                           },
+                     "facing=west,in_wall=true,open=true,powered=false":  {
+                                                                              "uvlock":  true,
+                                                                              "model":  "extradelightlegacy:dark_chocolate_fence_gate_open",
+                                                                              "y":  270
+                                                                          },
+                     "facing=east,in_wall=false,open=true,powered=false":  {
+                                                                               "uvlock":  true,
+                                                                               "model":  "extradelightlegacy:dark_chocolate_fence_gate_open",
+                                                                               "y":  90
+                                                                           },
+                     "facing=south,in_wall=false,open=true,powered=false":  {
+                                                                                "uvlock":  true,
+                                                                                "model":  "extradelightlegacy:dark_chocolate_fence_gate_open",
+                                                                                "y":  180
+                                                                            },
+                     "facing=south,in_wall=true,open=true,powered=true":  {
+                                                                              "uvlock":  true,
+                                                                              "model":  "extradelightlegacy:dark_chocolate_fence_gate_open",
+                                                                              "y":  180
+                                                                          },
+                     "facing=south,in_wall=false,open=false,powered=false":  {
+                                                                                 "uvlock":  true,
+                                                                                 "model":  "extradelightlegacy:dark_chocolate_fence_gate",
+                                                                                 "y":  180
+                                                                             },
+                     "facing=west,in_wall=false,open=true,powered=false":  {
+                                                                               "uvlock":  true,
+                                                                               "model":  "extradelightlegacy:dark_chocolate_fence_gate_open",
+                                                                               "y":  270
+                                                                           },
+                     "facing=west,in_wall=false,open=false,powered=false":  {
+                                                                                "uvlock":  true,
+                                                                                "model":  "extradelightlegacy:dark_chocolate_fence_gate",
+                                                                                "y":  270
+                                                                            },
+                     "facing=north,in_wall=true,open=false,powered=false":  {
+                                                                                "model":  "extradelightlegacy:dark_chocolate_fence_gate_wall",
+                                                                                "uvlock":  true
+                                                                            },
+                     "facing=west,in_wall=false,open=true,powered=true":  {
+                                                                              "uvlock":  true,
+                                                                              "model":  "extradelightlegacy:dark_chocolate_fence_gate_open",
+                                                                              "y":  270
+                                                                          },
+                     "facing=south,in_wall=false,open=true,powered=true":  {
+                                                                               "uvlock":  true,
+                                                                               "model":  "extradelightlegacy:dark_chocolate_fence_gate_open",
+                                                                               "y":  180
+                                                                           },
+                     "facing=west,in_wall=true,open=false,powered=false":  {
+                                                                               "uvlock":  true,
+                                                                               "model":  "extradelightlegacy:dark_chocolate_fence_gate_wall",
+                                                                               "y":  270
+                                                                           },
+                     "facing=east,in_wall=true,open=false,powered=false":  {
+                                                                               "uvlock":  true,
+                                                                               "model":  "extradelightlegacy:dark_chocolate_fence_gate_wall",
+                                                                               "y":  90
+                                                                           },
+                     "facing=east,in_wall=true,open=true,powered=false":  {
+                                                                              "uvlock":  true,
+                                                                              "model":  "extradelightlegacy:dark_chocolate_fence_gate_open",
+                                                                              "y":  90
+                                                                          },
+                     "facing=south,in_wall=true,open=false,powered=false":  {
+                                                                                "uvlock":  true,
+                                                                                "model":  "extradelightlegacy:dark_chocolate_fence_gate_wall",
+                                                                                "y":  180
+                                                                            },
+                     "facing=north,in_wall=false,open=true,powered=false":  {
+                                                                                "model":  "extradelightlegacy:dark_chocolate_fence_gate_open",
+                                                                                "uvlock":  true
+                                                                            },
+                     "facing=north,in_wall=true,open=true,powered=false":  {
+                                                                               "model":  "extradelightlegacy:dark_chocolate_fence_gate_open",
+                                                                               "uvlock":  true
+                                                                           },
+                     "facing=south,in_wall=false,open=false,powered=true":  {
+                                                                                "uvlock":  true,
+                                                                                "model":  "extradelightlegacy:dark_chocolate_fence_gate",
+                                                                                "y":  180
+                                                                            },
+                     "facing=north,in_wall=true,open=false,powered=true":  {
+                                                                               "model":  "extradelightlegacy:dark_chocolate_fence_gate_wall",
+                                                                               "uvlock":  true
+                                                                           },
+                     "facing=east,in_wall=false,open=true,powered=true":  {
+                                                                              "uvlock":  true,
+                                                                              "model":  "extradelightlegacy:dark_chocolate_fence_gate_open",
+                                                                              "y":  90
+                                                                          },
+                     "facing=east,in_wall=true,open=true,powered=true":  {
+                                                                             "uvlock":  true,
+                                                                             "model":  "extradelightlegacy:dark_chocolate_fence_gate_open",
+                                                                             "y":  90
+                                                                         },
+                     "facing=west,in_wall=false,open=false,powered=true":  {
+                                                                               "uvlock":  true,
+                                                                               "model":  "extradelightlegacy:dark_chocolate_fence_gate",
+                                                                               "y":  270
+                                                                           },
+                     "facing=north,in_wall=false,open=false,powered=false":  {
+                                                                                 "model":  "extradelightlegacy:dark_chocolate_fence_gate",
+                                                                                 "uvlock":  true
+                                                                             },
+                     "facing=north,in_wall=false,open=true,powered=true":  {
+                                                                               "model":  "extradelightlegacy:dark_chocolate_fence_gate_open",
+                                                                               "uvlock":  true
+                                                                           },
+                     "facing=south,in_wall=true,open=false,powered=true":  {
+                                                                               "uvlock":  true,
+                                                                               "model":  "extradelightlegacy:dark_chocolate_fence_gate_wall",
+                                                                               "y":  180
+                                                                           }
+                 }
+}

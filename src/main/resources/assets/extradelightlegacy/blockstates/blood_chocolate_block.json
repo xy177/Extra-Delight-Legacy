@@ -1,0 +1,22 @@
+﻿{
+    "variants":  {
+                     "style=0":  {
+                                     "model":  "extradelightlegacy:blood_chocolate_block_style0"
+                                 },
+                     "style=1":  {
+                                     "model":  "extradelightlegacy:blood_chocolate_block_style1"
+                                 },
+                     "style=2":  {
+                                     "model":  "extradelightlegacy:blood_chocolate_block_style2"
+                                 },
+                     "style=3":  {
+                                     "model":  "extradelightlegacy:blood_chocolate_block_style3"
+                                 },
+                     "style=4":  {
+                                     "model":  "extradelightlegacy:blood_chocolate_block_style4"
+                                 },
+                     "style=5":  {
+                                     "model":  "extradelightlegacy:blood_chocolate_block_style5"
+                                 }
+                 }
+}

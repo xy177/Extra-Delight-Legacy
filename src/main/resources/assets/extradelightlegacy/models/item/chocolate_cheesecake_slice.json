@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "extradelightlegacy:item/chocolate_cheesecake_slice"
+  }
+}

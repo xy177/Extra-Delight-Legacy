@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "extradelightlegacy:block/cinnamon_log",
+    "side": "extradelightlegacy:block/cinnamon_log"
+  }
+}

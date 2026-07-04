@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_pressed",
+  "textures": {
+    "texture": "extradelightlegacy:block/cinnamon_planks"
+  }
+}

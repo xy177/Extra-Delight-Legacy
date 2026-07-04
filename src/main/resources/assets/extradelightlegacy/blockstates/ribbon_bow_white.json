@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "extradelightlegacy:ribbon_bow_white",
+      "x": 180
+    },
+    "facing=up": {
+      "model": "extradelightlegacy:ribbon_bow_white"
+    },
+    "facing=north": {
+      "model": "extradelightlegacy:ribbon_bow_white",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "extradelightlegacy:ribbon_bow_white",
+      "x": 90,
+      "y": 180
+    },
+    "facing=east": {
+      "model": "extradelightlegacy:ribbon_bow_white",
+      "x": 90,
+      "y": 90
+    },
+    "facing=west": {
+      "model": "extradelightlegacy:ribbon_bow_white",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

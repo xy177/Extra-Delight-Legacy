@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "extradelightlegacy:juicer" },
+    "facing=south": { "model": "extradelightlegacy:juicer", "y": 180 },
+    "facing=west": { "model": "extradelightlegacy:juicer", "y": 270 },
+    "facing=east": { "model": "extradelightlegacy:juicer", "y": 90 }
+  }
+}

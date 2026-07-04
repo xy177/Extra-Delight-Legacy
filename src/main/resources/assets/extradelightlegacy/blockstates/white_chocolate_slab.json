@@ -1,0 +1,10 @@
+{
+    "variants":  {
+                     "half=bottom,variant=default":  {
+                                                         "model":  "extradelightlegacy:white_chocolate_slab"
+                                                     },
+                     "half=top,variant=default":  {
+                                                      "model":  "extradelightlegacy:white_chocolate_slab_top"
+                                                  }
+                 }
+}

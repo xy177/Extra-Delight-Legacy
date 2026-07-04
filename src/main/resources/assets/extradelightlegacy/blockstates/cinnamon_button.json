@@ -1,0 +1,68 @@
+{
+  "variants": {
+    "facing=east,powered=false": {
+      "model": "extradelightlegacy:cinnamon_button",
+      "uvlock": true,
+      "x": 90,
+      "y": 90
+    },
+    "facing=east,powered=true": {
+      "model": "extradelightlegacy:cinnamon_button_pressed",
+      "uvlock": true,
+      "x": 90,
+      "y": 90
+    },
+    "facing=west,powered=false": {
+      "model": "extradelightlegacy:cinnamon_button",
+      "uvlock": true,
+      "x": 90,
+      "y": 270
+    },
+    "facing=west,powered=true": {
+      "model": "extradelightlegacy:cinnamon_button_pressed",
+      "uvlock": true,
+      "x": 90,
+      "y": 270
+    },
+    "facing=south,powered=false": {
+      "model": "extradelightlegacy:cinnamon_button",
+      "uvlock": true,
+      "x": 90,
+      "y": 180
+    },
+    "facing=south,powered=true": {
+      "model": "extradelightlegacy:cinnamon_button_pressed",
+      "uvlock": true,
+      "x": 90,
+      "y": 180
+    },
+    "facing=north,powered=false": {
+      "model": "extradelightlegacy:cinnamon_button",
+      "uvlock": true,
+      "x": 90
+    },
+    "facing=north,powered=true": {
+      "model": "extradelightlegacy:cinnamon_button_pressed",
+      "uvlock": true,
+      "x": 90
+    },
+    "facing=up,powered=false": {
+      "model": "extradelightlegacy:cinnamon_button",
+      "uvlock": true
+    },
+    "facing=up,powered=true": {
+      "model": "extradelightlegacy:cinnamon_button_pressed",
+      "uvlock": true
+    },
+    "facing=down,powered=false": {
+      "model": "extradelightlegacy:cinnamon_button",
+      "uvlock": true,
+      "x": 180
+    },
+    "facing=down,powered=true": {
+      "model": "extradelightlegacy:cinnamon_button_pressed",
+      "uvlock": true,
+      "x": 180
+    }
+  }
+}

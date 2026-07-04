@@ -1,0 +1,7 @@
+{
+  "parent": "extradelightlegacy:block/mortar",
+  "textures": {
+    "0": "minecraft:blocks/prismarine_rough",
+    "particle": "minecraft:blocks/prismarine_rough"
+  }
+}

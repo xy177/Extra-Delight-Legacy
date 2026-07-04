@@ -1,0 +1,6 @@
+{
+    "textures":  {
+                     "all":  "extradelightlegacy:block/cheese_block"
+                 },
+    "parent":  "minecraft:block/cube_all"
+}

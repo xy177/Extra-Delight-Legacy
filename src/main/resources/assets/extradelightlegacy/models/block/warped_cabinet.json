@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "extradelightlegacy:block/warped_planks",
+    "side": "extradelightlegacy:block/warped_planks",
+    "top": "extradelightlegacy:block/warped_planks"
+  }
+}

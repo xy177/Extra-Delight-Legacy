@@ -1,0 +1,7 @@
+{
+    "variants":  {
+                     "variant=default":  {
+                                             "model":  "extradelightlegacy:dark_chocolate_slab_double"
+                                         }
+                 }
+}

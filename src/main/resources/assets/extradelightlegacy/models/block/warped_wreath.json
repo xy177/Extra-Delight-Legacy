@@ -1,0 +1,7 @@
+{
+  "parent": "extradelightlegacy:block/oak_wreath",
+  "textures": {
+    "all": "extradelightlegacy:block/warped_wart_block",
+    "particle": "extradelightlegacy:block/warped_wart_block"
+  }
+}

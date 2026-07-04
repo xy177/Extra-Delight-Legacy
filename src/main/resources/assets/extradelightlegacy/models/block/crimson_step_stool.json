@@ -1,0 +1,7 @@
+{
+  "parent": "extradelightlegacy:block/oak_step_stool",
+  "textures": {
+    "0": "extradelightlegacy:block/crimson_planks",
+    "particle": "extradelightlegacy:block/crimson_planks"
+  }
+}

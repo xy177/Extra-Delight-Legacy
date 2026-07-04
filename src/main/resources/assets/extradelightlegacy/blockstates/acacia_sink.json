@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "extradelightlegacy:acacia_sink_cabinet",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "extradelightlegacy:acacia_sink_cabinet"
+    },
+    "facing=south": {
+      "model": "extradelightlegacy:acacia_sink_cabinet",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "extradelightlegacy:acacia_sink_cabinet",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "extradelightlegacy:main/start",
+  "display": {
+    "icon": {
+      "item": "minecraft:apple"
+    },
+    "title": {
+      "translate": "extradelightlegacy.advancement.food.name"
+    },
+    "description": {
+      "translate": "extradelightlegacy.advancement.food.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "food": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:apple"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "food"
+    ]
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "extradelightlegacy:wooden_spoon"
+    },
+    "title": {
+      "translate": "extradelightlegacy.advancement.start.name"
+    },
+    "description": {
+      "translate": "extradelightlegacy.advancement.start.desc"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": true,
+    "background": "extradelightlegacy:textures/block/wallpaper_red.png"
+  },
+  "criteria": {
+    "start": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:wooden_spoon"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "start"
+    ]
+  ]
+}

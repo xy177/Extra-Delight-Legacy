@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "extradelightlegacy:block/keg_side",
+    "down": "extradelightlegacy:block/keg_bottom",
+    "up": "extradelightlegacy:block/keg_top",
+    "north": "extradelightlegacy:block/keg_side",
+    "east": "extradelightlegacy:block/keg_side",
+    "south": "extradelightlegacy:block/keg_side",
+    "west": "extradelightlegacy:block/keg_side"
+  }
+}

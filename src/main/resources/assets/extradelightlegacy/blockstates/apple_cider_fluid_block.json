@@ -1,0 +1,10 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "forge:fluid",
+    "custom": { "fluid": "extradelightlegacy.apple_cider_fluid" }
+  },
+  "variants": {
+    "normal": [ {} ]
+  }
+}

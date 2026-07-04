@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "extradelightlegacy:grapefruit_wreath"
+    },
+    "facing=south": {
+      "model": "extradelightlegacy:grapefruit_wreath",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "extradelightlegacy:grapefruit_wreath",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "extradelightlegacy:grapefruit_wreath",
+      "y": 270
+    }
+  }
+}

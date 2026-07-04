@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "extradelightlegacy:item/dynamics/toast/toast",
+    "layer1": "extradelightlegacy:item/dynamics/toast/hazelnut_spread"
+  }
+}

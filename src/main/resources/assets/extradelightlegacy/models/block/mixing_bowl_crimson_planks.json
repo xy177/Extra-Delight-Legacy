@@ -1,0 +1,7 @@
+{
+  "parent": "extradelightlegacy:block/mixing_bowl",
+  "textures": {
+    "1": "extradelightlegacy:block/crimson_planks",
+    "particle": "extradelightlegacy:block/crimson_planks"
+  }
+}

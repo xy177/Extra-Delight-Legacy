@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "extradelightlegacy:block/corn_husk_bundle_end",
+    "side": "extradelightlegacy:block/corn_husk_bundle_side"
+  }
+}

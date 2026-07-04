@@ -1,0 +1,6 @@
+{
+  "parent": "extradelightlegacy:item/pestle",
+  "textures": {
+    "0": "minecraft:blocks/end_stone"
+  }
+}

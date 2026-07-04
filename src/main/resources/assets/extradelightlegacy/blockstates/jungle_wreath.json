@@ -1,0 +1,19 @@
+{
+    "variants":  {
+                     "facing=north":  {
+                                          "model":  "extradelightlegacy:jungle_wreath"
+                                      },
+                     "facing=south":  {
+                                          "model":  "extradelightlegacy:jungle_wreath",
+                                          "y":  180
+                                      },
+                     "facing=east":  {
+                                         "model":  "extradelightlegacy:jungle_wreath",
+                                         "y":  90
+                                     },
+                     "facing=west":  {
+                                         "model":  "extradelightlegacy:jungle_wreath",
+                                         "y":  270
+                                     }
+                 }
+}

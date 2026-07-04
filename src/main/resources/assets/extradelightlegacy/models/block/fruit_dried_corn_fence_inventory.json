@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_inventory",
+  "textures": {
+    "texture": "extradelightlegacy:block/crops/corn/dried_corn_1"
+  }
+}

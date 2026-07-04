@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "ready=false": { "model": "extradelightlegacy:yeast_pot" },
+    "ready=true": { "model": "extradelightlegacy:yeast_pot" }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "extradelightlegacy:block/crops/fruit/orange/orange_petal_litter"
+  }
+}

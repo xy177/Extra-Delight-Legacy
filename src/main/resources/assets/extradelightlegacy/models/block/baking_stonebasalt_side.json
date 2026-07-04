@@ -1,0 +1,7 @@
+﻿{
+    "parent":  "extradelightlegacy:block/baking_stone",
+    "textures":  {
+                     "0":  "extradelightlegacy:block/basalt_side",
+                     "particle":  "extradelightlegacy:block/basalt_side"
+                 }
+}

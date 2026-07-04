@@ -1,0 +1,33 @@
+{
+  "parent": "extradelightlegacy:main/food",
+  "display": {
+    "icon": {
+      "item": "extradelightlegacy:cactus_juice"
+    },
+    "title": {
+      "translate": "extradelightlegacy.advancement.cactus_juice.name"
+    },
+    "description": {
+      "translate": "extradelightlegacy.advancement.cactus_juice.desc"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "cactus_juice": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "item": "extradelightlegacy:cactus_juice"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "cactus_juice"
+    ]
+  ]
+}

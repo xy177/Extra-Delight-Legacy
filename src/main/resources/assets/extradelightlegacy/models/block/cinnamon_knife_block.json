@@ -1,0 +1,7 @@
+{
+  "parent": "extradelightlegacy:block/knife_block_base",
+  "textures": {
+    "0": "extradelightlegacy:block/cinnamon_planks",
+    "particle": "extradelightlegacy:block/cinnamon_planks"
+  }
+}

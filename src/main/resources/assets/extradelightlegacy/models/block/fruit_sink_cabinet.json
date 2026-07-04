@@ -1,0 +1,11 @@
+{
+  "parent": "extradelightlegacy:block/sink_cabinet_bare",
+  "textures": {
+    "0": "extradelightlegacy:block/tap",
+    "1": "extradelightlegacy:block/fruit_cabinet_front",
+    "2": "extradelightlegacy:block/fruit_cabinet_side",
+    "3": "extradelightlegacy:block/fruit_cabinet_top",
+    "4": "extradelightlegacy:block/fruit_planks",
+    "particle": "extradelightlegacy:block/tap"
+  }
+}

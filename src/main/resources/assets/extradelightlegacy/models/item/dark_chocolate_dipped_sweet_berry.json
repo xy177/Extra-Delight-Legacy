@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "extradelightlegacy:item/dark_chocolate_dipped_sweet_berry"
+  }
+}

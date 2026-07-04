@@ -1,0 +1,19 @@
+{
+    "variants":  {
+                     "facing=north":  {
+                                          "model":  "extradelightlegacy:jungle_step_stool"
+                                      },
+                     "facing=south":  {
+                                          "model":  "extradelightlegacy:jungle_step_stool",
+                                          "y":  180
+                                      },
+                     "facing=east":  {
+                                         "model":  "extradelightlegacy:jungle_step_stool",
+                                         "y":  90
+                                     },
+                     "facing=west":  {
+                                         "model":  "extradelightlegacy:jungle_step_stool",
+                                         "y":  270
+                                     }
+                 }
+}

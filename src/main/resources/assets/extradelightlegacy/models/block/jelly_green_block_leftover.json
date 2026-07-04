@@ -1,0 +1,6 @@
+{
+  "parent": "extradelightlegacy:block/jelly_block_leftover",
+  "textures": {
+    "1": "extradelightlegacy:block/jelly_green"
+  }
+}

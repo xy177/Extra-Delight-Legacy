@@ -1,0 +1,8 @@
+{
+  "parent": "extradelightlegacy:block/serving_pot",
+  "textures": {
+    "0": "extradelightlegacy:block/cosmetics/pans/iron_block",
+    "1": "extradelightlegacy:block/cosmetics/pans/iron_block_bottom",
+    "particle": "extradelightlegacy:block/cosmetics/pans/iron_block"
+  }
+}

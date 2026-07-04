@@ -1,0 +1,35 @@
+{
+  "parent": "extradelightlegacy:main/mortar",
+  "display": {
+    "icon": {
+      "item": "extradelightlegacy:flour"
+    },
+    "title": {
+      "translate": "extradelightlegacy.advancement.flour.name"
+    },
+    "description": {
+      "translate": "extradelightlegacy.advancement.flour.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "flour": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:flour"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "flour"
+    ]
+  ]
+}

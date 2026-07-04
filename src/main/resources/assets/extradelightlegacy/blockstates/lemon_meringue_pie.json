@@ -1,0 +1,124 @@
+{
+  "variants": {
+    "facing=north,servings=0": {
+      "model": "extradelightlegacy:lemon_meringue_pie_slice3_block"
+    },
+    "facing=north,servings=1": {
+      "model": "extradelightlegacy:lemon_meringue_pie_slice3_block"
+    },
+    "facing=north,servings=2": {
+      "model": "extradelightlegacy:lemon_meringue_pie_slice2_block"
+    },
+    "facing=north,servings=3": {
+      "model": "extradelightlegacy:lemon_meringue_pie_slice1_block"
+    },
+    "facing=north,servings=4": {
+      "model": "extradelightlegacy:lemon_meringue_pie_block"
+    },
+    "facing=east,servings=0": {
+      "model": "extradelightlegacy:lemon_meringue_pie_slice3_block",
+      "y": 90
+    },
+    "facing=east,servings=1": {
+      "model": "extradelightlegacy:lemon_meringue_pie_slice3_block",
+      "y": 90
+    },
+    "facing=east,servings=2": {
+      "model": "extradelightlegacy:lemon_meringue_pie_slice2_block",
+      "y": 90
+    },
+    "facing=east,servings=3": {
+      "model": "extradelightlegacy:lemon_meringue_pie_slice1_block",
+      "y": 90
+    },
+    "facing=east,servings=4": {
+      "model": "extradelightlegacy:lemon_meringue_pie_block",
+      "y": 90
+    },
+    "facing=south,servings=0": {
+      "model": "extradelightlegacy:lemon_meringue_pie_slice3_block",
+      "y": 180
+    },
+    "facing=south,servings=1": {
+      "model": "extradelightlegacy:lemon_meringue_pie_slice3_block",
+      "y": 180
+    },
+    "facing=south,servings=2": {
+      "model": "extradelightlegacy:lemon_meringue_pie_slice2_block",
+      "y": 180
+    },
+    "facing=south,servings=3": {
+      "model": "extradelightlegacy:lemon_meringue_pie_slice1_block",
+      "y": 180
+    },
+    "facing=south,servings=4": {
+      "model": "extradelightlegacy:lemon_meringue_pie_block",
+      "y": 180
+    },
+    "facing=west,servings=0": {
+      "model": "extradelightlegacy:lemon_meringue_pie_slice3_block",
+      "y": 270
+    },
+    "facing=west,servings=1": {
+      "model": "extradelightlegacy:lemon_meringue_pie_slice3_block",
+      "y": 270
+    },
+    "facing=west,servings=2": {
+      "model": "extradelightlegacy:lemon_meringue_pie_slice2_block",
+      "y": 270
+    },
+    "facing=west,servings=3": {
+      "model": "extradelightlegacy:lemon_meringue_pie_slice1_block",
+      "y": 270
+    },
+    "facing=west,servings=4": {
+      "model": "extradelightlegacy:lemon_meringue_pie_block",
+      "y": 270
+    },
+    "facing=north,servings=5": {
+      "model": "extradelightlegacy:lemon_meringue_pie_block"
+    },
+    "facing=north,servings=6": {
+      "model": "extradelightlegacy:lemon_meringue_pie_block"
+    },
+    "facing=north,servings=7": {
+      "model": "extradelightlegacy:lemon_meringue_pie_block"
+    },
+    "facing=east,servings=5": {
+      "model": "extradelightlegacy:lemon_meringue_pie_block",
+      "y": 90
+    },
+    "facing=east,servings=6": {
+      "model": "extradelightlegacy:lemon_meringue_pie_block",
+      "y": 90
+    },
+    "facing=east,servings=7": {
+      "model": "extradelightlegacy:lemon_meringue_pie_block",
+      "y": 90
+    },
+    "facing=south,servings=5": {
+      "model": "extradelightlegacy:lemon_meringue_pie_block",
+      "y": 180
+    },
+    "facing=south,servings=6": {
+      "model": "extradelightlegacy:lemon_meringue_pie_block",
+      "y": 180
+    },
+    "facing=south,servings=7": {
+      "model": "extradelightlegacy:lemon_meringue_pie_block",
+      "y": 180
+    },
+    "facing=west,servings=5": {
+      "model": "extradelightlegacy:lemon_meringue_pie_block",
+      "y": 270
+    },
+    "facing=west,servings=6": {
+      "model": "extradelightlegacy:lemon_meringue_pie_block",
+      "y": 270
+    },
+    "facing=west,servings=7": {
+      "model": "extradelightlegacy:lemon_meringue_pie_block",
+      "y": 270
+    }
+  }
+}

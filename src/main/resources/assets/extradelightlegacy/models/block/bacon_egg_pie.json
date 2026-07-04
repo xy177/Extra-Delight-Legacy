@@ -1,0 +1,8 @@
+{
+  "parent": "extradelightlegacy:block/pie",
+  "textures": {
+    "inner": "extradelightlegacy:block/bacon_egg_pie_inner",
+    "particle": "extradelightlegacy:block/bacon_egg_pie_top",
+    "top": "extradelightlegacy:block/bacon_egg_pie_top"
+  }
+}

@@ -1,0 +1,7 @@
+﻿{
+  "parent": "extradelightlegacy:block/lemonade_tray_leftover",
+  "textures": {
+    "4": "extradelightlegacy:item/limeade"
+  }
+}
+

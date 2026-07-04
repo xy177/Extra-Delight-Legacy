@@ -1,0 +1,28 @@
+﻿{
+    "variants":  {
+                     "age=3,sterile=false":  {
+                                                 "model":  "extradelightlegacy:lemon_leaves_stage3"
+                                             },
+                     "age=2,sterile=false":  {
+                                                 "model":  "extradelightlegacy:lemon_leaves_stage2"
+                                             },
+                     "age=2,sterile=true":  {
+                                                "model":  "extradelightlegacy:lemon_leaves_stage2"
+                                            },
+                     "age=1,sterile=true":  {
+                                                "model":  "extradelightlegacy:lemon_leaves_stage1"
+                                            },
+                     "age=1,sterile=false":  {
+                                                 "model":  "extradelightlegacy:lemon_leaves_stage1"
+                                             },
+                     "age=0,sterile=true":  {
+                                                "model":  "extradelightlegacy:lemon_leaves_stage0"
+                                            },
+                     "age=3,sterile=true":  {
+                                                "model":  "extradelightlegacy:lemon_leaves_stage3"
+                                            },
+                     "age=0,sterile=false":  {
+                                                 "model":  "extradelightlegacy:lemon_leaves_stage0"
+                                             }
+                 }
+}

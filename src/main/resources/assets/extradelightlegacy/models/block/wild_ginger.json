@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "extradelightlegacy:block/crops/ginger/ginger_stage3"
+  }
+}

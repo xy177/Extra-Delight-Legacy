@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "extradelightlegacy:cinnamon_wood"
+    },
+    "axis=x": {
+      "model": "extradelightlegacy:cinnamon_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=z": {
+      "model": "extradelightlegacy:cinnamon_wood",
+      "x": 90
+    }
+  }
+}

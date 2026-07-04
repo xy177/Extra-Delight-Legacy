@@ -1,0 +1,8 @@
+{
+    "textures":  {
+                     "bottom":  "extradelightlegacy:block/cheese_block",
+                     "top":  "extradelightlegacy:block/cheese_block",
+                     "side":  "extradelightlegacy:block/cheese_block"
+                 },
+    "parent":  "minecraft:block/inner_stairs"
+}

@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=north,hanging=false": {
+      "model": "extradelightlegacy:corn_husk_doll"
+    },
+    "facing=south,hanging=false": {
+      "model": "extradelightlegacy:corn_husk_doll",
+      "y": 180
+    },
+    "facing=east,hanging=false": {
+      "model": "extradelightlegacy:corn_husk_doll",
+      "y": 90
+    },
+    "facing=west,hanging=false": {
+      "model": "extradelightlegacy:corn_husk_doll",
+      "y": 270
+    },
+    "facing=north,hanging=true": {
+      "model": "extradelightlegacy:corn_husk_doll_hang"
+    },
+    "facing=south,hanging=true": {
+      "model": "extradelightlegacy:corn_husk_doll_hang",
+      "y": 180
+    },
+    "facing=east,hanging=true": {
+      "model": "extradelightlegacy:corn_husk_doll_hang",
+      "y": 90
+    },
+    "facing=west,hanging=true": {
+      "model": "extradelightlegacy:corn_husk_doll_hang",
+      "y": 270
+    }
+  }
+}

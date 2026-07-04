@@ -1,0 +1,7 @@
+﻿{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "extradelightlegacy:item/honey_cookie_dough"
+  }
+}
+

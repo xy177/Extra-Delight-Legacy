@@ -1,0 +1,7 @@
+{
+  "parent": "block/trapdoor_open",
+  "textures": {
+    "texture": "extradelightlegacy:block/cosmetics/chocolate/white_chocolate_trapdoor",
+    "particle": "extradelightlegacy:block/cosmetics/chocolate/white_chocolate_trapdoor"
+  }
+}

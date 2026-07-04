@@ -1,0 +1,13 @@
+﻿{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "extradelightlegacy:block/bags/brown_bag_bottom",
+    "east": "extradelightlegacy:block/bags/brown_bag_side",
+    "north": "extradelightlegacy:block/bags/brown_bag_side_tied",
+    "particle": "extradelightlegacy:block/roasted_hazelnut_bag_top",
+    "south": "extradelightlegacy:block/bags/brown_bag_side_tied",
+    "up": "extradelightlegacy:block/roasted_hazelnut_bag_top",
+    "west": "extradelightlegacy:block/bags/brown_bag_side"
+  }
+}
+

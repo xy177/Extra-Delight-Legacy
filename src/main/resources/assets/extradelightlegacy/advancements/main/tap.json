@@ -1,0 +1,35 @@
+{
+  "parent": "extradelightlegacy:main/keg",
+  "display": {
+    "icon": {
+      "item": "extradelightlegacy:tap"
+    },
+    "title": {
+      "translate": "extradelightlegacy.advancement.tap.name"
+    },
+    "description": {
+      "translate": "extradelightlegacy.advancement.tap.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "tap": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:tap"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "tap"
+    ]
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "extradelightlegacy:block/chocolate_chip_cookie_block"
+  }
+}

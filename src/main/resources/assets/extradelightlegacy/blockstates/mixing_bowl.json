@@ -1,0 +1,154 @@
+{
+  "variants": {
+    "style=0": {
+      "model": "extradelightlegacy:mixing_bowl_oak_planks"
+    },
+    "style=1": {
+      "model": "extradelightlegacy:mixing_bowl_spruce_planks"
+    },
+    "style=2": {
+      "model": "extradelightlegacy:mixing_bowl_birch_planks"
+    },
+    "style=3": {
+      "model": "extradelightlegacy:mixing_bowl_dark_oak_planks"
+    },
+    "style=4": {
+      "model": "extradelightlegacy:mixing_bowl_acacia_planks"
+    },
+    "style=5": {
+      "model": "extradelightlegacy:mixing_bowl_mangrove_planks"
+    },
+    "style=6": {
+      "model": "extradelightlegacy:mixing_bowl_bamboo_planks"
+    },
+    "style=7": {
+      "model": "extradelightlegacy:mixing_bowl_cherry_planks"
+    },
+    "style=8": {
+      "model": "extradelightlegacy:mixing_bowl_jungle_planks"
+    },
+    "style=9": {
+      "model": "extradelightlegacy:mixing_bowl_warped_planks"
+    },
+    "style=10": {
+      "model": "extradelightlegacy:mixing_bowl_crimson_planks"
+    },
+    "style=11": {
+      "model": "extradelightlegacy:mixing_bowl_cinnamon_planks"
+    },
+    "style=12": {
+      "model": "extradelightlegacy:mixing_bowl_fruit_planks"
+    },
+    "style=13": {
+      "model": "extradelightlegacy:mixing_bowl_glass"
+    },
+    "style=14": {
+      "model": "extradelightlegacy:mixing_bowl_stone"
+    },
+    "style=15": {
+      "model": "extradelightlegacy:mixing_bowl_iron_block"
+    },
+    "style=16": {
+      "model": "extradelightlegacy:mixing_bowl_gold_block"
+    },
+    "style=17": {
+      "model": "extradelightlegacy:mixing_bowl_terracotta"
+    },
+    "style=18": {
+      "model": "extradelightlegacy:mixing_bowl_white_terracotta"
+    },
+    "style=19": {
+      "model": "extradelightlegacy:mixing_bowl_light_gray_terracotta"
+    },
+    "style=20": {
+      "model": "extradelightlegacy:mixing_bowl_gray_terracotta"
+    },
+    "style=21": {
+      "model": "extradelightlegacy:mixing_bowl_black_terracotta"
+    },
+    "style=22": {
+      "model": "extradelightlegacy:mixing_bowl_brown_terracotta"
+    },
+    "style=23": {
+      "model": "extradelightlegacy:mixing_bowl_red_terracotta"
+    },
+    "style=24": {
+      "model": "extradelightlegacy:mixing_bowl_orange_terracotta"
+    },
+    "style=25": {
+      "model": "extradelightlegacy:mixing_bowl_yellow_terracotta"
+    },
+    "style=26": {
+      "model": "extradelightlegacy:mixing_bowl_lime_terracotta"
+    },
+    "style=27": {
+      "model": "extradelightlegacy:mixing_bowl_green_terracotta"
+    },
+    "style=28": {
+      "model": "extradelightlegacy:mixing_bowl_cyan_terracotta"
+    },
+    "style=29": {
+      "model": "extradelightlegacy:mixing_bowl_light_blue_terracotta"
+    },
+    "style=30": {
+      "model": "extradelightlegacy:mixing_bowl_blue_terracotta"
+    },
+    "style=31": {
+      "model": "extradelightlegacy:mixing_bowl_magenta_terracotta"
+    },
+    "style=32": {
+      "model": "extradelightlegacy:mixing_bowl_pink_terracotta"
+    },
+    "style=33": {
+      "model": "extradelightlegacy:mixing_bowl_purple_terracotta"
+    },
+    "style=34": {
+      "model": "extradelightlegacy:mixing_bowl_white_glazed_terracotta"
+    },
+    "style=35": {
+      "model": "extradelightlegacy:mixing_bowl_light_gray_glazed_terracotta"
+    },
+    "style=36": {
+      "model": "extradelightlegacy:mixing_bowl_gray_glazed_terracotta"
+    },
+    "style=37": {
+      "model": "extradelightlegacy:mixing_bowl_black_glazed_terracotta"
+    },
+    "style=38": {
+      "model": "extradelightlegacy:mixing_bowl_brown_glazed_terracotta"
+    },
+    "style=39": {
+      "model": "extradelightlegacy:mixing_bowl_red_glazed_terracotta"
+    },
+    "style=40": {
+      "model": "extradelightlegacy:mixing_bowl_orange_glazed_terracotta"
+    },
+    "style=41": {
+      "model": "extradelightlegacy:mixing_bowl_yellow_glazed_terracotta"
+    },
+    "style=42": {
+      "model": "extradelightlegacy:mixing_bowl_lime_glazed_terracotta"
+    },
+    "style=43": {
+      "model": "extradelightlegacy:mixing_bowl_green_glazed_terracotta"
+    },
+    "style=44": {
+      "model": "extradelightlegacy:mixing_bowl_cyan_glazed_terracotta"
+    },
+    "style=45": {
+      "model": "extradelightlegacy:mixing_bowl_light_blue_glazed_terracotta"
+    },
+    "style=46": {
+      "model": "extradelightlegacy:mixing_bowl_blue_glazed_terracotta"
+    },
+    "style=47": {
+      "model": "extradelightlegacy:mixing_bowl_magenta_glazed_terracotta"
+    },
+    "style=48": {
+      "model": "extradelightlegacy:mixing_bowl_pink_glazed_terracotta"
+    },
+    "style=49": {
+      "model": "extradelightlegacy:mixing_bowl_purple_glazed_terracotta"
+    }
+  }
+}

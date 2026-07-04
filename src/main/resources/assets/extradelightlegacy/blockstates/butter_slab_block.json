@@ -1,0 +1,10 @@
+{
+    "variants":  {
+                     "half=bottom,variant=default":  {
+                                                         "model":  "extradelightlegacy:butter_slab_block"
+                                                     },
+                     "half=top,variant=default":  {
+                                                      "model":  "extradelightlegacy:butter_slab_block_top"
+                                                  }
+                 }
+}

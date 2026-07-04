@@ -1,0 +1,10 @@
+{
+  "parent": "extradelightlegacy:item/pickled_rinds_block_stage0",
+  "overrides": [
+    { "predicate": { "extradelightlegacy:servings": 4 }, "model": "extradelightlegacy:item/pickled_rinds_block_stage0" },
+    { "predicate": { "extradelightlegacy:servings": 3 }, "model": "extradelightlegacy:item/pickled_rinds_block_stage1" },
+    { "predicate": { "extradelightlegacy:servings": 2 }, "model": "extradelightlegacy:item/pickled_rinds_block_stage2" },
+    { "predicate": { "extradelightlegacy:servings": 1 }, "model": "extradelightlegacy:item/pickled_rinds_block_stage3" },
+    { "predicate": { "extradelightlegacy:servings": 0 }, "model": "extradelightlegacy:item/pickled_rinds_block_leftover" }
+  ]
+}

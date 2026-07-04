@@ -1,0 +1,52 @@
+﻿{
+    "variants":  {
+                     "style=0":  {
+                                     "model":  "extradelightlegacy:baking_stonestone"
+                                 },
+                     "style=1":  {
+                                     "model":  "extradelightlegacy:baking_stonegranite"
+                                 },
+                     "style=2":  {
+                                     "model":  "extradelightlegacy:baking_stonediorite"
+                                 },
+                     "style=3":  {
+                                     "model":  "extradelightlegacy:baking_stoneandesite"
+                                 },
+                     "style=4":  {
+                                     "model":  "extradelightlegacy:baking_stonedeepslate"
+                                 },
+                     "style=5":  {
+                                     "model":  "extradelightlegacy:baking_stonetuff"
+                                 },
+                     "style=6":  {
+                                     "model":  "extradelightlegacy:baking_stonesandstone_top"
+                                 },
+                     "style=7":  {
+                                     "model":  "extradelightlegacy:baking_stonered_sandstone_top"
+                                 },
+                     "style=8":  {
+                                     "model":  "extradelightlegacy:baking_stoneprismarine"
+                                 },
+                     "style=9":  {
+                                     "model":  "extradelightlegacy:baking_stonenetherrack"
+                                 },
+                     "style=10":  {
+                                      "model":  "extradelightlegacy:baking_stonebasalt_side"
+                                  },
+                     "style=11":  {
+                                      "model":  "extradelightlegacy:baking_stoneblackstone"
+                                  },
+                     "style=12":  {
+                                      "model":  "extradelightlegacy:baking_stoneend_stone"
+                                  },
+                     "style=13":  {
+                                      "model":  "extradelightlegacy:baking_stonebedrock"
+                                  },
+                     "style=14":  {
+                                      "model":  "extradelightlegacy:baking_stoneamethyst_block"
+                                  },
+                     "style=15":  {
+                                      "model":  "extradelightlegacy:baking_stonegilded_blackstone"
+                                  }
+                 }
+}

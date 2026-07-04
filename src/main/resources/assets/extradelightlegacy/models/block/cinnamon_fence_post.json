@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "extradelightlegacy:block/cinnamon_planks"
+  }
+}

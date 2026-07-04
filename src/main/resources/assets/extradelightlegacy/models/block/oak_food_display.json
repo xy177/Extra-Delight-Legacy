@@ -1,0 +1,7 @@
+{
+  "parent": "extradelightlegacy:block/food_display_base",
+  "textures": {
+    "0": "minecraft:blocks/planks_oak",
+    "particle": "minecraft:blocks/planks_oak"
+  }
+}

@@ -1,0 +1,12 @@
+﻿{
+    "parent":  "extradelightlegacy:block/frosted_gingerbread_block",
+    "textures":  {
+                     "north":  "extradelightlegacy:item/frosting_orange",
+                     "east":  "extradelightlegacy:item/frosting_orange",
+                     "south":  "extradelightlegacy:item/frosting_orange",
+                     "west":  "extradelightlegacy:item/frosting_orange",
+                     "up":  "extradelightlegacy:item/frosting_orange",
+                     "down":  "extradelightlegacy:block/gingerbread_block",
+                     "particle":  "extradelightlegacy:item/frosting_orange"
+                 }
+}

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "extradelightlegacy:chiller" },
+    "facing=east": { "model": "extradelightlegacy:chiller", "y": 90 },
+    "facing=south": { "model": "extradelightlegacy:chiller", "y": 180 },
+    "facing=west": { "model": "extradelightlegacy:chiller", "y": 270 }
+  }
+}

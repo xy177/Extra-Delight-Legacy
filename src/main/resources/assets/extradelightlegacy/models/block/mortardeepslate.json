@@ -1,0 +1,7 @@
+{
+  "parent": "extradelightlegacy:block/mortar",
+  "textures": {
+    "0": "extradelightlegacy:block/deepslate",
+    "particle": "extradelightlegacy:block/deepslate"
+  }
+}

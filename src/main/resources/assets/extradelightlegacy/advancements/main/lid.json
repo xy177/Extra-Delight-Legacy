@@ -1,0 +1,35 @@
+{
+  "parent": "extradelightlegacy:main/vat",
+  "display": {
+    "icon": {
+      "item": "extradelightlegacy:vat_lid"
+    },
+    "title": {
+      "translate": "extradelightlegacy.advancement.lid.name"
+    },
+    "description": {
+      "translate": "extradelightlegacy.advancement.lid.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "lid": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:vat_lid"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "lid"
+    ]
+  ]
+}

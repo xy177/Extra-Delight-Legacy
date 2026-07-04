@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "normal": [
+      {"model": "extradelightlegacy:cornmeal"},
+      {"model": "extradelightlegacy:cornmeal", "y": 90},
+      {"model": "extradelightlegacy:cornmeal", "y": 180},
+      {"model": "extradelightlegacy:cornmeal", "y": 270},
+      {"model": "extradelightlegacy:cornmeal1"},
+      {"model": "extradelightlegacy:cornmeal1", "y": 90},
+      {"model": "extradelightlegacy:cornmeal1", "y": 180},
+      {"model": "extradelightlegacy:cornmeal1", "y": 270},
+      {"model": "extradelightlegacy:cornmeal2"},
+      {"model": "extradelightlegacy:cornmeal2", "y": 90},
+      {"model": "extradelightlegacy:cornmeal2", "y": 180},
+      {"model": "extradelightlegacy:cornmeal2", "y": 270}
+    ]
+  }
+}

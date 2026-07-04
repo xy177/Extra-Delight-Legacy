@@ -1,0 +1,6 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "extradelightlegacy:block/crops/ginger/ginger_stage0"
+  }
+}

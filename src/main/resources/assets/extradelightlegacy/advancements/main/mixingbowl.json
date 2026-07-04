@@ -1,0 +1,28 @@
+{
+  "parent": "extradelightlegacy:main/spoon",
+  "display": {
+    "icon": {
+      "item": "extradelightlegacy:mixing_bowl"
+    },
+    "title": {
+      "translate": "extradelightlegacy.advancement.mixingbowl.name"
+    },
+    "description": {
+      "translate": "extradelightlegacy.advancement.mixingbowl.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "mixingbowl": {
+      "trigger": "extradelightlegacy:mixingbowl"
+    }
+  },
+  "requirements": [
+    [
+      "mixingbowl"
+    ]
+  ]
+}

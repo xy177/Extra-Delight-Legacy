@@ -1,0 +1,36 @@
+{
+    "variants":  {
+                     "facing=north,open=false":  {
+                                                     "model":  "extradelightlegacy:magenta_chocolate_box",
+                                                     "y":  0
+                                                 },
+                     "facing=east,open=false":  {
+                                                    "model":  "extradelightlegacy:magenta_chocolate_box",
+                                                    "y":  90
+                                                },
+                     "facing=south,open=false":  {
+                                                     "model":  "extradelightlegacy:magenta_chocolate_box",
+                                                     "y":  180
+                                                 },
+                     "facing=west,open=false":  {
+                                                    "model":  "extradelightlegacy:magenta_chocolate_box",
+                                                    "y":  270
+                                                },
+                     "facing=north,open=true":  {
+                                                    "model":  "extradelightlegacy:magenta_chocolate_box_open",
+                                                    "y":  0
+                                                },
+                     "facing=east,open=true":  {
+                                                   "model":  "extradelightlegacy:magenta_chocolate_box_open",
+                                                   "y":  90
+                                               },
+                     "facing=south,open=true":  {
+                                                    "model":  "extradelightlegacy:magenta_chocolate_box_open",
+                                                    "y":  180
+                                                },
+                     "facing=west,open=true":  {
+                                                   "model":  "extradelightlegacy:magenta_chocolate_box_open",
+                                                   "y":  270
+                                               }
+                 }
+}

@@ -1,0 +1,46 @@
+{
+  "parent": "extradelightlegacy:main/start",
+  "display": {
+    "icon": {
+      "item": "extradelightlegacy:vinegar_pot"
+    },
+    "title": {
+      "translate": "extradelightlegacy.advancement.vinegarpot.name"
+    },
+    "description": {
+      "translate": "extradelightlegacy.advancement.vinegarpot.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "vinegar": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:vinegar"
+          }
+        ]
+      }
+    },
+    "vinegarpot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:vinegar_pot"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "vinegar",
+      "vinegarpot"
+    ]
+  ]
+}

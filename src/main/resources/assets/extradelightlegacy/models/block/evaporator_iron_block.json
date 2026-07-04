@@ -1,0 +1,7 @@
+{
+  "parent": "extradelightlegacy:block/evaporator",
+  "textures": {
+    "2": "minecraft:blocks/iron_block",
+    "particle": "minecraft:blocks/iron_block"
+  }
+}

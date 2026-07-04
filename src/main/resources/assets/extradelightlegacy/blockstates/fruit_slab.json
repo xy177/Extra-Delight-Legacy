@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=bottom,variant=default": {
+      "model": "extradelightlegacy:fruit_slab"
+    },
+    "half=top,variant=default": {
+      "model": "extradelightlegacy:fruit_slab_top"
+    }
+  }
+}

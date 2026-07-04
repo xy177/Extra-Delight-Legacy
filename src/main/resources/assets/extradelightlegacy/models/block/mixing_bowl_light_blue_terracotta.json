@@ -1,0 +1,7 @@
+{
+  "parent": "extradelightlegacy:block/mixing_bowl",
+  "textures": {
+    "1": "minecraft:blocks/hardened_clay_stained_light_blue",
+    "particle": "minecraft:blocks/hardened_clay_stained_light_blue"
+  }
+}

@@ -1,0 +1,20 @@
+[
+{
+  "modid": "extradelightlegacy",
+  "name": "Extra Delight Legacy",
+  "description": "A Minecraft Forge 1.12.2 legacy port and adaptation of Extra Delight for Farmer's Delight Legacy. Adds expanded cooking, baking, pickling, butchery, kitchen workstations, decorative blocks, foods, fluids, crops, orchard content, and compatibility-focused recipe support.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["xy177"],
+  "credits": "Original Extra Delight by Lance5057, Alan199921, DivineAspect, Skysom, FreneticScribbler, Lanse505, Belathus, RoyalJelly, ParadigmOne, and Robynster. Built as a legacy addon for Farmer's Delight Legacy.",
+  "logoFile": "art/logo.png",
+  "screenshots": [],
+  "dependencies": [
+    "required-after:farmersdelight",
+    "after:jei"
+  ],
+  "license": "CC BY-NC-SA 4.0"
+}
+]

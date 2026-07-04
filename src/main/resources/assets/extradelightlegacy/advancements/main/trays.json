@@ -1,0 +1,101 @@
+{
+  "parent": "extradelightlegacy:main/oven",
+  "display": {
+    "icon": {
+      "item": "extradelightlegacy:tray"
+    },
+    "title": {
+      "translate": "extradelightlegacy.advancement.trays.name"
+    },
+    "description": {
+      "translate": "extradelightlegacy.advancement.trays.desc"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "baking_stone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:baking_stone"
+          }
+        ]
+      }
+    },
+    "loaf_pan": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:loaf_pan"
+          }
+        ]
+      }
+    },
+    "muffin_tin": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:muffin_tin"
+          }
+        ]
+      }
+    },
+    "pie_dish": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:pie_dish"
+          }
+        ]
+      }
+    },
+    "sheet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:sheet"
+          }
+        ]
+      }
+    },
+    "square_pan": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:square_pan"
+          }
+        ]
+      }
+    },
+    "tray": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:tray"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "baking_stone",
+      "loaf_pan",
+      "muffin_tin",
+      "pie_dish",
+      "sheet",
+      "square_pan",
+      "tray"
+    ]
+  ]
+}

@@ -1,0 +1,7 @@
+﻿{
+    "parent":  "extradelightlegacy:block/baking_stone",
+    "textures":  {
+                     "0":  "minecraft:blocks/sandstone_top",
+                     "particle":  "minecraft:blocks/sandstone_top"
+                 }
+}

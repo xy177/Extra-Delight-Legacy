@@ -1,0 +1,1215 @@
+{
+  "parent": "extradelightlegacy:main/food",
+  "display": {
+    "icon": {
+      "item": "extradelightlegacy:christmas_pudding"
+    },
+    "title": {
+      "translate": "extradelightlegacy.advancement.dessert.name"
+    },
+    "description": {
+      "translate": "extradelightlegacy.advancement.dessert.desc"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "affogato": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:affogato"
+          }
+        ]
+      }
+    },
+    "apple_cheesecake_slice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:apple_cheesecake_slice"
+          }
+        ]
+      }
+    },
+    "apple_crisp": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:apple_crisp"
+          }
+        ]
+      }
+    },
+    "apple_custard": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:apple_custard"
+          }
+        ]
+      }
+    },
+    "apple_ice_cream": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:apple_ice_cream"
+          }
+        ]
+      }
+    },
+    "apple_popsicle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:apple_popsicle"
+          }
+        ]
+      }
+    },
+    "baked_alaska_serving": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:baked_alaska_serving"
+          }
+        ]
+      }
+    },
+    "black_forest_trifle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:black_forest_trifle"
+          }
+        ]
+      }
+    },
+    "blondie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:blondie"
+          }
+        ]
+      }
+    },
+    "brownie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:brownie"
+          }
+        ]
+      }
+    },
+    "candy_apple": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:candy_apple"
+          }
+        ]
+      }
+    },
+    "candy_bar_salad": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:candy_bar_salad"
+          }
+        ]
+      }
+    },
+    "candy_golden_apple": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:candy_golden_apple"
+          }
+        ]
+      }
+    },
+    "caramel_apple": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:caramel_apple"
+          }
+        ]
+      }
+    },
+    "caramel_cheescake_slice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:caramel_cheesecake_slice"
+          }
+        ]
+      }
+    },
+    "caramel_custard": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:caramel_custard"
+          }
+        ]
+      }
+    },
+    "caramel_golden_apple": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:caramel_golden_apple"
+          }
+        ]
+      }
+    },
+    "caramel_popsicle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:caramel_popsicle"
+          }
+        ]
+      }
+    },
+    "cheesecake_slice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:cheesecake_slice"
+          }
+        ]
+      }
+    },
+    "chocolate_cake": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:chocolate_cake"
+          }
+        ]
+      }
+    },
+    "chocolate_cheesecake_slice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:chocolate_cheesecake_slice"
+          }
+        ]
+      }
+    },
+    "chocolate_cookie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:chocolate_cookie"
+          }
+        ]
+      }
+    },
+    "chocolate_custard": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:chocolate_custard"
+          }
+        ]
+      }
+    },
+    "chocolate_ice_cream": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:chocolate_ice_cream"
+          }
+        ]
+      }
+    },
+    "chocolate_mousse": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:chocolate_mousse"
+          }
+        ]
+      }
+    },
+    "christmas_pudding": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:christmas_pudding"
+          }
+        ]
+      }
+    },
+    "cinnamon_popsicle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:cinnamon_popsicle"
+          }
+        ]
+      }
+    },
+    "cinnamon_rolls": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:cinnamon_rolls"
+          }
+        ]
+      }
+    },
+    "coffee_cake_slice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:coffee_cake_slice"
+          }
+        ]
+      }
+    },
+    "coffee_jelly": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:coffee_jelly"
+          }
+        ]
+      }
+    },
+    "cookie_dough_ice_cream": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:cookie_dough_ice_cream"
+          }
+        ]
+      }
+    },
+    "crisp_rice_treat": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:crisp_rice_treat"
+          }
+        ]
+      }
+    },
+    "dirt_cake": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:dirt_cake"
+          }
+        ]
+      }
+    },
+    "eton_mess": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:eton_mess"
+          }
+        ]
+      }
+    },
+    "french_toast": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:french_toast"
+          }
+        ]
+      }
+    },
+    "fruit_bread": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:fruit_bread"
+          }
+        ]
+      }
+    },
+    "fudge_popsicle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:fudge_popsicle"
+          }
+        ]
+      }
+    },
+    "glow_berry_cheesecake_slice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:glow_berry_cheesecake_slice"
+          }
+        ]
+      }
+    },
+    "glow_berry_ice_cream": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:glow_berry_ice_cream"
+          }
+        ]
+      }
+    },
+    "glow_berry_pie_slice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:glow_berry_pie_slice"
+          }
+        ]
+      }
+    },
+    "glow_berry_popsicle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:glow_berry_popsicle"
+          }
+        ]
+      }
+    },
+    "grapefruit_sorbet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:grapefruit_sorbet"
+          }
+        ]
+      }
+    },
+    "grasshopper_pie_slice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:grasshopper_pie_slice"
+          }
+        ]
+      }
+    },
+    "grilled_grapefruit": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:grilled_grapefruit"
+          }
+        ]
+      }
+    },
+    "honey_cheesecake_slice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:honey_cheesecake_slice"
+          }
+        ]
+      }
+    },
+    "honey_custard": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:honey_custard"
+          }
+        ]
+      }
+    },
+    "honey_ice_cream": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:honey_ice_cream"
+          }
+        ]
+      }
+    },
+    "honey_popsicle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:honey_popsicle"
+          }
+        ]
+      }
+    },
+    "ice_cream": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:ice_cream"
+          }
+        ]
+      }
+    },
+    "ice_cream_sundae": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:ice_cream_sundae"
+          }
+        ]
+      }
+    },
+    "jaffa_cake": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:jaffa_cake"
+          }
+        ]
+      }
+    },
+    "jelly_black": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:jelly_black"
+          }
+        ]
+      }
+    },
+    "jelly_blue": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:jelly_blue"
+          }
+        ]
+      }
+    },
+    "jelly_brown": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:jelly_brown"
+          }
+        ]
+      }
+    },
+    "jelly_cyan": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:jelly_cyan"
+          }
+        ]
+      }
+    },
+    "jelly_green": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:jelly_green"
+          }
+        ]
+      }
+    },
+    "jelly_grey": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:jelly_grey"
+          }
+        ]
+      }
+    },
+    "jelly_light_blue": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:jelly_light_blue"
+          }
+        ]
+      }
+    },
+    "jelly_light_grey": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:jelly_light_grey"
+          }
+        ]
+      }
+    },
+    "jelly_lime": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:jelly_lime"
+          }
+        ]
+      }
+    },
+    "jelly_magenta": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:jelly_magenta"
+          }
+        ]
+      }
+    },
+    "jelly_orange": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:jelly_orange"
+          }
+        ]
+      }
+    },
+    "jelly_pink": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:jelly_pink"
+          }
+        ]
+      }
+    },
+    "jelly_purple": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:jelly_purple"
+          }
+        ]
+      }
+    },
+    "jelly_red": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:jelly_red"
+          }
+        ]
+      }
+    },
+    "jelly_white": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:jelly_white"
+          }
+        ]
+      }
+    },
+    "jelly_yellow": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:jelly_yellow"
+          }
+        ]
+      }
+    },
+    "key_lime_pie_slice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:key_lime_pie_slice"
+          }
+        ]
+      }
+    },
+    "kyiv_cake_slice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:kyiv_cake_slice"
+          }
+        ]
+      }
+    },
+    "lava_cake": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:lava_cake"
+          }
+        ]
+      }
+    },
+    "lemon_cucumber_cake_slice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:lemon_cucumber_cake_slice"
+          }
+        ]
+      }
+    },
+    "lemon_delicious": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:lemon_delicious"
+          }
+        ]
+      }
+    },
+    "lemon_meringue_pie_slice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:lemon_meringue_pie_slice"
+          }
+        ]
+      }
+    },
+    "lemon_posset": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:lemon_posset"
+          }
+        ]
+      }
+    },
+    "lime_souffle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:lime_souffle"
+          }
+        ]
+      }
+    },
+    "marshmallow_slice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:marshmallow_slice"
+          }
+        ]
+      }
+    },
+    "melon_fruit_salad_serving": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:melon_fruit_salad_serving"
+          }
+        ]
+      }
+    },
+    "melon_layer_cake_slice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:melon_layer_cake_slice"
+          }
+        ]
+      }
+    },
+    "milk_tart_slice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:milk_tart_slice"
+          }
+        ]
+      }
+    },
+    "mint_chip_ice_cream": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:mint_chip_ice_cream"
+          }
+        ]
+      }
+    },
+    "mississippi_mud_pie_slice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:mississippi_mud_pie_slice"
+          }
+        ]
+      }
+    },
+    "monkey_bread": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:monkey_bread"
+          }
+        ]
+      }
+    },
+    "muffin_apple": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:muffin_apple"
+          }
+        ]
+      }
+    },
+    "muffin_cinnamon": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:muffin_cinnamon"
+          }
+        ]
+      }
+    },
+    "muffin_ginger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:muffin_ginger"
+          }
+        ]
+      }
+    },
+    "muffin_sweet_berry": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:muffin_sweet_berry"
+          }
+        ]
+      }
+    },
+    "nut_butter_custard": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:nut_butter_custard"
+          }
+        ]
+      }
+    },
+    "nut_butter_ice_cream": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:nut_butter_ice_cream"
+          }
+        ]
+      }
+    },
+    "panforte_slice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:panforte_slice"
+          }
+        ]
+      }
+    },
+    "pavlova_slice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:pavlova_slice"
+          }
+        ]
+      }
+    },
+    "pumpkin_cheesecake_slice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:pumpkin_cheesecake_slice"
+          }
+        ]
+      }
+    },
+    "pumpkin_custard": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:pumpkin_custard"
+          }
+        ]
+      }
+    },
+    "pumpkin_ice_cream": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:pumpkin_ice_cream"
+          }
+        ]
+      }
+    },
+    "pumpkin_pie_slice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:pumpkin_pie_slice"
+          }
+        ]
+      }
+    },
+    "pumpkin_roll": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:pumpkin_roll"
+          }
+        ]
+      }
+    },
+    "rice_pudding": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:rice_pudding"
+          }
+        ]
+      }
+    },
+    "rocky_road": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:rocky_road"
+          }
+        ]
+      }
+    },
+    "rombosse": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:rombosse"
+          }
+        ]
+      }
+    },
+    "scotcharoo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:scotcharoo"
+          }
+        ]
+      }
+    },
+    "smore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:smore"
+          }
+        ]
+      }
+    },
+    "sticky_toffee_pudding_slice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:sticky_toffee_pudding_slice"
+          }
+        ]
+      }
+    },
+    "stuffed_apple": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:stuffed_apple"
+          }
+        ]
+      }
+    },
+    "stuffed_apple_ice_cream": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:stuffed_apple_ice_cream"
+          }
+        ]
+      }
+    },
+    "sweet_berry_custard": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:sweet_berry_custard"
+          }
+        ]
+      }
+    },
+    "sweet_berry_ice_cream": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:sweet_berry_ice_cream"
+          }
+        ]
+      }
+    },
+    "sweet_berry_pie_slice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:sweet_berry_pie_slice"
+          }
+        ]
+      }
+    },
+    "sweet_berry_popsicle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:sweet_berry_popsicle"
+          }
+        ]
+      }
+    },
+    "tarte_tatin_slice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:tarte_tatin_slice"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "affogato",
+      "apple_cheesecake_slice",
+      "apple_crisp",
+      "apple_custard",
+      "apple_ice_cream",
+      "apple_popsicle",
+      "baked_alaska_serving",
+      "black_forest_trifle",
+      "blondie",
+      "brownie",
+      "candy_apple",
+      "candy_bar_salad",
+      "candy_golden_apple",
+      "caramel_apple",
+      "caramel_cheescake_slice",
+      "caramel_custard",
+      "caramel_golden_apple",
+      "caramel_popsicle",
+      "cheesecake_slice",
+      "chocolate_cake",
+      "chocolate_cheesecake_slice",
+      "chocolate_cookie",
+      "chocolate_custard",
+      "chocolate_ice_cream",
+      "chocolate_mousse",
+      "christmas_pudding",
+      "cinnamon_popsicle",
+      "cinnamon_rolls",
+      "coffee_cake_slice",
+      "coffee_jelly",
+      "cookie_dough_ice_cream",
+      "crisp_rice_treat",
+      "dirt_cake",
+      "eton_mess",
+      "french_toast",
+      "fruit_bread",
+      "fudge_popsicle",
+      "glow_berry_cheesecake_slice",
+      "glow_berry_ice_cream",
+      "glow_berry_pie_slice",
+      "glow_berry_popsicle",
+      "grapefruit_sorbet",
+      "grasshopper_pie_slice",
+      "grilled_grapefruit",
+      "honey_cheesecake_slice",
+      "honey_custard",
+      "honey_ice_cream",
+      "honey_popsicle",
+      "ice_cream",
+      "ice_cream_sundae",
+      "jaffa_cake",
+      "jelly_black",
+      "jelly_blue",
+      "jelly_brown",
+      "jelly_cyan",
+      "jelly_green",
+      "jelly_grey",
+      "jelly_light_blue",
+      "jelly_light_grey",
+      "jelly_lime",
+      "jelly_magenta",
+      "jelly_orange",
+      "jelly_pink",
+      "jelly_purple",
+      "jelly_red",
+      "jelly_white",
+      "jelly_yellow",
+      "key_lime_pie_slice",
+      "kyiv_cake_slice",
+      "lava_cake",
+      "lemon_cucumber_cake_slice",
+      "lemon_delicious",
+      "lemon_meringue_pie_slice",
+      "lemon_posset",
+      "lime_souffle",
+      "marshmallow_slice",
+      "melon_fruit_salad_serving",
+      "melon_layer_cake_slice",
+      "milk_tart_slice",
+      "mint_chip_ice_cream",
+      "mississippi_mud_pie_slice",
+      "monkey_bread",
+      "muffin_apple",
+      "muffin_cinnamon",
+      "muffin_ginger",
+      "muffin_sweet_berry",
+      "nut_butter_custard",
+      "nut_butter_ice_cream",
+      "panforte_slice",
+      "pavlova_slice",
+      "pumpkin_cheesecake_slice",
+      "pumpkin_custard",
+      "pumpkin_ice_cream",
+      "pumpkin_pie_slice",
+      "pumpkin_roll",
+      "rice_pudding",
+      "rocky_road",
+      "rombosse",
+      "scotcharoo",
+      "smore",
+      "sticky_toffee_pudding_slice",
+      "stuffed_apple",
+      "stuffed_apple_ice_cream",
+      "sweet_berry_custard",
+      "sweet_berry_ice_cream",
+      "sweet_berry_pie_slice",
+      "sweet_berry_popsicle",
+      "tarte_tatin_slice"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "extradelightlegacy:block/yeast_pot",
+  "textures": {
+    "0": "extradelightlegacy:block/vinegarpot",
+    "particle": "extradelightlegacy:block/vinegarpot"
+  }
+}

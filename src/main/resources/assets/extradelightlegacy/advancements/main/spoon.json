@@ -1,0 +1,90 @@
+{
+  "parent": "extradelightlegacy:main/start",
+  "display": {
+    "icon": {
+      "item": "extradelightlegacy:diamond_spoon"
+    },
+    "title": {
+      "translate": "extradelightlegacy.advancement.spoon.name"
+    },
+    "description": {
+      "translate": "extradelightlegacy.advancement.spoon.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "diamond_spoon": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:diamond_spoon"
+          }
+        ]
+      }
+    },
+    "gold_spoon": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:gold_spoon"
+          }
+        ]
+      }
+    },
+    "iron_spoon": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:iron_spoon"
+          }
+        ]
+      }
+    },
+    "netherite_spoon": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:netherite_spoon"
+          }
+        ]
+      }
+    },
+    "stone_spoon": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:stone_spoon"
+          }
+        ]
+      }
+    },
+    "wooden_spoon": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:wooden_spoon"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "diamond_spoon",
+      "gold_spoon",
+      "iron_spoon",
+      "netherite_spoon",
+      "stone_spoon",
+      "wooden_spoon"
+    ]
+  ]
+}

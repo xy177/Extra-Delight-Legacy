@@ -1,0 +1,324 @@
+{
+  "parent": "extradelightlegacy:main/food",
+  "display": {
+    "icon": {
+      "item": "extradelightlegacy:sweet_berry_juice"
+    },
+    "title": {
+      "translate": "extradelightlegacy.advancement.drinks.name"
+    },
+    "description": {
+      "translate": "extradelightlegacy.advancement.drinks.desc"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "apple_milkshake": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:apple_milkshake"
+          }
+        ]
+      }
+    },
+    "cactus_juice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:cactus_juice"
+          }
+        ]
+      }
+    },
+    "chocolate_milk": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:chocolate_milk"
+          }
+        ]
+      }
+    },
+    "chocolate_milkshake": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:chocolate_milkshake"
+          }
+        ]
+      }
+    },
+    "coffee": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:coffee"
+          }
+        ]
+      }
+    },
+    "cookie_dough_milkshake": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:cookie_dough_milkshake"
+          }
+        ]
+      }
+    },
+    "dalgona_coffee": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:dalgona_coffee"
+          }
+        ]
+      }
+    },
+    "eggnog": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:eggnog"
+          }
+        ]
+      }
+    },
+    "ginger_beer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:ginger_beer"
+          }
+        ]
+      }
+    },
+    "glow_berry_juice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:glow_berry_juice"
+          }
+        ]
+      }
+    },
+    "glow_berry_milkshake": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:glow_berry_milkshake"
+          }
+        ]
+      }
+    },
+    "gourmet_hot_chocolate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:gourmet_hot_chocolate"
+          }
+        ]
+      }
+    },
+    "honey_milkshake": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:honey_milkshake"
+          }
+        ]
+      }
+    },
+    "horchata": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:horchata"
+          }
+        ]
+      }
+    },
+    "lemonade": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:lemonade"
+          }
+        ]
+      }
+    },
+    "limeade": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:limeade"
+          }
+        ]
+      }
+    },
+    "milkshake": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:milkshake"
+          }
+        ]
+      }
+    },
+    "mint_chip_milkshake": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:mint_chip_milkshake"
+          }
+        ]
+      }
+    },
+    "nut_butter_milkshake": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:nut_butter_milkshake"
+          }
+        ]
+      }
+    },
+    "orangeade": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:orangeade"
+          }
+        ]
+      }
+    },
+    "pumpkin_milkshake": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:pumpkin_milkshake"
+          }
+        ]
+      }
+    },
+    "punch": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:punch"
+          }
+        ]
+      }
+    },
+    "sweet_berry_juice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:sweet_berry_juice"
+          }
+        ]
+      }
+    },
+    "sweet_berry_milkshake": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:sweet_berry_milkshake"
+          }
+        ]
+      }
+    },
+    "tea": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:tea"
+          }
+        ]
+      }
+    },
+    "tomato_juice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:tomato_juice"
+          }
+        ]
+      }
+    },
+    "xocolati": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:xocolatl"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "apple_milkshake",
+      "cactus_juice",
+      "chocolate_milk",
+      "chocolate_milkshake",
+      "coffee",
+      "cookie_dough_milkshake",
+      "dalgona_coffee",
+      "eggnog",
+      "ginger_beer",
+      "glow_berry_juice",
+      "glow_berry_milkshake",
+      "gourmet_hot_chocolate",
+      "honey_milkshake",
+      "horchata",
+      "lemonade",
+      "limeade",
+      "milkshake",
+      "mint_chip_milkshake",
+      "nut_butter_milkshake",
+      "orangeade",
+      "pumpkin_milkshake",
+      "punch",
+      "sweet_berry_juice",
+      "sweet_berry_milkshake",
+      "tea",
+      "tomato_juice",
+      "xocolati"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  }
+}

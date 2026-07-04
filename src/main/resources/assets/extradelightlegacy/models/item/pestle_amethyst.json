@@ -1,0 +1,6 @@
+{
+  "parent": "extradelightlegacy:item/pestle",
+  "textures": {
+    "0": "deeperdepths:blocks/amethyst_block"
+  }
+}

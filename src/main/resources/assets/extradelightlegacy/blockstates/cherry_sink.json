@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=east": { "model": "extradelightlegacy:cherry_sink_cabinet", "y": 90 },
+    "facing=north": { "model": "extradelightlegacy:cherry_sink_cabinet" },
+    "facing=south": { "model": "extradelightlegacy:cherry_sink_cabinet", "y": 180 },
+    "facing=west": { "model": "extradelightlegacy:cherry_sink_cabinet", "y": 270 }
+  }
+}

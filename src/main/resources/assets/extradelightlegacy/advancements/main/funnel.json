@@ -1,0 +1,35 @@
+{
+  "parent": "extradelightlegacy:main/keg",
+  "display": {
+    "icon": {
+      "item": "extradelightlegacy:funnel"
+    },
+    "title": {
+      "translate": "extradelightlegacy.advancement.funnel.name"
+    },
+    "description": {
+      "translate": "extradelightlegacy.advancement.funnel.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "funnel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:funnel"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "funnel"
+    ]
+  ]
+}

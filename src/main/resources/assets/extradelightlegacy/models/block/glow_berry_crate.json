@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "extradelightlegacy:block/glow_berry_crate_top",
+    "side": "extradelightlegacy:block/glow_berry_crate_side"
+  }
+}

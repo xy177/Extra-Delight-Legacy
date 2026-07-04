@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "extradelightlegacy:block/cosmetics/chocolate/blood_chocolate_style0",
+    "side": "extradelightlegacy:block/cosmetics/chocolate/blood_chocolate_pillar"
+  }
+}

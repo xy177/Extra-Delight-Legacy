@@ -1,0 +1,35 @@
+{
+  "parent": "extradelightlegacy:main/melting_pot",
+  "display": {
+    "icon": {
+      "item": "extradelightlegacy:milk_chocolate_fondue_block"
+    },
+    "title": {
+      "translate": "extradelightlegacy.advancement.fondue.name"
+    },
+    "description": {
+      "translate": "extradelightlegacy.advancement.fondue.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "fondue": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:blood_chocolate_fondue_block"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "fondue"
+    ]
+  ]
+}

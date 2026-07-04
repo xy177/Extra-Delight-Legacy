@@ -1,0 +1,6 @@
+﻿{
+    "parent":  "minecraft:block/cube_all",
+    "textures":  {
+                     "all":  "extradelightlegacy:block/cosmetics/chocolate/blood_chocolate_style3"
+                 }
+}

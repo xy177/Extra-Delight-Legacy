@@ -1,0 +1,9 @@
+{
+  "parent": "extradelightlegacy:block/grass_like",
+  "textures": {
+    "0": "extradelightlegacy:block/gingerbread_block",
+    "1": "extradelightlegacy:block/frosting_colors/full_red",
+    "2": "extradelightlegacy:block/frosting_colors/snow_trim_red",
+    "particle": "extradelightlegacy:block/frosting_colors/full_red"
+  }
+}

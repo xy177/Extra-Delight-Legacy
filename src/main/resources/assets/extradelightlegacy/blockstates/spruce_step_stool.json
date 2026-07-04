@@ -1,0 +1,19 @@
+{
+    "variants":  {
+                     "facing=north":  {
+                                          "model":  "extradelightlegacy:spruce_step_stool"
+                                      },
+                     "facing=south":  {
+                                          "model":  "extradelightlegacy:spruce_step_stool",
+                                          "y":  180
+                                      },
+                     "facing=east":  {
+                                         "model":  "extradelightlegacy:spruce_step_stool",
+                                         "y":  90
+                                     },
+                     "facing=west":  {
+                                         "model":  "extradelightlegacy:spruce_step_stool",
+                                         "y":  270
+                                     }
+                 }
+}

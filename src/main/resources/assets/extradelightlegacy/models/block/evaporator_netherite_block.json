@@ -1,0 +1,7 @@
+﻿{
+    "parent":  "extradelightlegacy:block/evaporator",
+    "textures":  {
+                     "2":  "extradelightlegacy:block/netherite_block",
+                     "particle":  "extradelightlegacy:block/netherite_block"
+                 }
+}

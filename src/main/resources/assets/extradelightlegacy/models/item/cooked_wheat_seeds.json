@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "extradelightlegacy:item/cooked_wheat_seeds"
+  }
+}

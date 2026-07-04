@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "extradelightlegacy:block/crimson_trapdoor",
+    "side": "extradelightlegacy:block/crimson_planks",
+    "top": "extradelightlegacy:block/crimson_planks"
+  }
+}

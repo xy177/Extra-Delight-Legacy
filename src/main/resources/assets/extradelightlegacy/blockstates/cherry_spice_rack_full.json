@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "extradelightlegacy:cherry_spice_rack_full" },
+    "facing=south": { "model": "extradelightlegacy:cherry_spice_rack_full", "y": 180 },
+    "facing=east": { "model": "extradelightlegacy:cherry_spice_rack_full", "y": 90 },
+    "facing=west": { "model": "extradelightlegacy:cherry_spice_rack_full", "y": 270 }
+  }
+}

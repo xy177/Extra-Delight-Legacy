@@ -1,0 +1,12 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "forge:fluid",
+    "custom": {
+      "fluid": "extradelightlegacy.milk_chocolate_syrup_fluid"
+    }
+  },
+  "variants": {
+    "normal": [{}]
+  }
+}

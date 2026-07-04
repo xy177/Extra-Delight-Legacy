@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "extradelightlegacy:cherry_wreath" },
+    "facing=south": { "model": "extradelightlegacy:cherry_wreath", "y": 180 },
+    "facing=east": { "model": "extradelightlegacy:cherry_wreath", "y": 90 },
+    "facing=west": { "model": "extradelightlegacy:cherry_wreath", "y": 270 }
+  }
+}

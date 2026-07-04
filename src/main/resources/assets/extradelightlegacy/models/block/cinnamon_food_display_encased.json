@@ -1,0 +1,7 @@
+{
+  "parent": "extradelightlegacy:block/food_display_encased_base",
+  "textures": {
+    "0": "extradelightlegacy:block/cinnamon_planks",
+    "particle": "extradelightlegacy:block/cinnamon_planks"
+  }
+}

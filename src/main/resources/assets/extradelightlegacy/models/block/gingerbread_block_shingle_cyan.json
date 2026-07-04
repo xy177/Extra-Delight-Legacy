@@ -1,0 +1,8 @@
+{
+  "parent": "extradelightlegacy:block/double_texture",
+  "textures": {
+    "0": "extradelightlegacy:block/gingerbread_block",
+    "1": "extradelightlegacy:block/frosting_colors/shingle_cyan",
+    "particle": "extradelightlegacy:block/frosting_colors/shingle_cyan"
+  }
+}

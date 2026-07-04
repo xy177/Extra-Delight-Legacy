@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=top": {
+      "model": "extradelightlegacy:cherry_molded_pink_wallpaper_top"
+    },
+    "half=bottom": {
+      "model": "extradelightlegacy:cherry_molded_pink_wallpaper_bottom"
+    }
+  }
+}

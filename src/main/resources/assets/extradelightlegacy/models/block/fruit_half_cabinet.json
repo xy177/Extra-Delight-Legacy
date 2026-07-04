@@ -1,0 +1,9 @@
+{
+  "parent": "extradelightlegacy:block/half_cabinet",
+  "textures": {
+    "0": "extradelightlegacy:block/fruit_cabinet_front",
+    "1": "extradelightlegacy:block/fruit_cabinet_side",
+    "2": "extradelightlegacy:block/fruit_cabinet_top",
+    "particle": "extradelightlegacy:block/fruit_cabinet_front"
+  }
+}

@@ -1,0 +1,19 @@
+{
+    "variants":  {
+                     "facing=north":  {
+                                          "model":  "extradelightlegacy:oak_step_stool"
+                                      },
+                     "facing=south":  {
+                                          "model":  "extradelightlegacy:oak_step_stool",
+                                          "y":  180
+                                      },
+                     "facing=east":  {
+                                         "model":  "extradelightlegacy:oak_step_stool",
+                                         "y":  90
+                                     },
+                     "facing=west":  {
+                                         "model":  "extradelightlegacy:oak_step_stool",
+                                         "y":  270
+                                     }
+                 }
+}

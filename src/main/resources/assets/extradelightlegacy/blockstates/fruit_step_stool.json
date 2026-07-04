@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "extradelightlegacy:fruit_step_stool"
+    },
+    "facing=south": {
+      "model": "extradelightlegacy:fruit_step_stool",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "extradelightlegacy:fruit_step_stool",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "extradelightlegacy:fruit_step_stool",
+      "y": 270
+    }
+  }
+}

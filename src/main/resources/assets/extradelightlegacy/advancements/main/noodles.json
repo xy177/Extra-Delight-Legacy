@@ -1,0 +1,49 @@
+{
+  "parent": "extradelightlegacy:main/doughshaping",
+  "display": {
+    "icon": {
+      "item": "extradelightlegacy:lasagna_noodles"
+    },
+    "title": {
+      "translate": "extradelightlegacy.advancement.noodles.name"
+    },
+    "description": {
+      "translate": "extradelightlegacy.advancement.noodles.desc"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "lasagna_noodles": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:lasagna_noodles"
+          }
+        ]
+      }
+    },
+    "macaroni_noodles": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:macaroni"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "lasagna_noodles",
+      "macaroni_noodles"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  }
+}

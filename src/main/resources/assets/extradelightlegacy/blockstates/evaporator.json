@@ -1,0 +1,19 @@
+﻿{
+    "variants":  {
+                     "style=0":  {
+                                     "model":  "extradelightlegacy:evaporator_anvil"
+                                 },
+                     "style=1":  {
+                                     "model":  "extradelightlegacy:evaporator_gold_block"
+                                 },
+                     "style=2":  {
+                                     "model":  "extradelightlegacy:evaporator_netherite_block"
+                                 },
+                     "style=3":  {
+                                     "model":  "extradelightlegacy:evaporator_copper_block"
+                                 },
+                     "style=4":  {
+                                     "model":  "extradelightlegacy:evaporator_iron_block"
+                                 }
+                 }
+}

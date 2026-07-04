@@ -1,0 +1,12 @@
+{
+    "textures":  {
+                     "north":  "extradelightlegacy:item/frosting_blue",
+                     "up":  "extradelightlegacy:item/frosting_blue",
+                     "west":  "extradelightlegacy:item/frosting_blue",
+                     "south":  "extradelightlegacy:item/frosting_blue",
+                     "particle":  "extradelightlegacy:item/frosting_blue",
+                     "east":  "extradelightlegacy:item/frosting_blue",
+                     "down":  "extradelightlegacy:block/gingerbread_block"
+                 },
+    "parent":  "minecraft:block/cube"
+}

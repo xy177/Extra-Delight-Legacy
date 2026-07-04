@@ -1,0 +1,11 @@
+{
+  "parent": "extradelightlegacy:block/sink_cabinet_bare",
+  "textures": {
+    "0": "extradelightlegacy:block/tap",
+    "1": "suikecherry:blocks/cherry_planks",
+    "2": "suikecherry:blocks/cherry_planks",
+    "3": "suikecherry:blocks/cherry_planks",
+    "4": "suikecherry:blocks/cherry_planks",
+    "particle": "extradelightlegacy:block/tap"
+  }
+}

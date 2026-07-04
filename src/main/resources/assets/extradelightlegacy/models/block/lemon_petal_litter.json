@@ -1,0 +1,7 @@
+{
+  "parent": "block/carpet",
+  "textures": {
+    "wool": "extradelightlegacy:block/crops/fruit/lemon/lemon_petal_litter",
+    "particle": "extradelightlegacy:block/crops/fruit/lemon/lemon_petal_litter"
+  }
+}

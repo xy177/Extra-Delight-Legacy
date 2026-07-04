@@ -1,0 +1,259 @@
+{
+  "variants": {
+    "facing=east,style=0": {
+      "model": "extradelightlegacy:cosmetics/vat/copper_block"
+    },
+    "facing=north,style=0": {
+      "model": "extradelightlegacy:cosmetics/vat/copper_block",
+      "y": 270
+    },
+    "facing=south,style=0": {
+      "model": "extradelightlegacy:cosmetics/vat/copper_block",
+      "y": 90
+    },
+    "facing=west,style=0": {
+      "model": "extradelightlegacy:cosmetics/vat/copper_block",
+      "y": 180
+    },
+    "facing=east,style=1": {
+      "model": "extradelightlegacy:cosmetics/vat/white_terracotta"
+    },
+    "facing=north,style=1": {
+      "model": "extradelightlegacy:cosmetics/vat/white_terracotta",
+      "y": 270
+    },
+    "facing=south,style=1": {
+      "model": "extradelightlegacy:cosmetics/vat/white_terracotta",
+      "y": 90
+    },
+    "facing=west,style=1": {
+      "model": "extradelightlegacy:cosmetics/vat/white_terracotta",
+      "y": 180
+    },
+    "facing=east,style=2": {
+      "model": "extradelightlegacy:cosmetics/vat/light_gray_terracotta"
+    },
+    "facing=north,style=2": {
+      "model": "extradelightlegacy:cosmetics/vat/light_gray_terracotta",
+      "y": 270
+    },
+    "facing=south,style=2": {
+      "model": "extradelightlegacy:cosmetics/vat/light_gray_terracotta",
+      "y": 90
+    },
+    "facing=west,style=2": {
+      "model": "extradelightlegacy:cosmetics/vat/light_gray_terracotta",
+      "y": 180
+    },
+    "facing=east,style=3": {
+      "model": "extradelightlegacy:cosmetics/vat/gray_terracotta"
+    },
+    "facing=north,style=3": {
+      "model": "extradelightlegacy:cosmetics/vat/gray_terracotta",
+      "y": 270
+    },
+    "facing=south,style=3": {
+      "model": "extradelightlegacy:cosmetics/vat/gray_terracotta",
+      "y": 90
+    },
+    "facing=west,style=3": {
+      "model": "extradelightlegacy:cosmetics/vat/gray_terracotta",
+      "y": 180
+    },
+    "facing=east,style=4": {
+      "model": "extradelightlegacy:cosmetics/vat/black_terracotta"
+    },
+    "facing=north,style=4": {
+      "model": "extradelightlegacy:cosmetics/vat/black_terracotta",
+      "y": 270
+    },
+    "facing=south,style=4": {
+      "model": "extradelightlegacy:cosmetics/vat/black_terracotta",
+      "y": 90
+    },
+    "facing=west,style=4": {
+      "model": "extradelightlegacy:cosmetics/vat/black_terracotta",
+      "y": 180
+    },
+    "facing=east,style=5": {
+      "model": "extradelightlegacy:cosmetics/vat/brown_terracotta"
+    },
+    "facing=north,style=5": {
+      "model": "extradelightlegacy:cosmetics/vat/brown_terracotta",
+      "y": 270
+    },
+    "facing=south,style=5": {
+      "model": "extradelightlegacy:cosmetics/vat/brown_terracotta",
+      "y": 90
+    },
+    "facing=west,style=5": {
+      "model": "extradelightlegacy:cosmetics/vat/brown_terracotta",
+      "y": 180
+    },
+    "facing=east,style=6": {
+      "model": "extradelightlegacy:cosmetics/vat/red_terracotta"
+    },
+    "facing=north,style=6": {
+      "model": "extradelightlegacy:cosmetics/vat/red_terracotta",
+      "y": 270
+    },
+    "facing=south,style=6": {
+      "model": "extradelightlegacy:cosmetics/vat/red_terracotta",
+      "y": 90
+    },
+    "facing=west,style=6": {
+      "model": "extradelightlegacy:cosmetics/vat/red_terracotta",
+      "y": 180
+    },
+    "facing=east,style=7": {
+      "model": "extradelightlegacy:cosmetics/vat/orange_terracotta"
+    },
+    "facing=north,style=7": {
+      "model": "extradelightlegacy:cosmetics/vat/orange_terracotta",
+      "y": 270
+    },
+    "facing=south,style=7": {
+      "model": "extradelightlegacy:cosmetics/vat/orange_terracotta",
+      "y": 90
+    },
+    "facing=west,style=7": {
+      "model": "extradelightlegacy:cosmetics/vat/orange_terracotta",
+      "y": 180
+    },
+    "facing=east,style=8": {
+      "model": "extradelightlegacy:cosmetics/vat/yellow_terracotta"
+    },
+    "facing=north,style=8": {
+      "model": "extradelightlegacy:cosmetics/vat/yellow_terracotta",
+      "y": 270
+    },
+    "facing=south,style=8": {
+      "model": "extradelightlegacy:cosmetics/vat/yellow_terracotta",
+      "y": 90
+    },
+    "facing=west,style=8": {
+      "model": "extradelightlegacy:cosmetics/vat/yellow_terracotta",
+      "y": 180
+    },
+    "facing=east,style=9": {
+      "model": "extradelightlegacy:cosmetics/vat/lime_terracotta"
+    },
+    "facing=north,style=9": {
+      "model": "extradelightlegacy:cosmetics/vat/lime_terracotta",
+      "y": 270
+    },
+    "facing=south,style=9": {
+      "model": "extradelightlegacy:cosmetics/vat/lime_terracotta",
+      "y": 90
+    },
+    "facing=west,style=9": {
+      "model": "extradelightlegacy:cosmetics/vat/lime_terracotta",
+      "y": 180
+    },
+    "facing=east,style=10": {
+      "model": "extradelightlegacy:cosmetics/vat/green_terracotta"
+    },
+    "facing=north,style=10": {
+      "model": "extradelightlegacy:cosmetics/vat/green_terracotta",
+      "y": 270
+    },
+    "facing=south,style=10": {
+      "model": "extradelightlegacy:cosmetics/vat/green_terracotta",
+      "y": 90
+    },
+    "facing=west,style=10": {
+      "model": "extradelightlegacy:cosmetics/vat/green_terracotta",
+      "y": 180
+    },
+    "facing=east,style=11": {
+      "model": "extradelightlegacy:cosmetics/vat/cyan_terracotta"
+    },
+    "facing=north,style=11": {
+      "model": "extradelightlegacy:cosmetics/vat/cyan_terracotta",
+      "y": 270
+    },
+    "facing=south,style=11": {
+      "model": "extradelightlegacy:cosmetics/vat/cyan_terracotta",
+      "y": 90
+    },
+    "facing=west,style=11": {
+      "model": "extradelightlegacy:cosmetics/vat/cyan_terracotta",
+      "y": 180
+    },
+    "facing=east,style=12": {
+      "model": "extradelightlegacy:cosmetics/vat/light_blue_terracotta"
+    },
+    "facing=north,style=12": {
+      "model": "extradelightlegacy:cosmetics/vat/light_blue_terracotta",
+      "y": 270
+    },
+    "facing=south,style=12": {
+      "model": "extradelightlegacy:cosmetics/vat/light_blue_terracotta",
+      "y": 90
+    },
+    "facing=west,style=12": {
+      "model": "extradelightlegacy:cosmetics/vat/light_blue_terracotta",
+      "y": 180
+    },
+    "facing=east,style=13": {
+      "model": "extradelightlegacy:cosmetics/vat/blue_terracotta"
+    },
+    "facing=north,style=13": {
+      "model": "extradelightlegacy:cosmetics/vat/blue_terracotta",
+      "y": 270
+    },
+    "facing=south,style=13": {
+      "model": "extradelightlegacy:cosmetics/vat/blue_terracotta",
+      "y": 90
+    },
+    "facing=west,style=13": {
+      "model": "extradelightlegacy:cosmetics/vat/blue_terracotta",
+      "y": 180
+    },
+    "facing=east,style=14": {
+      "model": "extradelightlegacy:cosmetics/vat/magenta_terracotta"
+    },
+    "facing=north,style=14": {
+      "model": "extradelightlegacy:cosmetics/vat/magenta_terracotta",
+      "y": 270
+    },
+    "facing=south,style=14": {
+      "model": "extradelightlegacy:cosmetics/vat/magenta_terracotta",
+      "y": 90
+    },
+    "facing=west,style=14": {
+      "model": "extradelightlegacy:cosmetics/vat/magenta_terracotta",
+      "y": 180
+    },
+    "facing=east,style=15": {
+      "model": "extradelightlegacy:cosmetics/vat/pink_terracotta"
+    },
+    "facing=north,style=15": {
+      "model": "extradelightlegacy:cosmetics/vat/pink_terracotta",
+      "y": 270
+    },
+    "facing=south,style=15": {
+      "model": "extradelightlegacy:cosmetics/vat/pink_terracotta",
+      "y": 90
+    },
+    "facing=west,style=15": {
+      "model": "extradelightlegacy:cosmetics/vat/pink_terracotta",
+      "y": 180
+    },
+    "facing=east,style=16": {
+      "model": "extradelightlegacy:cosmetics/vat/purple_terracotta"
+    },
+    "facing=north,style=16": {
+      "model": "extradelightlegacy:cosmetics/vat/purple_terracotta",
+      "y": 270
+    },
+    "facing=south,style=16": {
+      "model": "extradelightlegacy:cosmetics/vat/purple_terracotta",
+      "y": 90
+    },
+    "facing=west,style=16": {
+      "model": "extradelightlegacy:cosmetics/vat/purple_terracotta",
+      "y": 180
+    }
+  }
+}

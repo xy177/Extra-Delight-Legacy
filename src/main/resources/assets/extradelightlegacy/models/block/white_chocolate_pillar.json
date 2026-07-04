@@ -1,0 +1,7 @@
+{
+    "textures":  {
+                     "end":  "extradelightlegacy:block/cosmetics/chocolate/white_chocolate_style0",
+                     "side":  "extradelightlegacy:block/cosmetics/chocolate/white_chocolate_pillar"
+                 },
+    "parent":  "minecraft:block/cube_column"
+}

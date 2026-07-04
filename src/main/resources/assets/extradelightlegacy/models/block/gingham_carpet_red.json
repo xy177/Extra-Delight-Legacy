@@ -1,0 +1,7 @@
+{
+  "parent": "block/carpet",
+  "textures": {
+    "wool": "extradelightlegacy:block/gingham/red",
+    "particle": "extradelightlegacy:block/gingham/red"
+  }
+}

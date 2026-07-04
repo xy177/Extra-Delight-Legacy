@@ -1,0 +1,6 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "extradelightlegacy:block/crops/marshmallow/marshmallow_stage4"
+  }
+}

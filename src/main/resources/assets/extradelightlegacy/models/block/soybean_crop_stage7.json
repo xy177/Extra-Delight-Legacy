@@ -1,0 +1,7 @@
+﻿{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "extradelightlegacy:block/crops/soybeans/soybeans_stage7"
+  }
+}
+

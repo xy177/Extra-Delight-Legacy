@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "age=0,sterile=false": { "model": "extradelightlegacy:cinnamon_leaves_stage0" },
+    "age=0,sterile=true": { "model": "extradelightlegacy:cinnamon_leaves_stage0" },
+    "age=1,sterile=false": { "model": "extradelightlegacy:cinnamon_leaves_stage1" },
+    "age=1,sterile=true": { "model": "extradelightlegacy:cinnamon_leaves_stage1" },
+    "age=2,sterile=false": { "model": "extradelightlegacy:cinnamon_leaves_stage2" },
+    "age=2,sterile=true": { "model": "extradelightlegacy:cinnamon_leaves_stage2" },
+    "age=3,sterile=false": { "model": "extradelightlegacy:cinnamon_leaves_stage3" },
+    "age=3,sterile=true": { "model": "extradelightlegacy:cinnamon_leaves_stage3" }
+  }
+}

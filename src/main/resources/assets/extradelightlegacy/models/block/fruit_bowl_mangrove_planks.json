@@ -1,0 +1,7 @@
+{
+  "parent": "extradelightlegacy:block/fruit_bowl",
+  "textures": {
+    "0": "extradelightlegacy:block/mangrove_planks",
+    "particle": "extradelightlegacy:block/mangrove_planks"
+  }
+}

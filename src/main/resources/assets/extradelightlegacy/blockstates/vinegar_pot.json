@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "ready=false": { "model": "extradelightlegacy:vinegar_pot" },
+    "ready=true": { "model": "extradelightlegacy:vinegar_pot" }
+  }
+}

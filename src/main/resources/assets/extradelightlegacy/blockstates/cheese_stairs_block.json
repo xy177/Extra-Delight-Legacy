@@ -1,0 +1,174 @@
+{
+    "variants":  {
+                     "facing=south,half=top,shape=outer_left":  {
+                                                                    "y":  90,
+                                                                    "model":  "extradelightlegacy:cheese_stairs_block_outer",
+                                                                    "x":  180
+                                                                },
+                     "facing=north,half=bottom,shape=inner_right":  {
+                                                                        "model":  "extradelightlegacy:cheese_stairs_block_inner"
+                                                                    },
+                     "facing=north,half=bottom,shape=outer_left":  {
+                                                                       "model":  "extradelightlegacy:cheese_stairs_block_outer",
+                                                                       "y":  270
+                                                                   },
+                     "facing=east,half=top,shape=inner_left":  {
+                                                                   "model":  "extradelightlegacy:cheese_stairs_block_inner",
+                                                                   "x":  180
+                                                               },
+                     "facing=south,half=top,shape=inner_left":  {
+                                                                    "y":  90,
+                                                                    "model":  "extradelightlegacy:cheese_stairs_block_inner",
+                                                                    "x":  180
+                                                                },
+                     "facing=south,half=bottom,shape=straight":  {
+                                                                     "model":  "extradelightlegacy:cheese_stairs_block",
+                                                                     "y":  90
+                                                                 },
+                     "facing=north,half=bottom,shape=inner_left":  {
+                                                                       "model":  "extradelightlegacy:cheese_stairs_block_inner",
+                                                                       "y":  270
+                                                                   },
+                     "facing=south,half=bottom,shape=outer_left":  {
+                                                                       "model":  "extradelightlegacy:cheese_stairs_block_outer",
+                                                                       "y":  90
+                                                                   },
+                     "facing=west,half=top,shape=outer_left":  {
+                                                                   "y":  180,
+                                                                   "model":  "extradelightlegacy:cheese_stairs_block_outer",
+                                                                   "x":  180
+                                                               },
+                     "facing=east,half=bottom,shape=outer_left":  {
+                                                                      "model":  "extradelightlegacy:cheese_stairs_block_outer"
+                                                                  },
+                     "facing=south,half=top,shape=inner_right":  {
+                                                                     "y":  180,
+                                                                     "model":  "extradelightlegacy:cheese_stairs_block_inner",
+                                                                     "x":  180
+                                                                 },
+                     "facing=west,half=bottom,shape=straight":  {
+                                                                    "model":  "extradelightlegacy:cheese_stairs_block",
+                                                                    "y":  180
+                                                                },
+                     "facing=east,half=bottom,shape=outer_right":  {
+                                                                       "model":  "extradelightlegacy:cheese_stairs_block_outer",
+                                                                       "y":  90
+                                                                   },
+                     "facing=south,half=bottom,shape=inner_left":  {
+                                                                       "model":  "extradelightlegacy:cheese_stairs_block_inner",
+                                                                       "y":  90
+                                                                   },
+                     "facing=north,half=top,shape=inner_left":  {
+                                                                    "y":  270,
+                                                                    "model":  "extradelightlegacy:cheese_stairs_block_inner",
+                                                                    "x":  180
+                                                                },
+                     "facing=north,half=bottom,shape=outer_right":  {
+                                                                        "model":  "extradelightlegacy:cheese_stairs_block_outer"
+                                                                    },
+                     "facing=west,half=bottom,shape=inner_left":  {
+                                                                      "model":  "extradelightlegacy:cheese_stairs_block_inner",
+                                                                      "y":  180
+                                                                  },
+                     "facing=south,half=top,shape=outer_right":  {
+                                                                     "y":  180,
+                                                                     "model":  "extradelightlegacy:cheese_stairs_block_outer",
+                                                                     "x":  180
+                                                                 },
+                     "facing=west,half=top,shape=straight":  {
+                                                                 "y":  180,
+                                                                 "model":  "extradelightlegacy:cheese_stairs_block",
+                                                                 "x":  180
+                                                             },
+                     "facing=north,half=top,shape=inner_right":  {
+                                                                     "model":  "extradelightlegacy:cheese_stairs_block_inner",
+                                                                     "x":  180
+                                                                 },
+                     "facing=south,half=top,shape=straight":  {
+                                                                  "y":  90,
+                                                                  "model":  "extradelightlegacy:cheese_stairs_block",
+                                                                  "x":  180
+                                                              },
+                     "facing=east,half=bottom,shape=straight":  {
+                                                                    "model":  "extradelightlegacy:cheese_stairs_block"
+                                                                },
+                     "facing=north,half=top,shape=outer_right":  {
+                                                                     "model":  "extradelightlegacy:cheese_stairs_block_outer",
+                                                                     "x":  180
+                                                                 },
+                     "facing=east,half=bottom,shape=inner_left":  {
+                                                                      "model":  "extradelightlegacy:cheese_stairs_block_inner"
+                                                                  },
+                     "facing=west,half=bottom,shape=inner_right":  {
+                                                                       "model":  "extradelightlegacy:cheese_stairs_block_inner",
+                                                                       "y":  270
+                                                                   },
+                     "facing=east,half=top,shape=outer_right":  {
+                                                                    "y":  90,
+                                                                    "model":  "extradelightlegacy:cheese_stairs_block_outer",
+                                                                    "x":  180
+                                                                },
+                     "facing=west,half=bottom,shape=outer_left":  {
+                                                                      "model":  "extradelightlegacy:cheese_stairs_block_outer",
+                                                                      "y":  180
+                                                                  },
+                     "facing=east,half=top,shape=outer_left":  {
+                                                                   "model":  "extradelightlegacy:cheese_stairs_block_outer",
+                                                                   "x":  180
+                                                               },
+                     "facing=north,half=top,shape=straight":  {
+                                                                  "y":  270,
+                                                                  "model":  "extradelightlegacy:cheese_stairs_block",
+                                                                  "x":  180
+                                                              },
+                     "facing=south,half=bottom,shape=outer_right":  {
+                                                                        "model":  "extradelightlegacy:cheese_stairs_block_outer",
+                                                                        "y":  180
+                                                                    },
+                     "facing=north,half=bottom,shape=straight":  {
+                                                                     "model":  "extradelightlegacy:cheese_stairs_block",
+                                                                     "y":  270
+                                                                 },
+                     "facing=west,half=top,shape=inner_right":  {
+                                                                    "y":  270,
+                                                                    "model":  "extradelightlegacy:cheese_stairs_block_inner",
+                                                                    "x":  180
+                                                                },
+                     "facing=west,half=bottom,shape=outer_right":  {
+                                                                       "model":  "extradelightlegacy:cheese_stairs_block_outer",
+                                                                       "y":  270
+                                                                   },
+                     "facing=west,half=top,shape=outer_right":  {
+                                                                    "y":  270,
+                                                                    "model":  "extradelightlegacy:cheese_stairs_block_outer",
+                                                                    "x":  180
+                                                                },
+                     "facing=east,half=top,shape=inner_right":  {
+                                                                    "y":  90,
+                                                                    "model":  "extradelightlegacy:cheese_stairs_block_inner",
+                                                                    "x":  180
+                                                                },
+                     "facing=west,half=top,shape=inner_left":  {
+                                                                   "y":  180,
+                                                                   "model":  "extradelightlegacy:cheese_stairs_block_inner",
+                                                                   "x":  180
+                                                               },
+                     "facing=north,half=top,shape=outer_left":  {
+                                                                    "y":  270,
+                                                                    "model":  "extradelightlegacy:cheese_stairs_block_outer",
+                                                                    "x":  180
+                                                                },
+                     "facing=south,half=bottom,shape=inner_right":  {
+                                                                        "model":  "extradelightlegacy:cheese_stairs_block_inner",
+                                                                        "y":  180
+                                                                    },
+                     "facing=east,half=top,shape=straight":  {
+                                                                 "model":  "extradelightlegacy:cheese_stairs_block",
+                                                                 "x":  180
+                                                             },
+                     "facing=east,half=bottom,shape=inner_right":  {
+                                                                       "model":  "extradelightlegacy:cheese_stairs_block_inner",
+                                                                       "y":  90
+                                                                   }
+                 }
+}

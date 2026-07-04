@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "variant=default": {
+      "model": "extradelightlegacy:fruit_slab_double"
+    }
+  }
+}

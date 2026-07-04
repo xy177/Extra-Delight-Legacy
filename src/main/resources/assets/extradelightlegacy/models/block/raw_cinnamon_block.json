@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "extradelightlegacy:block/raw_cinnamon_block_top",
+    "side": "extradelightlegacy:block/raw_cinnamon_block_sides"
+  }
+}

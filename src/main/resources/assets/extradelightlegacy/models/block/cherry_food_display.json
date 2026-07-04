@@ -1,0 +1,7 @@
+{
+  "parent": "extradelightlegacy:block/food_display_base",
+  "textures": {
+    "0": "suikecherry:blocks/cherry_planks",
+    "particle": "suikecherry:blocks/cherry_planks"
+  }
+}

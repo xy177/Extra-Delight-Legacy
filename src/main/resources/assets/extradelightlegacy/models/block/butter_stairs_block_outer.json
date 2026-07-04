@@ -1,0 +1,8 @@
+{
+    "textures":  {
+                     "bottom":  "extradelightlegacy:block/butter_block",
+                     "top":  "extradelightlegacy:block/butter_block",
+                     "side":  "extradelightlegacy:block/butter_block"
+                 },
+    "parent":  "minecraft:block/outer_stairs"
+}

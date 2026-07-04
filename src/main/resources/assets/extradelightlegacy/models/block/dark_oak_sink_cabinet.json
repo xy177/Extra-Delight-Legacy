@@ -1,0 +1,11 @@
+{
+  "parent": "extradelightlegacy:block/sink_cabinet_bare",
+  "textures": {
+    "0": "extradelightlegacy:block/tap",
+    "1": "farmersdelight:block/dark_oak_cabinet_front",
+    "2": "farmersdelight:block/dark_oak_cabinet_side",
+    "3": "farmersdelight:block/dark_oak_cabinet_top",
+    "4": "minecraft:blocks/planks_big_oak",
+    "particle": "extradelightlegacy:block/tap"
+  }
+}

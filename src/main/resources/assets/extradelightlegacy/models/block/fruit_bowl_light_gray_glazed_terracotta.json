@@ -1,0 +1,7 @@
+{
+  "parent": "extradelightlegacy:block/fruit_bowl",
+  "textures": {
+    "0": "minecraft:blocks/glazed_terracotta_silver",
+    "particle": "minecraft:blocks/glazed_terracotta_silver"
+  }
+}

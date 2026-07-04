@@ -1,0 +1,46 @@
+{
+  "parent": "extradelightlegacy:main/start",
+  "display": {
+    "icon": {
+      "item": "extradelightlegacy:yeast_pot"
+    },
+    "title": {
+      "translate": "extradelightlegacy.advancement.yeastpot.name"
+    },
+    "description": {
+      "translate": "extradelightlegacy.advancement.yeastpot.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "yeast": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:yeast"
+          }
+        ]
+      }
+    },
+    "yeastpot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:yeast_pot"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "yeast",
+      "yeastpot"
+    ]
+  ]
+}

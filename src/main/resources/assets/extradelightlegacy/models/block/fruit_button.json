@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "extradelightlegacy:block/fruit_planks"
+  }
+}

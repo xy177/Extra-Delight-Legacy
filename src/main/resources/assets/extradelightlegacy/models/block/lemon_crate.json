@@ -1,0 +1,13 @@
+﻿{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "extradelightlegacy:block/crates/oak_crate_bottom",
+    "east": "extradelightlegacy:block/lemon_crate_side",
+    "north": "extradelightlegacy:block/lemon_crate_side",
+    "particle": "extradelightlegacy:block/lemon_crate_top",
+    "south": "extradelightlegacy:block/lemon_crate_side",
+    "up": "extradelightlegacy:block/lemon_crate_top",
+    "west": "extradelightlegacy:block/lemon_crate_side"
+  }
+}
+

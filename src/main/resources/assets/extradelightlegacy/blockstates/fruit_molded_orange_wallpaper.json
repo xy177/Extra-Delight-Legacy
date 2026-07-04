@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=top": {
+      "model": "extradelightlegacy:fruit_molded_orange_wallpaper_top"
+    },
+    "half=bottom": {
+      "model": "extradelightlegacy:fruit_molded_orange_wallpaper_bottom"
+    }
+  }
+}

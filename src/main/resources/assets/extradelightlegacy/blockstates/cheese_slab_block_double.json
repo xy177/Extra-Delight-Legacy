@@ -1,0 +1,7 @@
+{
+    "variants":  {
+                     "variant=default":  {
+                                             "model":  "extradelightlegacy:cheese_slab_block_double"
+                                         }
+                 }
+}

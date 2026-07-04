@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "encased=false,facing=north": { "model": "extradelightlegacy:birch_food_display" },
+    "encased=false,facing=east": { "model": "extradelightlegacy:birch_food_display", "y": 90 },
+    "encased=false,facing=south": { "model": "extradelightlegacy:birch_food_display", "y": 180 },
+    "encased=false,facing=west": { "model": "extradelightlegacy:birch_food_display", "y": 270 },
+    "encased=true,facing=north": { "model": "extradelightlegacy:birch_food_display_encased" },
+    "encased=true,facing=east": { "model": "extradelightlegacy:birch_food_display_encased", "y": 90 },
+    "encased=true,facing=south": { "model": "extradelightlegacy:birch_food_display_encased", "y": 180 },
+    "encased=true,facing=west": { "model": "extradelightlegacy:birch_food_display_encased", "y": 270 }
+  }
+}

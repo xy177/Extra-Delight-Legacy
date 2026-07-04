@@ -1,0 +1,7 @@
+﻿{
+  "parent": "extradelightlegacy:block/lemonade_tray_stage3",
+  "textures": {
+    "4": "extradelightlegacy:item/orangeade"
+  }
+}
+

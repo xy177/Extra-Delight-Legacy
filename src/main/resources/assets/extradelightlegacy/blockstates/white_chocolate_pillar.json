@@ -1,0 +1,16 @@
+{
+    "variants":  {
+                     "axis=y":  {
+                                    "model":  "extradelightlegacy:white_chocolate_pillar"
+                                },
+                     "axis=x":  {
+                                    "y":  90,
+                                    "model":  "extradelightlegacy:white_chocolate_pillar",
+                                    "x":  90
+                                },
+                     "axis=z":  {
+                                    "model":  "extradelightlegacy:white_chocolate_pillar",
+                                    "x":  90
+                                }
+                 }
+}

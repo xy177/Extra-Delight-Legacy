@@ -1,0 +1,35 @@
+{
+  "parent": "extradelightlegacy:main/start",
+  "display": {
+    "icon": {
+      "item": "extradelightlegacy:melting_pot"
+    },
+    "title": {
+      "translate": "extradelightlegacy.advancement.melting_pot.name"
+    },
+    "description": {
+      "translate": "extradelightlegacy.advancement.melting_pot.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "melting_pot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extradelightlegacy:melting_pot"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "melting_pot"
+    ]
+  ]
+}

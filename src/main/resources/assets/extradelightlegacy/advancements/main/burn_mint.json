@@ -1,0 +1,28 @@
+{
+  "parent": "extradelightlegacy:main/start",
+  "display": {
+    "icon": {
+      "item": "extradelightlegacy:mint"
+    },
+    "title": {
+      "translate": "extradelightlegacy.advancement.burn_mint.name"
+    },
+    "description": {
+      "translate": "extradelightlegacy.advancement.burn_mint.desc"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "burn_mint": {
+      "trigger": "extradelightlegacy:burn_mint"
+    }
+  },
+  "requirements": [
+    [
+      "burn_mint"
+    ]
+  ]
+}

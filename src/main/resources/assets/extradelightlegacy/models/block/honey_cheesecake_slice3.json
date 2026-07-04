@@ -1,0 +1,8 @@
+{
+  "parent": "extradelightlegacy:block/pie_slice3",
+  "textures": {
+    "inner": "extradelightlegacy:block/honey_cheesecake_inner",
+    "particle": "extradelightlegacy:block/honey_cheesecake_top",
+    "top": "extradelightlegacy:block/honey_cheesecake_top"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "extradelightlegacy:crimson_knife_block" },
+    "facing=east": { "model": "extradelightlegacy:crimson_knife_block", "y": 90 },
+    "facing=south": { "model": "extradelightlegacy:crimson_knife_block", "y": 180 },
+    "facing=west": { "model": "extradelightlegacy:crimson_knife_block", "y": 270 }
+  }
+}

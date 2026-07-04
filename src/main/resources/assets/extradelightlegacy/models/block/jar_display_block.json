@@ -1,0 +1,7 @@
+{
+  "parent": "block/block",
+  "textures": {
+    "particle": "extradelightlegacy:block/glass_jar"
+  },
+  "elements": []
+}

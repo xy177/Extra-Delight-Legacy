@@ -1,0 +1,8 @@
+{
+    "textures":  {
+                     "bottom":  "extradelightlegacy:block/cosmetics/chocolate/white_chocolate_style0",
+                     "top":  "extradelightlegacy:block/cosmetics/chocolate/white_chocolate_style0",
+                     "side":  "extradelightlegacy:block/cosmetics/chocolate/white_chocolate_style0"
+                 },
+    "parent":  "minecraft:block/stairs"
+}

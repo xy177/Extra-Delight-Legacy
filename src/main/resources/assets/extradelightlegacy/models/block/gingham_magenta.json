@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "extradelightlegacy:block/gingham/magenta",
+    "particle": "extradelightlegacy:block/gingham/magenta"
+  }
+}

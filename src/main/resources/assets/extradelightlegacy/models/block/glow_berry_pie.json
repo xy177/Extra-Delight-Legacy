@@ -1,0 +1,8 @@
+{
+  "parent": "extradelightlegacy:block/pie",
+  "textures": {
+    "inner": "extradelightlegacy:block/glow_berry_pie_inner",
+    "particle": "extradelightlegacy:block/glow_berry_pie_top",
+    "top": "extradelightlegacy:block/glow_berry_pie_top"
+  }
+}

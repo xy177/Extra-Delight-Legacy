@@ -1,0 +1,8 @@
+{
+  "parent": "extradelightlegacy:block/pie",
+  "textures": {
+    "inner": "extradelightlegacy:block/steak_and_pickled_onion_pie_inner",
+    "particle": "extradelightlegacy:block/meat_pie_top",
+    "top": "extradelightlegacy:block/meat_pie_top"
+  }
+}

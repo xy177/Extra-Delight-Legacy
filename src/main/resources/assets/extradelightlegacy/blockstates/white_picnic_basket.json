@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "extradelightlegacy:white_picnic_basket",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "extradelightlegacy:white_picnic_basket"
+    },
+    "facing=south": {
+      "model": "extradelightlegacy:white_picnic_basket",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "extradelightlegacy:white_picnic_basket",
+      "y": 270
+    }
+  }
+}

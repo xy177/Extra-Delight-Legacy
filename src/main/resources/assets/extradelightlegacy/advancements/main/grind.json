@@ -1,0 +1,28 @@
+{
+  "parent": "extradelightlegacy:main/mortar",
+  "display": {
+    "icon": {
+      "item": "extradelightlegacy:pestle_endstone"
+    },
+    "title": {
+      "translate": "extradelightlegacy.advancement.grind.name"
+    },
+    "description": {
+      "translate": "extradelightlegacy.advancement.grind.desc"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "grind": {
+      "trigger": "extradelightlegacy:grind"
+    }
+  },
+  "requirements": [
+    [
+      "grind"
+    ]
+  ]
+}

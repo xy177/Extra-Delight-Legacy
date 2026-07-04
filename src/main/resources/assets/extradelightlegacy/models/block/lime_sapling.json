@@ -1,0 +1,7 @@
+﻿{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "extradelightlegacy:block/crops/fruit/lime/lime_sapling"
+  }
+}
+

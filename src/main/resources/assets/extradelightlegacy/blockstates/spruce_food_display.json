@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "encased=false,facing=north": { "model": "extradelightlegacy:spruce_food_display" },
+    "encased=false,facing=east": { "model": "extradelightlegacy:spruce_food_display", "y": 90 },
+    "encased=false,facing=south": { "model": "extradelightlegacy:spruce_food_display", "y": 180 },
+    "encased=false,facing=west": { "model": "extradelightlegacy:spruce_food_display", "y": 270 },
+    "encased=true,facing=north": { "model": "extradelightlegacy:spruce_food_display_encased" },
+    "encased=true,facing=east": { "model": "extradelightlegacy:spruce_food_display_encased", "y": 90 },
+    "encased=true,facing=south": { "model": "extradelightlegacy:spruce_food_display_encased", "y": 180 },
+    "encased=true,facing=west": { "model": "extradelightlegacy:spruce_food_display_encased", "y": 270 }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "extradelightlegacy:block/half_cabinet",
+  "textures": {
+    "0": "suikecherry:blocks/cherry_planks",
+    "1": "suikecherry:blocks/cherry_planks",
+    "2": "suikecherry:blocks/cherry_planks",
+    "particle": "suikecherry:blocks/cherry_planks"
+  }
+}

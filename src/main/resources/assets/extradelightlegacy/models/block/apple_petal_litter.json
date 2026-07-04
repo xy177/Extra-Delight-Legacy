@@ -1,0 +1,7 @@
+{
+  "parent": "block/carpet",
+  "textures": {
+    "wool": "extradelightlegacy:block/crops/fruit/apple/apple_leaves_budding",
+    "particle": "extradelightlegacy:block/crops/fruit/apple/apple_leaves_budding"
+  }
+}

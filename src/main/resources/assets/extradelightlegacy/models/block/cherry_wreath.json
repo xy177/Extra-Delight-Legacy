@@ -1,0 +1,7 @@
+{
+  "parent": "extradelightlegacy:block/oak_wreath",
+  "textures": {
+    "all": "suikecherry:blocks/cherry_leaves",
+    "particle": "suikecherry:blocks/cherry_leaves"
+  }
+}

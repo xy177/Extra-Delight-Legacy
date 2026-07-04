@@ -1,0 +1,19 @@
+{
+    "variants":  {
+                     "facing=north":  {
+                                          "model":  "extradelightlegacy:acacia_wreath"
+                                      },
+                     "facing=south":  {
+                                          "model":  "extradelightlegacy:acacia_wreath",
+                                          "y":  180
+                                      },
+                     "facing=east":  {
+                                         "model":  "extradelightlegacy:acacia_wreath",
+                                         "y":  90
+                                     },
+                     "facing=west":  {
+                                         "model":  "extradelightlegacy:acacia_wreath",
+                                         "y":  270
+                                     }
+                 }
+}

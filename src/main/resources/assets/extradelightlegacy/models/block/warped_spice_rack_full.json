@@ -1,0 +1,9 @@
+{
+  "parent": "extradelightlegacy:block/oak_spice_rack_full",
+  "textures": {
+    "0": "extradelightlegacy:block/warped_planks",
+    "1": "extradelightlegacy:block/spicerack",
+    "2": "extradelightlegacy:block/warped_ornate",
+    "particle": "extradelightlegacy:block/warped_planks"
+  }
+}

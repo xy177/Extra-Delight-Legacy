@@ -1,0 +1,6 @@
+﻿{
+  "parent": "extradelightlegacy:block/fondue_pot_stage1",
+  "textures": {
+    "5": "extradelightlegacy:liquid/dark_chocolate_syrup_still"
+  }
+}

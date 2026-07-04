@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "age=0": { "model": "extradelightlegacy:ginger_crop_stage0" },
+    "age=1": { "model": "extradelightlegacy:ginger_crop_stage1" },
+    "age=2": { "model": "extradelightlegacy:ginger_crop_stage2" },
+    "age=3": { "model": "extradelightlegacy:ginger_crop_stage3" },
+    "age=4": { "model": "extradelightlegacy:ginger_crop_stage3" },
+    "age=5": { "model": "extradelightlegacy:ginger_crop_stage3" },
+    "age=6": { "model": "extradelightlegacy:ginger_crop_stage3" },
+    "age=7": { "model": "extradelightlegacy:ginger_crop_stage3" }
+  }
+}

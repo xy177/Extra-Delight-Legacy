@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "extradelightlegacy:block/fruit_cabinet_front_open",
+    "side": "extradelightlegacy:block/fruit_cabinet_side",
+    "top": "extradelightlegacy:block/fruit_cabinet_top"
+  }
+}

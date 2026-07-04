@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "extradelightlegacy:block/bags/lime_bag_bottom",
+    "side": "extradelightlegacy:block/bags/lime_bag_side",
+    "top": "extradelightlegacy:block/soybean_bag_top"
+  }
+}

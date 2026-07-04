@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "suikecherry:blocks/cherry_trapdoor",
+    "side": "suikecherry:blocks/cherry_planks",
+    "top": "suikecherry:blocks/cherry_planks"
+  }
+}

@@ -1,0 +1,176 @@
+package xy177.extradelightlegacy.common.block;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.ITileEntityProvider;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.material.Material;
+import net.minecraft.block.properties.PropertyInteger;
+import net.minecraft.block.state.BlockStateContainer;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.util.EnumBlockRenderType;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.NonNullList;
+import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
+import xy177.extradelightlegacy.ExtraDelightLegacy;
+import xy177.extradelightlegacy.common.crafting.MixingBowlRecipeManager;
+import xy177.extradelightlegacy.common.gui.EDLGuiHandler;
+import xy177.extradelightlegacy.common.item.ItemOffsetSpatula;
+import xy177.extradelightlegacy.common.tile.TileEntityMixingBowl;
+
+import javax.annotation.Nullable;
+
+public class BlockMixingBowl extends Block implements ITileEntityProvider, IStyleableBlock {
+    public static final PropertyInteger STYLE = PropertyInteger.create("style", 0, 49);
+    private static final AxisAlignedBB BOWL_BOX = new AxisAlignedBB(0.125D, 0.0D, 0.125D, 0.875D, 0.375D, 0.875D);
+
+    public BlockMixingBowl() {
+        super(Material.WOOD);
+        setHardness(0.5F);
+        setResistance(1.0F);
+        setSoundType(SoundType.WOOD);
+        setLightOpacity(0);
+        setDefaultState(blockState.getBaseState().withProperty(STYLE, 0));
+    }
+
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta) {
+        return new TileEntityMixingBowl();
+    }
+
+    @Override
+    public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player,
+                                    EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
+        TileEntity tile = world.getTileEntity(pos);
+        if (!(tile instanceof TileEntityMixingBowl)) {
+            return false;
+        }
+        TileEntityMixingBowl bowl = (TileEntityMixingBowl) tile;
+        ItemStack held = player.getHeldItem(hand);
+
+        if (!held.isEmpty() && held.getItem() instanceof ItemOffsetSpatula) {
+            if (!world.isRemote) {
+                if (player.isSneaking()) {
+                    player.openGui(ExtraDelightLegacy.instance, EDLGuiHandler.STYLEABLE, world, pos.getX(), pos.getY(), pos.getZ());
+                } else {
+                    setNextStyle(world, pos, state);
+                    if (!player.capabilities.isCreativeMode && held.isItemStackDamageable()) {
+                        held.damageItem(1, player);
+                    }
+                    world.playSound(null, pos, net.minecraft.init.SoundEvents.BLOCK_SLIME_PLACE, net.minecraft.util.SoundCategory.BLOCKS, 1.0F, 1.0F);
+                }
+            }
+            return true;
+        }
+
+        if (!world.isRemote && bowl.handleEgg(player, held)) {
+            return true;
+        }
+        if (!world.isRemote && bowl.handleFluidContainer(player, held)) {
+            return true;
+        }
+        if (MixingBowlRecipeManager.isValidUtensil(held)) {
+            if (!world.isRemote) {
+                bowl.stir(player, held);
+            }
+            return true;
+        }
+        if (!world.isRemote) {
+            player.openGui(ExtraDelightLegacy.instance, EDLGuiHandler.MIXING_BOWL, world, pos.getX(), pos.getY(), pos.getZ());
+        }
+        return true;
+    }
+
+    @Override
+    public void breakBlock(World world, BlockPos pos, IBlockState state) {
+        TileEntity tile = world.getTileEntity(pos);
+        if (tile instanceof TileEntityMixingBowl) {
+            TileEntityMixingBowl bowl = (TileEntityMixingBowl) tile;
+            for (ItemStack stack : bowl.getItems()) {
+                if (!stack.isEmpty()) {
+                    spawnAsEntity(world, pos, stack);
+                }
+            }
+            bowl.clear();
+        }
+        super.breakBlock(world, pos, state);
+    }
+
+    @Override
+    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
+        return BOWL_BOX;
+    }
+
+    @Nullable
+    @Override
+    public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos) {
+        return BOWL_BOX;
+    }
+
+    @Override
+    public boolean isOpaqueCube(IBlockState state) {
+        return false;
+    }
+
+    @Override
+    public boolean isFullCube(IBlockState state) {
+        return false;
+    }
+
+    @Override
+    public BlockRenderLayer getBlockLayer() {
+        return BlockRenderLayer.CUTOUT;
+    }
+
+    @Override
+    public EnumBlockRenderType getRenderType(IBlockState state) {
+        return EnumBlockRenderType.MODEL;
+    }
+
+    @Override
+    public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
+        StyleableBlockHelper.addDropWithTileStyle(drops, this, world, pos);
+    }
+
+    @Override
+    public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
+        return state.withProperty(STYLE, StyleableBlockHelper.getTileStyle(worldIn, pos, 0));
+    }
+
+    @Override
+    public int getStyleCount() {
+        return 50;
+    }
+
+    @Override
+    public int getCurrentStyle(IBlockState state) {
+        return state.getValue(STYLE);
+    }
+
+    @Override
+    public IBlockState withStyle(IBlockState state, int style) {
+        return state.withProperty(STYLE, Math.max(0, Math.min(49, style)));
+    }
+
+    @Override
+    public IBlockState getStateFromMeta(int meta) {
+        return getDefaultState();
+    }
+
+    @Override
+    public int getMetaFromState(IBlockState state) {
+        return 0;
+    }
+
+    @Override
+    protected BlockStateContainer createBlockState() {
+        return new BlockStateContainer(this, STYLE);
+    }
+}

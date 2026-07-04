@@ -1,0 +1,8 @@
+{
+    "textures":  {
+                     "bottom":  "extradelightlegacy:block/butter_block",
+                     "top":  "extradelightlegacy:block/butter_block",
+                     "side":  "extradelightlegacy:block/butter_slab"
+                 },
+    "parent":  "minecraft:block/half_slab"
+}

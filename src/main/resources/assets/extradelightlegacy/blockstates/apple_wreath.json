@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "extradelightlegacy:apple_wreath"
+    },
+    "facing=south": {
+      "model": "extradelightlegacy:apple_wreath",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "extradelightlegacy:apple_wreath",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "extradelightlegacy:apple_wreath",
+      "y": 270
+    }
+  }
+}

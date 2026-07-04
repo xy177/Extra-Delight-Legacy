@@ -1,0 +1,8 @@
+{
+  "parent": "extradelightlegacy:block/pie_dish",
+  "textures": {
+    "0": "extradelightlegacy:block/cosmetics/pans/base",
+    "1": "extradelightlegacy:block/cosmetics/pans/base_bottom",
+    "particle": "extradelightlegacy:block/cosmetics/pans/base"
+  }
+}

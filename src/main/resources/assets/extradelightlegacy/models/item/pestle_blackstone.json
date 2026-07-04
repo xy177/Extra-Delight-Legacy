@@ -1,0 +1,6 @@
+{
+  "parent": "extradelightlegacy:item/pestle",
+  "textures": {
+    "0": "nb:blocks/black_stone_side"
+  }
+}

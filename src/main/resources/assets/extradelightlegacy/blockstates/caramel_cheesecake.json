@@ -1,0 +1,124 @@
+{
+  "variants": {
+    "facing=north,servings=0": {
+      "model": "extradelightlegacy:caramel_cheesecake_slice3"
+    },
+    "facing=north,servings=1": {
+      "model": "extradelightlegacy:caramel_cheesecake_slice3"
+    },
+    "facing=north,servings=2": {
+      "model": "extradelightlegacy:caramel_cheesecake_slice2"
+    },
+    "facing=north,servings=3": {
+      "model": "extradelightlegacy:caramel_cheesecake_slice1"
+    },
+    "facing=north,servings=4": {
+      "model": "extradelightlegacy:caramel_cheesecake"
+    },
+    "facing=north,servings=5": {
+      "model": "extradelightlegacy:caramel_cheesecake"
+    },
+    "facing=north,servings=6": {
+      "model": "extradelightlegacy:caramel_cheesecake"
+    },
+    "facing=north,servings=7": {
+      "model": "extradelightlegacy:caramel_cheesecake"
+    },
+    "facing=east,servings=0": {
+      "model": "extradelightlegacy:caramel_cheesecake_slice3",
+      "y": 90
+    },
+    "facing=east,servings=1": {
+      "model": "extradelightlegacy:caramel_cheesecake_slice3",
+      "y": 90
+    },
+    "facing=east,servings=2": {
+      "model": "extradelightlegacy:caramel_cheesecake_slice2",
+      "y": 90
+    },
+    "facing=east,servings=3": {
+      "model": "extradelightlegacy:caramel_cheesecake_slice1",
+      "y": 90
+    },
+    "facing=east,servings=4": {
+      "model": "extradelightlegacy:caramel_cheesecake",
+      "y": 90
+    },
+    "facing=east,servings=5": {
+      "model": "extradelightlegacy:caramel_cheesecake",
+      "y": 90
+    },
+    "facing=east,servings=6": {
+      "model": "extradelightlegacy:caramel_cheesecake",
+      "y": 90
+    },
+    "facing=east,servings=7": {
+      "model": "extradelightlegacy:caramel_cheesecake",
+      "y": 90
+    },
+    "facing=south,servings=0": {
+      "model": "extradelightlegacy:caramel_cheesecake_slice3",
+      "y": 180
+    },
+    "facing=south,servings=1": {
+      "model": "extradelightlegacy:caramel_cheesecake_slice3",
+      "y": 180
+    },
+    "facing=south,servings=2": {
+      "model": "extradelightlegacy:caramel_cheesecake_slice2",
+      "y": 180
+    },
+    "facing=south,servings=3": {
+      "model": "extradelightlegacy:caramel_cheesecake_slice1",
+      "y": 180
+    },
+    "facing=south,servings=4": {
+      "model": "extradelightlegacy:caramel_cheesecake",
+      "y": 180
+    },
+    "facing=south,servings=5": {
+      "model": "extradelightlegacy:caramel_cheesecake",
+      "y": 180
+    },
+    "facing=south,servings=6": {
+      "model": "extradelightlegacy:caramel_cheesecake",
+      "y": 180
+    },
+    "facing=south,servings=7": {
+      "model": "extradelightlegacy:caramel_cheesecake",
+      "y": 180
+    },
+    "facing=west,servings=0": {
+      "model": "extradelightlegacy:caramel_cheesecake_slice3",
+      "y": 270
+    },
+    "facing=west,servings=1": {
+      "model": "extradelightlegacy:caramel_cheesecake_slice3",
+      "y": 270
+    },
+    "facing=west,servings=2": {
+      "model": "extradelightlegacy:caramel_cheesecake_slice2",
+      "y": 270
+    },
+    "facing=west,servings=3": {
+      "model": "extradelightlegacy:caramel_cheesecake_slice1",
+      "y": 270
+    },
+    "facing=west,servings=4": {
+      "model": "extradelightlegacy:caramel_cheesecake",
+      "y": 270
+    },
+    "facing=west,servings=5": {
+      "model": "extradelightlegacy:caramel_cheesecake",
+      "y": 270
+    },
+    "facing=west,servings=6": {
+      "model": "extradelightlegacy:caramel_cheesecake",
+      "y": 270
+    },
+    "facing=west,servings=7": {
+      "model": "extradelightlegacy:caramel_cheesecake",
+      "y": 270
+    }
+  }
+}

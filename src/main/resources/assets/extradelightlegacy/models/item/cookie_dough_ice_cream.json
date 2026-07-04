@@ -1,0 +1,7 @@
+﻿{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "extradelightlegacy:item/cookie_dough_ice_cream"
+  }
+}
+

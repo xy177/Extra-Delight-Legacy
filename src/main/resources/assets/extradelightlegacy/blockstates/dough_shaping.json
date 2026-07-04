@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "extradelightlegacy:doughforming",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "extradelightlegacy:doughforming"
+    },
+    "facing=south": {
+      "model": "extradelightlegacy:doughforming",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "extradelightlegacy:doughforming",
+      "y": 270
+    }
+  }
+}

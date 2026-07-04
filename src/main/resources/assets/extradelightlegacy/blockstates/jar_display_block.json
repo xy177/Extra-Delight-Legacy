@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "extradelightlegacy:jar_display_block" },
+    "facing=east": { "model": "extradelightlegacy:jar_display_block" },
+    "facing=south": { "model": "extradelightlegacy:jar_display_block" },
+    "facing=west": { "model": "extradelightlegacy:jar_display_block" }
+  }
+}

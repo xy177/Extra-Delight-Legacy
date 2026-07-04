@@ -1,0 +1,6 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "extradelightlegacy:block/crops/chili/chili_stage3"
+  }
+}

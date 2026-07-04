@@ -1,0 +1,9 @@
+{
+  "parent": "extradelightlegacy:block/half_cabinet",
+  "textures": {
+    "0": "extradelightlegacy:block/warped_planks",
+    "1": "extradelightlegacy:block/warped_planks",
+    "2": "extradelightlegacy:block/warped_planks",
+    "particle": "extradelightlegacy:block/warped_planks"
+  }
+}

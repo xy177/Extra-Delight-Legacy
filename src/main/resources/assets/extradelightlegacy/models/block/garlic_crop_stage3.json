@@ -1,0 +1,6 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "extradelightlegacy:block/crops/garlic/garlic_stage3"
+  }
+}

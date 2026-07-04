@@ -1,0 +1,49 @@
+{
+    "multipart":  [
+                      {
+                          "apply":  {
+                                        "model":  "extradelightlegacy:milk_chocolate_fence_post"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "north":  "true"
+                                   },
+                          "apply":  {
+                                        "y":  0,
+                                        "uvlock":  true,
+                                        "model":  "extradelightlegacy:milk_chocolate_fence_side"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "east":  "true"
+                                   },
+                          "apply":  {
+                                        "y":  90,
+                                        "uvlock":  true,
+                                        "model":  "extradelightlegacy:milk_chocolate_fence_side"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "south":  "true"
+                                   },
+                          "apply":  {
+                                        "y":  180,
+                                        "uvlock":  true,
+                                        "model":  "extradelightlegacy:milk_chocolate_fence_side"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "west":  "true"
+                                   },
+                          "apply":  {
+                                        "y":  270,
+                                        "uvlock":  true,
+                                        "model":  "extradelightlegacy:milk_chocolate_fence_side"
+                                    }
+                      }
+                  ]
+}

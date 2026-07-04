@@ -1,0 +1,9 @@
+{
+  "parent": "extradelightlegacy:block/half_cabinet",
+  "textures": {
+    "0": "extradelightlegacy:block/cinnamon_cabinet_front_open",
+    "1": "extradelightlegacy:block/cinnamon_cabinet_side",
+    "2": "extradelightlegacy:block/cinnamon_cabinet_top",
+    "particle": "extradelightlegacy:block/cinnamon_cabinet_front"
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "textures":  {
+                     "bottom":  "extradelightlegacy:block/cheese_block",
+                     "top":  "extradelightlegacy:block/cheese_block",
+                     "side":  "extradelightlegacy:block/cheese_slab"
+                 },
+    "parent":  "minecraft:block/upper_slab"
+}

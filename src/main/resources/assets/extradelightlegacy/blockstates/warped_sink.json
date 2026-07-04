@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=east": { "model": "extradelightlegacy:warped_sink_cabinet", "y": 90 },
+    "facing=north": { "model": "extradelightlegacy:warped_sink_cabinet" },
+    "facing=south": { "model": "extradelightlegacy:warped_sink_cabinet", "y": 180 },
+    "facing=west": { "model": "extradelightlegacy:warped_sink_cabinet", "y": 270 }
+  }
+}

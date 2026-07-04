@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "extradelightlegacy:birch_knife_block"
+    },
+    "facing=east": {
+      "model": "extradelightlegacy:birch_knife_block",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "extradelightlegacy:birch_knife_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "extradelightlegacy:birch_knife_block",
+      "y": 270
+    }
+  }
+}

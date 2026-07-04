@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "extradelightlegacy:stripped_fruit_wood"
+    },
+    "axis=x": {
+      "model": "extradelightlegacy:stripped_fruit_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=z": {
+      "model": "extradelightlegacy:stripped_fruit_wood",
+      "x": 90
+    }
+  }
+}
