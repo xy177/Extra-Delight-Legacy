@@ -26,6 +26,7 @@ import net.minecraftforge.fluids.capability.IFluidTankProperties;
 import xy177.extradelightlegacy.common.crafting.BottleFluidRecipeManager;
 import xy177.extradelightlegacy.common.crafting.ChillerRecipe;
 import xy177.extradelightlegacy.common.crafting.ChillerRecipeManager;
+import xy177.extradelightlegacy.common.crafting.MixingBowlIngredient;
 import xy177.extradelightlegacy.common.util.FluidContainerHelper;
 
 import javax.annotation.Nullable;
@@ -466,6 +467,11 @@ public class TileEntityChiller extends TileEntity implements ITickable, IFluidHa
     }
 
     private void craft(ChillerRecipe recipe) {
+        int[] matchedSlots = recipe.matchIngredientSlots(getIngredientStacks());
+        if (matchedSlots == null) {
+            cookTime = 0;
+            return;
+        }
         ItemStack output = recipe.getOutput();
         ItemStack current = items.get(RESULT_SLOT);
         if (current.isEmpty()) {
@@ -474,19 +480,13 @@ public class TileEntityChiller extends TileEntity implements ITickable, IFluidHa
             current.grow(output.getCount());
         }
 
-        for (int i = 0; i < INGREDIENT_SLOTS; i++) {
-            ItemStack stack = items.get(i);
-            if (!stack.isEmpty()) {
-                ItemStack container = stack.getItem().getContainerItem(stack);
-                stack.shrink(1);
-                if (!container.isEmpty()) {
-                    EntityItem entity = new EntityItem(world, pos.getX() + 0.5D, pos.getY() + 0.5D, pos.getZ() + 0.5D, container);
-                    entity.setDefaultPickupDelay();
-                    world.spawnEntity(entity);
-                }
-                if (stack.isEmpty()) {
-                    items.set(i, ItemStack.EMPTY);
-                }
+        for (int i = 0; i < matchedSlots.length; i++) {
+            int slot = matchedSlots[i];
+            ItemStack stack = items.get(slot);
+            MixingBowlIngredient ingredient = recipe.getIngredients().get(i);
+            consumeIngredient(stack, ingredient.getRequiredCount());
+            if (stack.isEmpty()) {
+                items.set(slot, ItemStack.EMPTY);
             }
         }
 
@@ -502,6 +502,17 @@ public class TileEntityChiller extends TileEntity implements ITickable, IFluidHa
             drain(fluid.amount);
         }
         cookTime = 0;
+    }
+
+    private void consumeIngredient(ItemStack stack, int count) {
+        ItemStack container = stack.getItem().getContainerItem(stack);
+        stack.shrink(count);
+        for (int i = 0; i < count && !container.isEmpty(); i++) {
+            EntityItem entity = new EntityItem(world, pos.getX() + 0.5D, pos.getY() + 0.5D,
+                pos.getZ() + 0.5D, container.copy());
+            entity.setDefaultPickupDelay();
+            world.spawnEntity(entity);
+        }
     }
 
     private ItemStack[] getIngredientStacks() {

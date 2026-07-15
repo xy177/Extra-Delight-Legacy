@@ -4,14 +4,20 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
 
 public final class BottleFluidRecipe {
+    private final String id;
     private final ItemStack bottle;
     private final FluidStack fluid;
     private final ItemStack bucket;
 
-    BottleFluidRecipe(ItemStack bottle, FluidStack fluid, ItemStack bucket) {
+    BottleFluidRecipe(String id, ItemStack bottle, FluidStack fluid, ItemStack bucket) {
+        this.id = id;
         this.bottle = bottle.copy();
         this.fluid = fluid.copy();
         this.bucket = bucket.copy();
+    }
+
+    public String getId() {
+        return id;
     }
 
     public ItemStack getBottle() {
@@ -27,7 +33,7 @@ public final class BottleFluidRecipe {
     }
 
     public boolean matchesBottle(ItemStack stack) {
-        return !stack.isEmpty() && ItemStack.areItemsEqual(bottle, stack);
+        return RecipeManagerUtil.stackMatches(bottle, stack);
     }
 
     public boolean matchesFluid(FluidStack stack) {

@@ -121,9 +121,11 @@ public class TileEntityOven extends TileEntity implements ITickable {
             }
             MixingBowlIngredient ingredient = recipe.getIngredients().get(i);
             ItemStack container = stack.getItem().getContainerItem(stack);
-            stack.shrink(ingredient.getRequiredCount());
-            if (!container.isEmpty()) {
-                EntityItem entity = new EntityItem(world, pos.getX() + 0.5D, pos.getY() + 0.7D, pos.getZ() + 0.5D, container);
+            int requiredCount = ingredient.getRequiredCount();
+            stack.shrink(requiredCount);
+            for (int containerIndex = 0; containerIndex < requiredCount && !container.isEmpty(); containerIndex++) {
+                EntityItem entity = new EntityItem(world, pos.getX() + 0.5D, pos.getY() + 0.7D,
+                    pos.getZ() + 0.5D, container.copy());
                 entity.setDefaultPickupDelay();
                 world.spawnEntity(entity);
             }

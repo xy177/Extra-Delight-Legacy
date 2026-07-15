@@ -1,9 +1,15 @@
 package xy177.extradelightlegacy.integration.jei;
 
+import com.wdcftgg.farmersdelightlegacy.client.jei.HuntingDropJeiRecipe;
+import com.wdcftgg.farmersdelightlegacy.common.recipe.HuntingDropRecipeManager;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.IModRegistry;
+import mezz.jei.api.IJeiRuntime;
+import mezz.jei.api.IRecipeRegistry;
 import mezz.jei.api.JEIPlugin;
+import mezz.jei.api.recipe.IRecipeCategory;
 import mezz.jei.api.recipe.IRecipeCategoryRegistration;
+import mezz.jei.api.recipe.IRecipeWrapper;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import xy177.extradelightlegacy.common.crafting.BottleFluidRecipe;
@@ -39,6 +45,11 @@ import java.util.Map;
 
 @JEIPlugin
 public class ExtraDelightLegacyJeiPlugin implements IModPlugin {
+    private static final String HUNTING_DROPS = "farmersdelight.hunting_drops";
+    private static final String BUTCHER_PREFIX = "extradelightlegacy:butcher/";
+    private static final Map<String, List<IRecipeWrapper>> ACTIVE_RECIPES = new LinkedHashMap<>();
+    private static IJeiRuntime jeiRuntime;
+
     @Override
     public void registerCategories(IRecipeCategoryRegistration registry) {
         registry.addRecipeCategories(
@@ -59,17 +70,17 @@ public class ExtraDelightLegacyJeiPlugin implements IModPlugin {
     @Override
     public void register(IModRegistry registry) {
         EDLRecipes.init();
-        registry.addRecipes(createDryingRecipes(), EDLJeiRecipeTypes.DRYING);
-        registry.addRecipes(createMortarRecipes(), EDLJeiRecipeTypes.MORTAR);
-        registry.addRecipes(createDoughShapingRecipes(), EDLJeiRecipeTypes.DOUGH_SHAPING);
-        registry.addRecipes(createBottleFluidRecipes(), EDLJeiRecipeTypes.BOTTLE_FLUID);
-        registry.addRecipes(createMixingBowlRecipes(), EDLJeiRecipeTypes.MIXING_BOWL);
-        registry.addRecipes(createChillerRecipes(), EDLJeiRecipeTypes.CHILLER);
-        registry.addRecipes(createMeltingPotRecipes(), EDLJeiRecipeTypes.MELTING_POT);
-        registry.addRecipes(createOvenRecipes(), EDLJeiRecipeTypes.OVEN);
-        registry.addRecipes(createJuicerRecipes(), EDLJeiRecipeTypes.JUICER);
-        registry.addRecipes(createVatRecipes(), EDLJeiRecipeTypes.VAT);
-        registry.addRecipes(createEvaporatorRecipes(), EDLJeiRecipeTypes.EVAPORATOR);
+        registerManaged(registry, EDLJeiRecipeTypes.DRYING, createDryingRecipes());
+        registerManaged(registry, EDLJeiRecipeTypes.MORTAR, createMortarRecipes());
+        registerManaged(registry, EDLJeiRecipeTypes.DOUGH_SHAPING, createDoughShapingRecipes());
+        registerManaged(registry, EDLJeiRecipeTypes.BOTTLE_FLUID, createBottleFluidRecipes());
+        registerManaged(registry, EDLJeiRecipeTypes.MIXING_BOWL, createMixingBowlRecipes());
+        registerManaged(registry, EDLJeiRecipeTypes.CHILLER, createChillerRecipes());
+        registerManaged(registry, EDLJeiRecipeTypes.MELTING_POT, createMeltingPotRecipes());
+        registerManaged(registry, EDLJeiRecipeTypes.OVEN, createOvenRecipes());
+        registerManaged(registry, EDLJeiRecipeTypes.JUICER, createJuicerRecipes());
+        registerManaged(registry, EDLJeiRecipeTypes.VAT, createVatRecipes());
+        registerManaged(registry, EDLJeiRecipeTypes.EVAPORATOR, createEvaporatorRecipes());
         if (EDLBlocks.DRYING_RACK.getItemBlock() != null) {
             registry.addRecipeCatalyst(new ItemStack(EDLBlocks.DRYING_RACK.getItemBlock()), EDLJeiRecipeTypes.DRYING);
         }
@@ -118,6 +129,69 @@ public class ExtraDelightLegacyJeiPlugin implements IModPlugin {
             registry.addRecipeCatalyst(recipe.getBucket(), EDLJeiRecipeTypes.BOTTLE_FLUID);
         }
         hideSourceHiddenItems(registry);
+    }
+
+    @Override
+    public void onRuntimeAvailable(IJeiRuntime runtime) {
+        jeiRuntime = runtime;
+    }
+
+    public static void refreshAllRecipes() {
+        if (jeiRuntime == null) {
+            return;
+        }
+        refreshCategory(EDLJeiRecipeTypes.DRYING, createDryingRecipes());
+        refreshCategory(EDLJeiRecipeTypes.MORTAR, createMortarRecipes());
+        refreshCategory(EDLJeiRecipeTypes.DOUGH_SHAPING, createDoughShapingRecipes());
+        refreshCategory(EDLJeiRecipeTypes.BOTTLE_FLUID, createBottleFluidRecipes());
+        refreshCategory(EDLJeiRecipeTypes.MIXING_BOWL, createMixingBowlRecipes());
+        refreshCategory(EDLJeiRecipeTypes.CHILLER, createChillerRecipes());
+        refreshCategory(EDLJeiRecipeTypes.MELTING_POT, createMeltingPotRecipes());
+        refreshCategory(EDLJeiRecipeTypes.OVEN, createOvenRecipes());
+        refreshCategory(EDLJeiRecipeTypes.JUICER, createJuicerRecipes());
+        refreshCategory(EDLJeiRecipeTypes.VAT, createVatRecipes());
+        refreshCategory(EDLJeiRecipeTypes.EVAPORATOR, createEvaporatorRecipes());
+        refreshButcherRecipes();
+    }
+
+    private static void registerManaged(IModRegistry registry, String uid, List<? extends IRecipeWrapper> recipes) {
+        List<IRecipeWrapper> active = new ArrayList<>(recipes);
+        ACTIVE_RECIPES.put(uid, active);
+        registry.addRecipes(active, uid);
+    }
+
+    private static void refreshCategory(String uid, List<? extends IRecipeWrapper> recipes) {
+        IRecipeRegistry registry = jeiRuntime.getRecipeRegistry();
+        List<IRecipeWrapper> active = ACTIVE_RECIPES.computeIfAbsent(uid, ignored -> new ArrayList<>());
+        for (IRecipeWrapper recipe : active) {
+            registry.removeRecipe(recipe, uid);
+        }
+        active.clear();
+        active.addAll(recipes);
+        for (IRecipeWrapper recipe : active) {
+            registry.addRecipe(recipe, uid);
+        }
+    }
+
+    @SuppressWarnings({"rawtypes", "unchecked"})
+    private static void refreshButcherRecipes() {
+        IRecipeRegistry registry = jeiRuntime.getRecipeRegistry();
+        IRecipeCategory category = registry.getRecipeCategory(HUNTING_DROPS);
+        if (category == null) {
+            return;
+        }
+        List<IRecipeWrapper> wrappers = new ArrayList<>(registry.getRecipeWrappers(category));
+        for (IRecipeWrapper wrapper : wrappers) {
+            if (wrapper instanceof HuntingDropJeiRecipe
+                && ((HuntingDropJeiRecipe) wrapper).getRecipeId().startsWith(BUTCHER_PREFIX)) {
+                registry.removeRecipe(wrapper, HUNTING_DROPS);
+            }
+        }
+        for (HuntingDropRecipeManager.HuntingDropRecipeView recipe : HuntingDropRecipeManager.getRecipes()) {
+            if (recipe.getKey().startsWith(BUTCHER_PREFIX)) {
+                registry.addRecipe(HuntingDropJeiRecipe.of(recipe), HUNTING_DROPS);
+            }
+        }
     }
 
     private static void hideSourceHiddenItems(IModRegistry registry) {

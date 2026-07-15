@@ -191,7 +191,7 @@ public class TileEntityMeltingPot extends TileEntity implements ITickable, IFlui
         }
 
         addFluid(recipe.getOutput());
-        input.shrink(1);
+        input.shrink(recipe.getInput().getRequiredCount());
         if (input.isEmpty()) {
             items.set(INPUT_SLOT, ItemStack.EMPTY);
         }

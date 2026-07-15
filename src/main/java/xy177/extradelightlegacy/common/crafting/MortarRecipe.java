@@ -4,20 +4,30 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
 
 public final class MortarRecipe {
-    private final ItemStack input;
+    private final String id;
+    private final MixingBowlIngredient input;
     private final ItemStack output;
     private final FluidStack fluidOutput;
     private final int grinds;
 
-    MortarRecipe(ItemStack input, ItemStack output, FluidStack fluidOutput, int grinds) {
-        this.input = input.copy();
+    MortarRecipe(String id, MixingBowlIngredient input, ItemStack output, FluidStack fluidOutput, int grinds) {
+        this.id = id;
+        this.input = input;
         this.output = output.copy();
         this.fluidOutput = fluidOutput == null ? null : fluidOutput.copy();
         this.grinds = grinds;
     }
 
+    public String getId() {
+        return id;
+    }
+
     public ItemStack getInput() {
-        return input.copy();
+        return input == null ? ItemStack.EMPTY : input.getDisplayStack();
+    }
+
+    public MixingBowlIngredient getIngredient() {
+        return input;
     }
 
     public ItemStack getOutput() {
@@ -33,6 +43,6 @@ public final class MortarRecipe {
     }
 
     public boolean matches(ItemStack stack) {
-        return !stack.isEmpty() && ItemStack.areItemsEqual(input, stack);
+        return input != null && input.matches(stack);
     }
 }

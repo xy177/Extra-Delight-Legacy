@@ -3,12 +3,10 @@ package xy177.extradelightlegacy.common.crafting;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public final class MortarRecipeManager {
-    private static final List<MortarRecipe> RECIPES = new ArrayList<>();
+    private static final ManagedRecipeRegistry<MortarRecipe> RECIPES = new ManagedRecipeRegistry<>();
 
     private MortarRecipeManager() {
     }
@@ -22,15 +20,21 @@ public final class MortarRecipeManager {
     }
 
     public static void register(ItemStack input, ItemStack output, FluidStack fluidOutput, int grinds) {
-        if (input.isEmpty() || (output.isEmpty() && isEmptyFluid(fluidOutput)) || grinds <= 0) {
-            return;
-        }
+        register(RecipeManagerUtil.generatedId("mortar", input, output, fluidOutput),
+            MixingBowlIngredient.stack(input), output, fluidOutput, grinds);
+    }
 
-        RECIPES.add(new MortarRecipe(input, output, fluidOutput, grinds));
+    public static boolean register(String id, MixingBowlIngredient input, ItemStack output, FluidStack fluidOutput, int grinds) {
+        if (input == null || input.getRequiredCount() != 1 || input.getDisplayStack().isEmpty()
+            || (output.isEmpty() && isEmptyFluid(fluidOutput)) || grinds <= 0) {
+            return false;
+        }
+        String normalized = RecipeManagerUtil.normalizeId(id);
+        return normalized != null && RECIPES.register(normalized, new MortarRecipe(normalized, input, output, fluidOutput, grinds));
     }
 
     public static MortarRecipe find(ItemStack stack) {
-        for (MortarRecipe recipe : RECIPES) {
+        for (MortarRecipe recipe : RECIPES.getRecipes()) {
             if (recipe.matches(stack)) {
                 return recipe;
             }
@@ -39,7 +43,31 @@ public final class MortarRecipeManager {
     }
 
     public static List<MortarRecipe> getRecipes() {
-        return Collections.unmodifiableList(RECIPES);
+        return RECIPES.getRecipes();
+    }
+
+    public static boolean remove(String id) {
+        return RECIPES.remove(id);
+    }
+
+    public static int removeByItemOutput(ItemStack output) {
+        return RECIPES.removeIf(recipe -> RecipeManagerUtil.stackMatches(output, recipe.getOutput()));
+    }
+
+    public static int removeByFluidOutput(FluidStack output) {
+        return RECIPES.removeIf(recipe -> RecipeManagerUtil.fluidMatches(output, recipe.getFluidOutput()));
+    }
+
+    public static int removeAll() {
+        return RECIPES.removeAll();
+    }
+
+    public static void captureBaseline() {
+        RECIPES.captureBaseline();
+    }
+
+    public static void restoreBaseline() {
+        RECIPES.restoreBaseline();
     }
 
     private static boolean isEmptyFluid(FluidStack stack) {

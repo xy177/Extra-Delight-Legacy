@@ -2,7 +2,6 @@ package xy177.extradelightlegacy.common.crafting;
 
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.oredict.OreDictionary;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -67,37 +66,13 @@ public final class VatRecipe {
             return false;
         }
         if (actualContainer.isEmpty() || actualContainer.getCount() < container.getCount()
-            || !OreDictionary.itemMatches(container, actualContainer, false)) {
+            || !RecipeManagerUtil.stackMatches(container, actualContainer)) {
             return false;
         }
-        return matchesItems(inputs);
+        return matchIngredientSlots(inputs) != null;
     }
 
-    private boolean matchesItems(ItemStack[] inputs) {
-        List<ItemStack> actual = new ArrayList<>();
-        for (ItemStack input : inputs) {
-            if (!input.isEmpty()) {
-                actual.add(input);
-            }
-        }
-        if (actual.size() != ingredients.size()) {
-            return false;
-        }
-
-        boolean[] used = new boolean[actual.size()];
-        for (MixingBowlIngredient ingredient : ingredients) {
-            boolean matched = false;
-            for (int i = 0; i < actual.size(); i++) {
-                if (!used[i] && ingredient.matches(actual.get(i))) {
-                    used[i] = true;
-                    matched = true;
-                    break;
-                }
-            }
-            if (!matched) {
-                return false;
-            }
-        }
-        return true;
+    public int[] matchIngredientSlots(ItemStack[] inputs) {
+        return IngredientSlotMatcher.match(ingredients, inputs);
     }
 }

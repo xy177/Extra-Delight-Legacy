@@ -64,37 +64,13 @@ public final class ChillerRecipe {
                 return false;
         }
         if (!container.isEmpty() && (actualContainer.isEmpty() || actualContainer.getCount() < container.getCount()
-            || !net.minecraftforge.oredict.OreDictionary.itemMatches(container, actualContainer, false))) {
+            || !RecipeManagerUtil.stackMatches(container, actualContainer))) {
             return false;
         }
-        return matchesItems(inputs);
+        return matchIngredientSlots(inputs) != null;
     }
 
-    private boolean matchesItems(ItemStack[] inputs) {
-        List<ItemStack> actual = new ArrayList<>();
-        for (ItemStack input : inputs) {
-            if (!input.isEmpty()) {
-                actual.add(input);
-            }
-        }
-        if (actual.size() != ingredients.size()) {
-            return false;
-        }
-
-        boolean[] used = new boolean[actual.size()];
-        for (MixingBowlIngredient ingredient : ingredients) {
-            boolean matched = false;
-            for (int i = 0; i < actual.size(); i++) {
-                if (!used[i] && ingredient.matches(actual.get(i))) {
-                    used[i] = true;
-                    matched = true;
-                    break;
-                }
-            }
-            if (!matched) {
-                return false;
-            }
-        }
-        return true;
+    public int[] matchIngredientSlots(ItemStack[] inputs) {
+        return IngredientSlotMatcher.match(ingredients, inputs);
     }
 }

@@ -2,12 +2,10 @@ package xy177.extradelightlegacy.common.crafting;
 
 import net.minecraft.item.ItemStack;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public final class DryingRackRecipeManager {
-    private static final List<DryingRackRecipe> RECIPES = new ArrayList<>();
+    private static final ManagedRecipeRegistry<DryingRackRecipe> RECIPES = new ManagedRecipeRegistry<>();
 
     private DryingRackRecipeManager() {
     }
@@ -17,15 +15,20 @@ public final class DryingRackRecipeManager {
     }
 
     public static void register(ItemStack input, ItemStack output, int cookingTime) {
-        if (input.isEmpty() || output.isEmpty() || cookingTime <= 0) {
-            return;
-        }
+        register(RecipeManagerUtil.generatedId("drying", input, output), MixingBowlIngredient.stack(input), output, cookingTime);
+    }
 
-        RECIPES.add(new DryingRackRecipe(input, output, cookingTime));
+    public static boolean register(String id, MixingBowlIngredient input, ItemStack output, int cookingTime) {
+        if (input == null || input.getRequiredCount() != 1 || input.getDisplayStack().isEmpty()
+            || output.isEmpty() || cookingTime <= 0) {
+            return false;
+        }
+        String normalized = RecipeManagerUtil.normalizeId(id);
+        return normalized != null && RECIPES.register(normalized, new DryingRackRecipe(normalized, input, output, cookingTime));
     }
 
     public static DryingRackRecipe find(ItemStack stack) {
-        for (DryingRackRecipe recipe : RECIPES) {
+        for (DryingRackRecipe recipe : RECIPES.getRecipes()) {
             if (recipe.matches(stack)) {
                 return recipe;
             }
@@ -34,6 +37,26 @@ public final class DryingRackRecipeManager {
     }
 
     public static List<DryingRackRecipe> getRecipes() {
-        return Collections.unmodifiableList(RECIPES);
+        return RECIPES.getRecipes();
+    }
+
+    public static boolean remove(String id) {
+        return RECIPES.remove(id);
+    }
+
+    public static int removeByOutput(ItemStack output) {
+        return RECIPES.removeIf(recipe -> RecipeManagerUtil.stackMatches(output, recipe.getOutput()));
+    }
+
+    public static int removeAll() {
+        return RECIPES.removeAll();
+    }
+
+    public static void captureBaseline() {
+        RECIPES.captureBaseline();
+    }
+
+    public static void restoreBaseline() {
+        RECIPES.restoreBaseline();
     }
 }

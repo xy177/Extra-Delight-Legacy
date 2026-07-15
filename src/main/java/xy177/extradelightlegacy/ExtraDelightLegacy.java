@@ -9,6 +9,7 @@ import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -70,12 +71,12 @@ import xy177.extradelightlegacy.common.tile.TileEntityUnripeSalami;
     modid = ExtraDelightLegacy.MODID,
     name = ExtraDelightLegacy.NAME,
     version = ExtraDelightLegacy.VERSION,
-    dependencies = "required-after:farmersdelight;after:brewinandchewinlegacy;after:jei;after:suikecherry"
+    dependencies = "required-after:farmersdelight;after:brewinandchewinlegacy;after:crafttweaker;after:jei;after:suikecherry"
 )
 public class ExtraDelightLegacy {
     public static final String MODID = "extradelightlegacy";
     public static final String NAME = "ExtraDelight";
-    public static final String VERSION = "1.0.0";
+    public static final String VERSION = "1.1.0";
 
     @Mod.Instance(MODID)
     public static ExtraDelightLegacy instance;
@@ -94,6 +95,7 @@ public class ExtraDelightLegacy {
         MinecraftForge.EVENT_BUS.register(new ButcherDropEventHandler());
         MinecraftForge.EVENT_BUS.register(new PickledEffectEventHandler());
         MinecraftForge.EVENT_BUS.register(new EDLLootTableEventHandler());
+        registerCraftTweakerCompat();
         EDLFluids.registerFluids();
         GameRegistry.registerTileEntity(TileEntityDryingRack.class, MODID + ":drying_rack");
         GameRegistry.registerTileEntity(TileEntityMortar.class, MODID + ":mortar");
@@ -126,6 +128,20 @@ public class ExtraDelightLegacy {
         GameRegistry.registerTileEntity(TileEntityVatLidStyleable.class, MODID + ":styleable_vat_lid");
         if (event.getSide().isClient()) {
             EDLClientRegistry.preInit();
+        }
+    }
+
+    private static void registerCraftTweakerCompat() {
+        if (!Loader.isModLoaded("crafttweaker")) {
+            return;
+        }
+        try {
+            Object handler = Class.forName(
+                "xy177.extradelightlegacy.common.compat.crafttweaker.CraftTweakerEventHandler"
+            ).newInstance();
+            MinecraftForge.EVENT_BUS.register(handler);
+        } catch (ReflectiveOperationException exception) {
+            logger.error("Failed to initialize CraftTweaker compatibility", exception);
         }
     }
 

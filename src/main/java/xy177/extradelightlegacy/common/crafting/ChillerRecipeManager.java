@@ -3,12 +3,10 @@ package xy177.extradelightlegacy.common.crafting;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public final class ChillerRecipeManager {
-    private static final List<ChillerRecipe> RECIPES = new ArrayList<>();
+    private static final ManagedRecipeRegistry<ChillerRecipe> RECIPES = new ManagedRecipeRegistry<>();
 
     private ChillerRecipeManager() {
     }
@@ -17,19 +15,24 @@ public final class ChillerRecipeManager {
         RECIPES.clear();
     }
 
-    public static void register(String name, List<MixingBowlIngredient> ingredients, FluidStack fluid,
-                                ItemStack container, ItemStack output, int cookingTime, boolean consumeContainer) {
-        if (name == null || name.isEmpty() || output.isEmpty() || ingredients.size() > 4 || cookingTime <= 0) {
-            return;
+    public static boolean register(String name, List<MixingBowlIngredient> ingredients, FluidStack fluid,
+                                   ItemStack container, ItemStack output, int cookingTime, boolean consumeContainer) {
+        if (ingredients == null || output.isEmpty() || ingredients.size() > 4 || cookingTime <= 0) {
+            return false;
         }
         if (fluid != null && (fluid.amount <= 0 || fluid.getFluid() == null)) {
-            return;
+            return false;
         }
-        RECIPES.add(new ChillerRecipe(name, ingredients, fluid, container, output, cookingTime, consumeContainer));
+        if (ingredients.isEmpty() && fluid == null && (container == null || container.isEmpty())) {
+            return false;
+        }
+        String normalized = RecipeManagerUtil.normalizeId(name);
+        return normalized != null && RECIPES.register(normalized,
+            new ChillerRecipe(name, ingredients, fluid, container, output, cookingTime, consumeContainer));
     }
 
     public static ChillerRecipe find(ItemStack[] inputs, ItemStack container, FluidStack fluid) {
-        for (ChillerRecipe recipe : RECIPES) {
+        for (ChillerRecipe recipe : RECIPES.getRecipes()) {
             if (recipe.matches(inputs, container, fluid)) {
                 return recipe;
             }
@@ -41,9 +44,9 @@ public final class ChillerRecipeManager {
         if (stack.isEmpty()) {
             return false;
         }
-        for (ChillerRecipe recipe : RECIPES) {
+        for (ChillerRecipe recipe : RECIPES.getRecipes()) {
             for (MixingBowlIngredient ingredient : recipe.getIngredients()) {
-                if (ingredient.matches(stack)) {
+                if (ingredient.matchesIgnoringCount(stack)) {
                     return true;
                 }
             }
@@ -55,9 +58,9 @@ public final class ChillerRecipeManager {
         if (stack.isEmpty()) {
             return false;
         }
-        for (ChillerRecipe recipe : RECIPES) {
+        for (ChillerRecipe recipe : RECIPES.getRecipes()) {
             ItemStack container = recipe.getContainer();
-            if (!container.isEmpty() && net.minecraftforge.oredict.OreDictionary.itemMatches(container, stack, false)) {
+            if (!container.isEmpty() && RecipeManagerUtil.stackMatches(container, stack)) {
                 return true;
             }
         }
@@ -65,6 +68,26 @@ public final class ChillerRecipeManager {
     }
 
     public static List<ChillerRecipe> getRecipes() {
-        return Collections.unmodifiableList(RECIPES);
+        return RECIPES.getRecipes();
+    }
+
+    public static boolean remove(String id) {
+        return RECIPES.remove(id);
+    }
+
+    public static int removeByOutput(ItemStack output) {
+        return RECIPES.removeIf(recipe -> RecipeManagerUtil.stackMatches(output, recipe.getOutput()));
+    }
+
+    public static int removeAll() {
+        return RECIPES.removeAll();
+    }
+
+    public static void captureBaseline() {
+        RECIPES.captureBaseline();
+    }
+
+    public static void restoreBaseline() {
+        RECIPES.restoreBaseline();
     }
 }

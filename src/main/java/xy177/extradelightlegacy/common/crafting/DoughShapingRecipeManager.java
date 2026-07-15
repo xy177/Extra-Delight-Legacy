@@ -1,14 +1,12 @@
 package xy177.extradelightlegacy.common.crafting;
 
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.oredict.OreDictionary;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public final class DoughShapingRecipeManager {
-    private static final List<DoughShapingRecipe> RECIPES = new ArrayList<>();
+    private static final ManagedRecipeRegistry<DoughShapingRecipe> RECIPES = new ManagedRecipeRegistry<>();
 
     private DoughShapingRecipeManager() {
     }
@@ -18,11 +16,15 @@ public final class DoughShapingRecipeManager {
     }
 
     public static void register(String name, String inputOre, ItemStack output) {
-        if (name == null || inputOre == null || inputOre.isEmpty() || output.isEmpty()) {
-            return;
-        }
+        register(name, MixingBowlIngredient.ore(inputOre), output);
+    }
 
-        RECIPES.add(new DoughShapingRecipe(name, inputOre, output));
+    public static boolean register(String name, MixingBowlIngredient input, ItemStack output) {
+        if (input == null || input.getDisplayStack().isEmpty() || output.isEmpty()) {
+            return false;
+        }
+        String normalized = RecipeManagerUtil.normalizeId(name);
+        return normalized != null && RECIPES.register(normalized, new DoughShapingRecipe(normalized, input, output));
     }
 
     public static DoughShapingRecipe find(ItemStack input, int selectedIndex) {
@@ -51,25 +53,36 @@ public final class DoughShapingRecipeManager {
     }
 
     public static List<DoughShapingRecipe> getRecipes() {
-        return Collections.unmodifiableList(RECIPES);
+        return RECIPES.getRecipes();
     }
 
     private static List<DoughShapingRecipe> findAll(ItemStack input) {
         List<DoughShapingRecipe> matches = new ArrayList<>();
-        for (DoughShapingRecipe recipe : RECIPES) {
-            if (matchesOre(input, recipe.getInputOre())) {
+        for (DoughShapingRecipe recipe : RECIPES.getRecipes()) {
+            if (recipe.getInput().matches(input)) {
                 matches.add(recipe);
             }
         }
         return matches;
     }
 
-    private static boolean matchesOre(ItemStack stack, String oreName) {
-        for (ItemStack oreStack : OreDictionary.getOres(oreName, false)) {
-            if (OreDictionary.itemMatches(oreStack, stack, false)) {
-                return true;
-            }
-        }
-        return false;
+    public static boolean remove(String id) {
+        return RECIPES.remove(id);
+    }
+
+    public static int removeByOutput(ItemStack output) {
+        return RECIPES.removeIf(recipe -> RecipeManagerUtil.stackMatches(output, recipe.getOutput()));
+    }
+
+    public static int removeAll() {
+        return RECIPES.removeAll();
+    }
+
+    public static void captureBaseline() {
+        RECIPES.captureBaseline();
+    }
+
+    public static void restoreBaseline() {
+        RECIPES.restoreBaseline();
     }
 }

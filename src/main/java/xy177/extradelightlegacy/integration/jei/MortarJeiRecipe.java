@@ -15,13 +15,13 @@ import java.util.Collections;
 import java.util.List;
 
 public class MortarJeiRecipe implements IRecipeWrapper {
-    private final ItemStack input;
+    private final List<ItemStack> inputs;
     private final ItemStack output;
     private final FluidStack fluidOutput;
     private final int grinds;
 
     public MortarJeiRecipe(MortarRecipe recipe) {
-        this.input = recipe.getInput();
+        this.inputs = recipe.getIngredient().getMatchingStacks();
         this.output = recipe.getOutput();
         this.fluidOutput = recipe.getFluidOutput();
         this.grinds = recipe.getGrinds();
@@ -29,7 +29,7 @@ public class MortarJeiRecipe implements IRecipeWrapper {
 
     @Override
     public void getIngredients(IIngredients ingredients) {
-        ingredients.setInput(ItemStack.class, input);
+        ingredients.setInputs(ItemStack.class, inputs);
         List<ItemStack> itemOutputs = new ArrayList<>();
         if (!output.isEmpty()) {
             itemOutputs.add(output);
@@ -51,7 +51,11 @@ public class MortarJeiRecipe implements IRecipeWrapper {
     }
 
     public ItemStack getInput() {
-        return input;
+        return inputs.isEmpty() ? ItemStack.EMPTY : inputs.get(0);
+    }
+
+    public List<ItemStack> getInputs() {
+        return inputs;
     }
 
     public ItemStack getOutput() {

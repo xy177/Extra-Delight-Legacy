@@ -20,6 +20,7 @@ import net.minecraftforge.fluids.capability.FluidTankProperties;
 import net.minecraftforge.fluids.capability.IFluidHandler;
 import net.minecraftforge.fluids.capability.IFluidTankProperties;
 import xy177.extradelightlegacy.common.crafting.BottleFluidRecipeManager;
+import xy177.extradelightlegacy.common.crafting.MixingBowlIngredient;
 import xy177.extradelightlegacy.common.crafting.VatRecipe;
 import xy177.extradelightlegacy.common.crafting.VatRecipeManager;
 import xy177.extradelightlegacy.common.crafting.VatStage;
@@ -246,7 +247,7 @@ public class TileEntityVat extends TileEntity implements ITickable, IStyleableTi
 
     private void finishStage(VatRecipe recipe, VatStage stage) {
         if (stage.hasIngredient()) {
-            consumeStageInput();
+            consumeStageInput(stage.getIngredient().getRequiredCount());
         }
 
         stageIndex++;
@@ -258,24 +259,23 @@ public class TileEntityVat extends TileEntity implements ITickable, IStyleableTi
         }
     }
 
-    private void consumeStageInput() {
+    private void consumeStageInput(int count) {
         ItemStack stack = items.get(STAGE_SLOT);
         if (stack.isEmpty()) {
             return;
         }
-        ItemStack container = stack.getItem().getContainerItem(stack);
-        stack.shrink(1);
-        if (!container.isEmpty()) {
-            EntityItem entity = new EntityItem(world, pos.getX() + 0.5D, pos.getY() + 0.5D, pos.getZ() + 0.5D, container);
-            entity.setDefaultPickupDelay();
-            world.spawnEntity(entity);
-        }
+        consumeIngredient(stack, count);
         if (stack.isEmpty()) {
             items.set(STAGE_SLOT, ItemStack.EMPTY);
         }
     }
 
     private void craft(VatRecipe recipe) {
+        int[] matchedSlots = recipe.matchIngredientSlots(getIngredientStacks());
+        if (matchedSlots == null) {
+            resetProgress();
+            return;
+        }
         ItemStack current = items.get(RESULT_SLOT);
         ItemStack output = recipe.getOutput();
         if (current.isEmpty()) {
@@ -284,19 +284,13 @@ public class TileEntityVat extends TileEntity implements ITickable, IStyleableTi
             current.grow(output.getCount());
         }
 
-        for (int i = 0; i < INGREDIENT_SLOTS; i++) {
-            ItemStack stack = items.get(i);
-            if (!stack.isEmpty()) {
-                ItemStack container = stack.getItem().getContainerItem(stack);
-                stack.shrink(1);
-                if (!container.isEmpty()) {
-                    EntityItem entity = new EntityItem(world, pos.getX() + 0.5D, pos.getY() + 0.5D, pos.getZ() + 0.5D, container);
-                    entity.setDefaultPickupDelay();
-                    world.spawnEntity(entity);
-                }
-                if (stack.isEmpty()) {
-                    items.set(i, ItemStack.EMPTY);
-                }
+        for (int i = 0; i < matchedSlots.length; i++) {
+            int slot = matchedSlots[i];
+            ItemStack stack = items.get(slot);
+            MixingBowlIngredient ingredient = recipe.getIngredients().get(i);
+            consumeIngredient(stack, ingredient.getRequiredCount());
+            if (stack.isEmpty()) {
+                items.set(slot, ItemStack.EMPTY);
             }
         }
         items.get(CONTAINER_SLOT).shrink(recipe.getContainer().getCount());
@@ -305,6 +299,17 @@ public class TileEntityVat extends TileEntity implements ITickable, IStyleableTi
         }
         drain(recipe.getFluid().amount);
         resetProgress();
+    }
+
+    private void consumeIngredient(ItemStack stack, int count) {
+        ItemStack container = stack.getItem().getContainerItem(stack);
+        stack.shrink(count);
+        for (int i = 0; i < count && !container.isEmpty(); i++) {
+            EntityItem entity = new EntityItem(world, pos.getX() + 0.5D, pos.getY() + 0.5D,
+                pos.getZ() + 0.5D, container.copy());
+            entity.setDefaultPickupDelay();
+            world.spawnEntity(entity);
+        }
     }
 
     private void handleFluidInputSlot() {

@@ -53,4 +53,8 @@ public final class MixingBowlRecipe {
     public int getStirs() {
         return stirs;
     }
+
+    public int[] matchIngredientSlots(ItemStack[] inputs) {
+        return IngredientSlotMatcher.match(ingredients, inputs);
+    }
 }

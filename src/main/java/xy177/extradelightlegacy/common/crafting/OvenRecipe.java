@@ -1,7 +1,6 @@
 package xy177.extradelightlegacy.common.crafting;
 
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.oredict.OreDictionary;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -50,42 +49,12 @@ public final class OvenRecipe {
     }
 
     public int[] matchIngredientSlots(ItemStack[] inputs) {
-        List<ItemStack> actual = new ArrayList<>();
-        List<Integer> slots = new ArrayList<>();
-        for (int i = 0; i < inputs.length; i++) {
-            ItemStack input = inputs[i];
-            if (!input.isEmpty()) {
-                actual.add(input);
-                slots.add(i);
-            }
-        }
-        if (actual.size() != ingredients.size()) {
-            return null;
-        }
-
-        boolean[] used = new boolean[actual.size()];
-        int[] matchedSlots = new int[ingredients.size()];
-        for (int ingredientIndex = 0; ingredientIndex < ingredients.size(); ingredientIndex++) {
-            MixingBowlIngredient ingredient = ingredients.get(ingredientIndex);
-            boolean matched = false;
-            for (int actualIndex = 0; actualIndex < actual.size(); actualIndex++) {
-                if (!used[actualIndex] && ingredient.matches(actual.get(actualIndex))) {
-                    used[actualIndex] = true;
-                    matchedSlots[ingredientIndex] = slots.get(actualIndex);
-                    matched = true;
-                    break;
-                }
-            }
-            if (!matched) {
-                return null;
-            }
-        }
-        return matchedSlots;
+        return IngredientSlotMatcher.match(ingredients, inputs);
     }
 
     boolean matches(ItemStack[] inputs, ItemStack actualContainer) {
         if (!container.isEmpty() && (actualContainer.isEmpty() || actualContainer.getCount() < container.getCount()
-            || !OreDictionary.itemMatches(container, actualContainer, false))) {
+            || !RecipeManagerUtil.stackMatches(container, actualContainer))) {
             return false;
         }
         return matchIngredientSlots(inputs) != null;

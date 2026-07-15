@@ -50,7 +50,7 @@ public class DryingRackRecipeCategory implements IRecipeCategory<DryingRackJeiRe
     @Override
     public void setRecipe(IRecipeLayout recipeLayout, DryingRackJeiRecipe recipeWrapper, IIngredients ingredients) {
         recipeLayout.getItemStacks().init(0, true, 3, 21);
-        recipeLayout.getItemStacks().set(0, recipeWrapper.getInput());
+        recipeLayout.getItemStacks().set(0, recipeWrapper.getInputs());
         recipeLayout.getItemStacks().init(1, false, 63, 21);
         recipeLayout.getItemStacks().set(1, recipeWrapper.getOutput());
     }

@@ -49,7 +49,7 @@ public class MortarRecipeCategory implements IRecipeCategory<MortarJeiRecipe> {
     @Override
     public void setRecipe(IRecipeLayout recipeLayout, MortarJeiRecipe recipeWrapper, IIngredients ingredients) {
         recipeLayout.getItemStacks().init(0, true, 8, 17);
-        recipeLayout.getItemStacks().set(0, recipeWrapper.getInput());
+        recipeLayout.getItemStacks().set(0, recipeWrapper.getInputs());
         recipeLayout.getItemStacks().init(1, true, 28, 0);
         recipeLayout.getItemStacks().set(1, EDLItems.PESTLE_STONE.stack(1));
         if (!recipeWrapper.getOutput().isEmpty()) {

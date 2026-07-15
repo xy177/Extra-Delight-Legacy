@@ -17,6 +17,7 @@ import net.minecraftforge.common.util.Constants;
 import xy177.extradelightlegacy.common.crafting.BottleFluidRecipe;
 import xy177.extradelightlegacy.common.crafting.BottleFluidRecipeManager;
 import xy177.extradelightlegacy.common.crafting.MixingBowlFluidIngredient;
+import xy177.extradelightlegacy.common.crafting.MixingBowlIngredient;
 import xy177.extradelightlegacy.common.crafting.MixingBowlRecipe;
 import xy177.extradelightlegacy.common.crafting.MixingBowlRecipeManager;
 import xy177.extradelightlegacy.common.event.EDLAdvancements;
@@ -365,17 +366,17 @@ public class TileEntityMixingBowl extends TileEntity implements IStyleableTile {
     }
 
     private void consumeRecipe(MixingBowlRecipe recipe, EntityPlayer player) {
-        for (int i = 0; i < INGREDIENT_SLOTS; i++) {
-            ItemStack stack = items.get(i);
-            if (!stack.isEmpty()) {
-                ItemStack container = stack.getItem().getContainerItem(stack);
-                stack.shrink(1);
-                if (!container.isEmpty()) {
-                    givePlayerItem(player, container);
-                }
-                if (stack.isEmpty()) {
-                    items.set(i, ItemStack.EMPTY);
-                }
+        int[] matchedSlots = recipe.matchIngredientSlots(getIngredientStacks());
+        if (matchedSlots == null) {
+            return;
+        }
+        for (int i = 0; i < matchedSlots.length; i++) {
+            int slot = matchedSlots[i];
+            ItemStack stack = items.get(slot);
+            MixingBowlIngredient ingredient = recipe.getIngredients().get(i);
+            consumeIngredient(stack, ingredient.getRequiredCount(), player);
+            if (stack.isEmpty()) {
+                items.set(slot, ItemStack.EMPTY);
             }
         }
 
@@ -389,6 +390,17 @@ public class TileEntityMixingBowl extends TileEntity implements IStyleableTile {
 
         for (MixingBowlFluidIngredient fluid : recipe.getFluids()) {
             removeFluid(fluid.getFluidId(), fluid.getAmount());
+        }
+    }
+
+    private void consumeIngredient(ItemStack stack, int count, EntityPlayer player) {
+        ItemStack container = stack.getItem().getContainerItem(stack);
+        stack.shrink(count);
+        if (container.isEmpty()) {
+            return;
+        }
+        for (int i = 0; i < count; i++) {
+            givePlayerItem(player, container.copy());
         }
     }
 

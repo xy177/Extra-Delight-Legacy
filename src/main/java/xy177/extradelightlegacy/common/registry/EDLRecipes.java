@@ -2,18 +2,9 @@ package xy177.extradelightlegacy.common.registry;
 
 import com.wdcftgg.farmersdelightlegacy.api.recipe.CookingPotRecipeApi;
 import com.wdcftgg.farmersdelightlegacy.api.recipe.CuttingBoardRecipeApi;
-import com.wdcftgg.farmersdelightlegacy.api.recipe.knife.HuntingDropOutput;
-import com.wdcftgg.farmersdelightlegacy.api.recipe.knife.HuntingDropRecipeApi;
 import com.wdcftgg.farmersdelightlegacy.common.recipe.CampfireCookingRecipeManager;
 import com.wdcftgg.farmersdelightlegacy.common.registry.ModBlocks;
 import com.wdcftgg.farmersdelightlegacy.common.registry.ModItems;
-import net.minecraft.entity.EntityList;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.passive.EntityChicken;
-import net.minecraft.entity.passive.EntityCow;
-import net.minecraft.entity.passive.EntityPig;
-import net.minecraft.entity.passive.EntityRabbit;
-import net.minecraft.entity.passive.EntitySheep;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -28,11 +19,13 @@ import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.registries.IForgeRegistry;
 import xy177.extradelightlegacy.ExtraDelightLegacy;
 import xy177.extradelightlegacy.common.crafting.BottleFluidRecipeManager;
+import xy177.extradelightlegacy.common.crafting.ButcherDropRegistry;
 import xy177.extradelightlegacy.common.crafting.ChillerRecipeManager;
 import xy177.extradelightlegacy.common.crafting.CitrusBannerRecipe;
 import xy177.extradelightlegacy.common.crafting.DoughShapingRecipeManager;
 import xy177.extradelightlegacy.common.crafting.DryingRackRecipeManager;
 import xy177.extradelightlegacy.common.crafting.EvaporatorRecipeManager;
+import xy177.extradelightlegacy.common.crafting.EDLCustomRecipeLifecycle;
 import xy177.extradelightlegacy.common.crafting.FeastServingRegistry;
 import xy177.extradelightlegacy.common.crafting.JuicerRecipeManager;
 import xy177.extradelightlegacy.common.crafting.MortarRecipeManager;
@@ -319,7 +312,7 @@ public final class EDLRecipes {
         registerEvaporatorRecipes();
         registerCookingPotRecipes();
         registerFeastServingRecipes();
-        registerButcherHuntingJeiRecipes();
+        ButcherDropRegistry.registerDefaults();
 
         registerCampfire("campfire/popcorn", EDLItems.CORN_SEEDS, EDLItems.POPCORN, 600);
         registerCampfire("campfire/roasted_peanuts", EDLItems.PEANUTS, EDLItems.ROASTED_PEANUTS, 600);
@@ -691,6 +684,9 @@ public final class EDLRecipes {
         registerSourceBuildingCuttingRecipes();
 
         registerHangingCuttingRecipes();
+        EDLCustomRecipeLifecycle.captureBaseline();
+        EDLCustomRecipeLifecycle.applyPendingActions();
+        ButcherDropRegistry.syncHuntingJeiRecipes();
     }
 
     private static void registerSourceBuildingCuttingRecipes() {
@@ -7065,80 +7061,6 @@ public final class EDLRecipes {
 
     private static void registerButcheryCampfire(EDLItems.ItemDefinition input, EDLItems.ItemDefinition output) {
         registerCampfire("campfire/butchery/" + input.getId(), input, output, 600);
-    }
-
-    private static void registerButcherHuntingJeiRecipes() {
-        registerButcherHuntingJei("butcher/cow", entity -> entity instanceof EntityCow,
-            new ResourceLocation("minecraft", "cow"),
-            EDLItems.BEEF_SCRAPS, EDLItems.CUBED_BEEF, EDLItems.GROUND_BEEF, EDLItems.BEEF_RIBS,
-            EDLItems.BEEF_ROAST, EDLItems.BEEF_STEWMEAT, EDLItems.OXTAIL, EDLItems.TONGUE,
-            EDLItems.BRAIN, EDLItems.HEART, EDLItems.KIDNEY, EDLItems.LIVER, EDLItems.LUNG,
-            EDLItems.STOMACH, EDLItems.TRIPE, EDLItems.EYEBALL, EDLItems.BLOOD, EDLItems.FAT, EDLItems.GELATIN);
-        registerButcherHuntingJei("butcher/pig", entity -> entity instanceof EntityPig,
-            new ResourceLocation("minecraft", "pig"),
-            EDLItems.PORK_SCRAPS, EDLItems.CUBED_PORK, EDLItems.GROUND_PORK, EDLItems.PORK_RIBS,
-            EDLItems.PORK_ROAST, EDLItems.PORK_STEWMEAT, EDLItems.BRAIN, EDLItems.HEART,
-            EDLItems.KIDNEY, EDLItems.LIVER, EDLItems.LUNG, EDLItems.STOMACH, EDLItems.TRIPE,
-            EDLItems.EYEBALL, EDLItems.BLOOD, EDLItems.FAT, EDLItems.GELATIN);
-        registerButcherHuntingJei("butcher/sheep", entity -> entity instanceof EntitySheep,
-            new ResourceLocation("minecraft", "sheep"),
-            EDLItems.LAMB_SCRAPS, EDLItems.CUBED_LAMB, EDLItems.GROUND_LAMB, EDLItems.LAMB_RIBS,
-            EDLItems.LAMB_ROAST, EDLItems.LAMB_STEWMEAT, EDLItems.BRAIN, EDLItems.HEART,
-            EDLItems.KIDNEY, EDLItems.LIVER, EDLItems.LUNG, EDLItems.STOMACH, EDLItems.TRIPE,
-            EDLItems.EYEBALL, EDLItems.BLOOD, EDLItems.FAT, EDLItems.GELATIN);
-        registerButcherHuntingJei("butcher/chicken", entity -> entity instanceof EntityChicken,
-            new ResourceLocation("minecraft", "chicken"),
-            EDLItems.CHICKEN_SCRAPS, EDLItems.CHICKEN_BREAST, EDLItems.CHICKEN_LEG,
-            EDLItems.CHICKEN_THIGH, EDLItems.CHICKEN_WING, EDLItems.CUBED_CHICKEN,
-            EDLItems.GROUND_CHICKEN, EDLItems.CHICKEN_STEWMEAT, EDLItems.BLOOD, EDLItems.GELATIN);
-        registerButcherHuntingJei("butcher/rabbit", entity -> entity instanceof EntityRabbit,
-            new ResourceLocation("minecraft", "rabbit"),
-            EDLItems.RABBIT_SCRAPS, EDLItems.RABBIT_SADDLE, EDLItems.RABBIT_THIGH,
-            EDLItems.RABBIT_LEG, EDLItems.RABBIT_STEWMEAT, EDLItems.GROUND_RABBIT,
-            EDLItems.CUBED_RABBIT, EDLItems.BLOOD);
-        ResourceLocation goatEntity = EDLItems.firstGoatEntityId();
-        if (goatEntity != null) {
-            registerButcherHuntingJei("butcher/goat", EDLRecipes::isGoatLike,
-                goatEntity,
-                EDLItems.GOAT_SCRAPS, EDLItems.GOAT_CHOP, EDLItems.GOAT_RIBS, EDLItems.GOAT_ROAST,
-                EDLItems.GOAT_STEWMEAT, EDLItems.GROUND_GOAT, EDLItems.CUBED_GOAT,
-                EDLItems.BRAIN, EDLItems.HEART, EDLItems.KIDNEY, EDLItems.LIVER, EDLItems.LUNG,
-                EDLItems.STOMACH, EDLItems.TRIPE, EDLItems.EYEBALL, EDLItems.BLOOD, EDLItems.FAT, EDLItems.GELATIN);
-        }
-    }
-
-    private static boolean isGoatLike(EntityLivingBase entity) {
-        ResourceLocation id = EntityList.getKey(entity);
-        return EDLItems.isGoatEntityId(id);
-    }
-
-    private static void registerButcherHuntingJei(String name,
-                                                  com.wdcftgg.farmersdelightlegacy.common.recipe.HuntingDropRecipeManager.HuntingTargetMatcher matcher,
-                                                  ResourceLocation entityId,
-                                                  EDLItems.ItemDefinition... outputs) {
-        if (EDLEnchantments.BUTCHER == null) {
-            return;
-        }
-
-        List<HuntingDropOutput> list = new ArrayList<>();
-        for (EDLItems.ItemDefinition output : outputs) {
-            if (output.isRegistered()) {
-                list.add(HuntingDropOutput.of(output.stack(1), 1.0F, 0.0F));
-            }
-        }
-        if (list.isEmpty()) {
-            return;
-        }
-
-        HuntingDropRecipeApi.registerRecipeAdvanceJei(
-            ExtraDelightLegacy.MODID + ":" + name,
-            matcher,
-            list,
-            false,
-            entityId,
-            null,
-            Collections.singletonList("extradelightlegacy.jei.butcher_drop")
-        );
     }
 
     private static void registerCutting(String name, String input, String output, int count, float chance) {

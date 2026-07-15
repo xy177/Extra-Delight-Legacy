@@ -4,12 +4,12 @@ import net.minecraft.item.ItemStack;
 
 public final class DoughShapingRecipe {
     private final String name;
-    private final String inputOre;
+    private final MixingBowlIngredient input;
     private final ItemStack output;
 
-    DoughShapingRecipe(String name, String inputOre, ItemStack output) {
+    DoughShapingRecipe(String name, MixingBowlIngredient input, ItemStack output) {
         this.name = name;
-        this.inputOre = inputOre;
+        this.input = input;
         this.output = output.copy();
     }
 
@@ -17,8 +17,8 @@ public final class DoughShapingRecipe {
         return name;
     }
 
-    public String getInputOre() {
-        return inputOre;
+    public MixingBowlIngredient getInput() {
+        return input;
     }
 
     public ItemStack getOutput() {

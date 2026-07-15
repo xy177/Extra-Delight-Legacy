@@ -3,21 +3,43 @@ package xy177.extradelightlegacy.common.crafting;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
-public final class MixingBowlIngredient {
-    private final ItemStack stack;
-    private final String oreName;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
-    private MixingBowlIngredient(ItemStack stack, String oreName) {
-        this.stack = stack == null ? ItemStack.EMPTY : stack.copy();
+public final class MixingBowlIngredient {
+    private final List<ItemStack> stacks;
+    private final String oreName;
+    private final int oreCount;
+
+    private MixingBowlIngredient(List<ItemStack> stacks, String oreName, int oreCount) {
+        List<ItemStack> copies = new ArrayList<>();
+        if (stacks != null) {
+            for (ItemStack stack : stacks) {
+                if (stack != null && !stack.isEmpty()) {
+                    copies.add(stack.copy());
+                }
+            }
+        }
+        this.stacks = Collections.unmodifiableList(copies);
         this.oreName = oreName;
+        this.oreCount = Math.max(1, oreCount);
     }
 
     public static MixingBowlIngredient stack(ItemStack stack) {
-        return new MixingBowlIngredient(stack, null);
+        return new MixingBowlIngredient(Collections.singletonList(stack), null, 1);
+    }
+
+    public static MixingBowlIngredient stacks(List<ItemStack> stacks) {
+        return new MixingBowlIngredient(stacks, null, 1);
     }
 
     public static MixingBowlIngredient ore(String oreName) {
-        return new MixingBowlIngredient(ItemStack.EMPTY, oreName);
+        return ore(oreName, 1);
+    }
+
+    public static MixingBowlIngredient ore(String oreName, int count) {
+        return new MixingBowlIngredient(Collections.emptyList(), oreName, count);
     }
 
     public boolean matches(ItemStack input) {
@@ -25,34 +47,66 @@ public final class MixingBowlIngredient {
             return false;
         }
         if (oreName != null && !oreName.isEmpty()) {
-            if (!stack.isEmpty() && input.getCount() < stack.getCount()) {
+            if (input.getCount() < oreCount) {
                 return false;
             }
+            return matchesIgnoringCount(input);
+        }
+        for (ItemStack stack : stacks) {
+            if (input.getCount() >= stack.getCount() && RecipeManagerUtil.stackMatches(stack, input)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean matchesIgnoringCount(ItemStack input) {
+        if (input.isEmpty()) {
+            return false;
+        }
+        if (oreName != null && !oreName.isEmpty()) {
             for (ItemStack oreStack : OreDictionary.getOres(oreName, false)) {
-                if (OreDictionary.itemMatches(oreStack, input, false)) {
+                if (RecipeManagerUtil.stackMatches(oreStack, input)) {
                     return true;
                 }
             }
             return false;
         }
-        return !stack.isEmpty() && input.getCount() >= stack.getCount() && OreDictionary.itemMatches(stack, input, false);
+        for (ItemStack stack : stacks) {
+            if (RecipeManagerUtil.stackMatches(stack, input)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public ItemStack getDisplayStack() {
-        if (!stack.isEmpty()) {
-            return stack.copy();
+        List<ItemStack> matching = getMatchingStacks();
+        return matching.isEmpty() ? ItemStack.EMPTY : matching.get(0).copy();
+    }
+
+    public List<ItemStack> getMatchingStacks() {
+        List<ItemStack> matching = new ArrayList<>();
+        for (ItemStack stack : stacks) {
+            matching.add(stack.copy());
         }
         if (oreName != null && !oreName.isEmpty()) {
             for (ItemStack oreStack : OreDictionary.getOres(oreName, false)) {
                 if (!oreStack.isEmpty()) {
-                    return oreStack.copy();
+                    ItemStack copy = oreStack.copy();
+                    copy.setCount(oreCount);
+                    matching.add(copy);
                 }
             }
         }
-        return ItemStack.EMPTY;
+        return Collections.unmodifiableList(matching);
     }
 
     public int getRequiredCount() {
-        return stack.isEmpty() ? 1 : stack.getCount();
+        return stacks.isEmpty() ? oreCount : stacks.get(0).getCount();
+    }
+
+    public String getOreName() {
+        return oreName;
     }
 }
