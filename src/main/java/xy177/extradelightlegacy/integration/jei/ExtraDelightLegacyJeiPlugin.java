@@ -1,7 +1,7 @@
 package xy177.extradelightlegacy.integration.jei;
 
 import com.wdcftgg.farmersdelightlegacy.client.jei.HuntingDropJeiRecipe;
-import com.wdcftgg.farmersdelightlegacy.common.recipe.HuntingDropRecipeManager;
+import com.wdcftgg.farmersdelightlegacy.common.recipe.manager.HuntingDropRecipeManager;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.IModRegistry;
 import mezz.jei.api.IJeiRuntime;

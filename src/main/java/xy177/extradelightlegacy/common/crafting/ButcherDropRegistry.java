@@ -2,7 +2,7 @@ package xy177.extradelightlegacy.common.crafting;
 
 import com.wdcftgg.farmersdelightlegacy.api.recipe.knife.HuntingDropOutput;
 import com.wdcftgg.farmersdelightlegacy.api.recipe.knife.HuntingDropRecipeApi;
-import com.wdcftgg.farmersdelightlegacy.common.recipe.HuntingDropRecipeManager;
+import com.wdcftgg.farmersdelightlegacy.common.recipe.manager.HuntingDropRecipeManager;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.passive.EntityChicken;

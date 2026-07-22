@@ -1,12 +1,10 @@
 package xy177.extradelightlegacy.common.registry;
 
-import com.wdcftgg.farmersdelightlegacy.api.knife.IKnifeItem;
+import com.wdcftgg.farmersdelightlegacy.common.item.ItemKnife;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnumEnchantmentType;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.registries.IForgeRegistry;
 import xy177.extradelightlegacy.ExtraDelightLegacy;
 import xy177.extradelightlegacy.common.config.EDLConfig;
@@ -48,24 +46,7 @@ public final class EDLEnchantments {
     }
 
     public static boolean isKnife(ItemStack stack) {
-        if (stack.isEmpty()) {
-            return false;
-        }
-
-        if (stack.getItem() instanceof IKnifeItem) {
-            return true;
-        }
-
-        for (ItemStack knife : OreDictionary.getOres("toolKnife")) {
-            if (OreDictionary.itemMatches(knife, stack, false)) {
-                return true;
-            }
-        }
-
-        ResourceLocation name = stack.getItem().getRegistryName();
-        return name != null
-            && "farmersdelight".equals(name.getResourceDomain())
-            && name.getResourcePath().endsWith("_knife");
+        return ItemKnife.isKnife(stack);
     }
 
     private static final class EnchantmentButcher extends Enchantment {

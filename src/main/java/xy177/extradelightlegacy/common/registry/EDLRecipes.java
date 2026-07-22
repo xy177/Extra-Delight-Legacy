@@ -2,7 +2,7 @@ package xy177.extradelightlegacy.common.registry;
 
 import com.wdcftgg.farmersdelightlegacy.api.recipe.CookingPotRecipeApi;
 import com.wdcftgg.farmersdelightlegacy.api.recipe.CuttingBoardRecipeApi;
-import com.wdcftgg.farmersdelightlegacy.common.recipe.CampfireCookingRecipeManager;
+import com.wdcftgg.farmersdelightlegacy.common.recipe.manager.CampfireCookingRecipeManager;
 import com.wdcftgg.farmersdelightlegacy.common.registry.ModBlocks;
 import com.wdcftgg.farmersdelightlegacy.common.registry.ModItems;
 import net.minecraft.init.Blocks;
