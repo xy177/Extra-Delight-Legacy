@@ -5,8 +5,6 @@ import net.minecraft.enchantment.Enchantment;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.potion.Potion;
-import net.minecraftforge.client.event.ModelRegistryEvent;
-import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Loader;
@@ -17,7 +15,6 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.registries.IForgeRegistry;
 import org.apache.logging.log4j.Logger;
 import xy177.extradelightlegacy.client.EDLClientRegistry;
@@ -76,7 +73,7 @@ import xy177.extradelightlegacy.common.tile.TileEntityUnripeSalami;
 public class ExtraDelightLegacy {
     public static final String MODID = "extradelightlegacy";
     public static final String NAME = "ExtraDelight";
-    public static final String VERSION = "1.1.1";
+    public static final String VERSION = "1.1.2";
 
     @Mod.Instance(MODID)
     public static ExtraDelightLegacy instance;
@@ -193,18 +190,5 @@ public class ExtraDelightLegacy {
             EDLRecipes.register(event.getRegistry());
         }
 
-        @SubscribeEvent
-        public static void registerModels(ModelRegistryEvent event) {
-            if (net.minecraftforge.fml.common.FMLCommonHandler.instance().getSide() == Side.CLIENT) {
-                EDLClientRegistry.registerModels();
-            }
-        }
-
-        @SubscribeEvent
-        public static void stitchTextures(TextureStitchEvent.Pre event) {
-            if (net.minecraftforge.fml.common.FMLCommonHandler.instance().getSide() == Side.CLIENT) {
-                EDLClientRegistry.stitchTextures(event);
-            }
-        }
     }
 }

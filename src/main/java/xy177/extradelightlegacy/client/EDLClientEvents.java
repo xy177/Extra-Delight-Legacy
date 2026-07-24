@@ -5,6 +5,8 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.potion.PotionEffect;
 import net.minecraftforge.client.event.ColorHandlerEvent;
 import net.minecraftforge.client.event.EntityViewRenderEvent;
+import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
@@ -14,6 +16,16 @@ import xy177.extradelightlegacy.common.registry.EDLEffects;
 @Mod.EventBusSubscriber(modid = ExtraDelightLegacy.MODID, value = Side.CLIENT)
 public final class EDLClientEvents {
     private EDLClientEvents() {
+    }
+
+    @SubscribeEvent
+    public static void registerModels(ModelRegistryEvent event) {
+        EDLClientRegistry.registerModels();
+    }
+
+    @SubscribeEvent
+    public static void stitchTextures(TextureStitchEvent.Pre event) {
+        EDLClientRegistry.stitchTextures(event);
     }
 
     @SubscribeEvent
