@@ -284,6 +284,7 @@ public final class EDLOreDictionary {
         ore("teaIngredient", EDLItems.GRATED_GINGER);
         ore("teaIngredient", EDLItems.CORN_SILK);
         ore("teaIngredient", EDLItems.MALLOW_ROOT);
+        bridgeOre("cropTea", "teaIngredient");
         ore("foodPastaCooked", EDLItems.COOKED_PASTA);
         optionalOre("dough", "farmersdelight:wheat_dough");
         optionalOre("foodDough", "farmersdelight:wheat_dough");
@@ -1349,6 +1350,16 @@ public final class EDLOreDictionary {
     private static void ore(String name, ItemStack stack) {
         if (!stack.isEmpty()) {
             OreDictionary.registerOre(name, stack);
+        }
+    }
+
+    public static void registerTeaIngredientAlias(ItemStack stack) {
+        ore("teaIngredient", stack.copy());
+    }
+
+    private static void bridgeOre(String source, String target) {
+        for (ItemStack stack : OreDictionary.getOres(source, false)) {
+            ore(target, stack.copy());
         }
     }
 

@@ -78,6 +78,22 @@ public class OvenJeiRecipe implements IRecipeWrapper {
         return outputs;
     }
 
+    public List<Integer> getBatchCounts() {
+        List<Integer> counts = new ArrayList<>();
+        if (!isCondensedSingleInput()) {
+            return counts;
+        }
+
+        for (OvenRecipe recipe : recipes) {
+            ItemStack input = getCondensedInput(recipe);
+            if (!input.isEmpty() && !counts.contains(input.getCount())) {
+                counts.add(input.getCount());
+            }
+        }
+        Collections.sort(counts);
+        return counts;
+    }
+
     @Override
     public void getIngredients(IIngredients ingredients) {
         List<ItemStack> inputs = getInputs();
@@ -86,7 +102,7 @@ public class OvenJeiRecipe implements IRecipeWrapper {
         ingredients.setOutputs(ItemStack.class, getOutputVariants());
     }
 
-    private boolean isCondensedSingleInput() {
+    public boolean isCondensedSingleInput() {
         return recipes.size() > 1 && !getCondensedInput(recipes.get(0)).isEmpty();
     }
 

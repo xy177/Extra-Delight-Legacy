@@ -1464,6 +1464,7 @@ public final class EDLItems {
     public static final ItemDefinition COOKED_TRIPE = butcheryFood("cooked_tripe", "Cooked Intestines", 6, 0.2F);
     public static final ItemDefinition EYEBALL = rawOffalFood("eyeball", "Eyeball", 1, 0.1F);
     public static final ItemDefinition COOKED_EYEBALL = butcheryFood("cooked_eyeball", "Cooked Eyeball", 2, 0.2F);
+    public static final ItemDefinition SAUSAGE_LINKED = butcheryItem("sausage_linked", "Linked Sausage");
     public static final ItemDefinition SAUSAGE = rawSausageFood("sausage", "Raw Sausage");
     public static final ItemDefinition COOKED_SAUSAGE = butcheryFood("cooked_sausage", "Cooked Sausage", 6, 0.2F);
     public static final ItemDefinition FAT = butcheryItem("fat", "Fat");

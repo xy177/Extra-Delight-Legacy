@@ -66,6 +66,10 @@ public final class EDLRecipes {
         registerCheeseSandwichRecipes(registry);
         registerShapeless(registry, "smore", EDLItems.SMORE.stack(1), EDLItems.GRAHAM_CRACKER.getItem(), EDLItems.MARSHMALLOW.getItem(), EDLItems.COCOA_SOLIDS.getItem());
         registerShapeless(registry, "trail_mix", EDLItems.TRAIL_MIX.stack(3), EDLItems.DRIED_FRUIT.getItem(), EDLItems.ROASTED_PEANUTS.getItem(), EDLItems.COCOA_SOLIDS.getItem());
+        registerShapeless(registry, "sausage_linked", EDLItems.SAUSAGE_LINKED.stack(1),
+            "groundMeatRaw", "groundMeatRaw", "groundMeatRaw", "groundMeatRaw",
+            "groundMeatRaw", "groundMeatRaw", "groundMeatRaw", "groundMeatRaw",
+            EDLItems.TRIPE.getItem());
         registerShapeless(registry, "cactus_eggs", EDLItems.CACTUS_EGGS.stack(1), EDLItems.COOKED_CACTUS.getItem(), EDLItems.SCRAMBLED_EGGS.getItem());
         registerShapeless(registry, "caramel_popcorn", EDLItems.CARAMEL_POPCORN.stack(1), EDLItems.POPCORN.getItem(), EDLItems.CARAMEL_SAUCE.getItem(), Items.BOWL);
         registerShapeless(registry, "furikake_rice", EDLItems.FURIKAKE_RICE.stack(1), EDLItems.FURIKAKE.getItem(), itemStack("farmersdelight:cooked_rice"), Items.BOWL);
@@ -395,6 +399,7 @@ public final class EDLRecipes {
             new float[]{1.0F, 0.75F}
         );
         registerCutting("cutting/peanuts", itemId("peanuts_in_shell"), itemId("peanuts"), 2, 1.0F);
+        registerCutting("cutting/sausage_linked", itemId("sausage_linked"), itemId("sausage"), 8, 1.0F);
         registerPieCuttingRecipes();
         registerCuttingWithTools(
             "cutting/strip_cinnamon_log",

@@ -15,6 +15,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.registries.IForgeRegistry;
 import org.apache.logging.log4j.Logger;
 import xy177.extradelightlegacy.client.EDLClientRegistry;
@@ -74,7 +75,7 @@ import xy177.extradelightlegacy.common.world.EDLWorldGenerator;
 public class ExtraDelightLegacy {
     public static final String MODID = "extradelightlegacy";
     public static final String NAME = "ExtraDelight";
-    public static final String VERSION = "1.1.3";
+    public static final String VERSION = "1.1.4";
 
     @Mod.Instance(MODID)
     public static ExtraDelightLegacy instance;
@@ -190,6 +191,13 @@ public class ExtraDelightLegacy {
         @SubscribeEvent
         public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
             EDLRecipes.register(event.getRegistry());
+        }
+
+        @SubscribeEvent
+        public static void registerOreAliases(OreDictionary.OreRegisterEvent event) {
+            if ("cropTea".equals(event.getName())) {
+                EDLOreDictionary.registerTeaIngredientAlias(event.getOre());
+            }
         }
 
     }
