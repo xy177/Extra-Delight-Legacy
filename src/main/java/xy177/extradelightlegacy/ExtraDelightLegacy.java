@@ -63,6 +63,7 @@ import xy177.extradelightlegacy.common.tile.TileEntityFeastServings;
 import xy177.extradelightlegacy.common.tile.TileEntityPickleJarDisplay;
 import xy177.extradelightlegacy.common.tile.TileEntityWreathDisplay;
 import xy177.extradelightlegacy.common.tile.TileEntityUnripeSalami;
+import xy177.extradelightlegacy.common.world.EDLWorldGenerator;
 
 @Mod(
     modid = ExtraDelightLegacy.MODID,
@@ -73,7 +74,7 @@ import xy177.extradelightlegacy.common.tile.TileEntityUnripeSalami;
 public class ExtraDelightLegacy {
     public static final String MODID = "extradelightlegacy";
     public static final String NAME = "ExtraDelight";
-    public static final String VERSION = "1.1.2";
+    public static final String VERSION = "1.1.3";
 
     @Mod.Instance(MODID)
     public static ExtraDelightLegacy instance;
@@ -94,6 +95,7 @@ public class ExtraDelightLegacy {
         MinecraftForge.EVENT_BUS.register(new EDLLootTableEventHandler());
         registerCraftTweakerCompat();
         EDLFluids.registerFluids();
+        GameRegistry.registerWorldGenerator(new EDLWorldGenerator(), 0);
         GameRegistry.registerTileEntity(TileEntityDryingRack.class, MODID + ":drying_rack");
         GameRegistry.registerTileEntity(TileEntityMortar.class, MODID + ":mortar");
         GameRegistry.registerTileEntity(TileEntityMixingBowl.class, MODID + ":mixing_bowl");

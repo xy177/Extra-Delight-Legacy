@@ -61,11 +61,15 @@ public class BlockOrchardSapling extends BlockBush implements IGrowable {
     }
 
     private void grow(World world, BlockPos pos, Random random) {
+        generateTree(world, pos, random);
+    }
+
+    public boolean generateTree(World world, BlockPos pos, Random random) {
         Block leaves = leavesSupplier.get();
         Block log = logSupplier.get();
         int trunkHeight = baseHeight + random.nextInt(3);
         if (leaves == null || log == null || !canGenerate(world, pos, trunkHeight)) {
-            return;
+            return false;
         }
 
         IBlockState logState = log.getDefaultState();
@@ -78,6 +82,7 @@ public class BlockOrchardSapling extends BlockBush implements IGrowable {
         placeFruitLeafLayer(world, foliageCenter, -2, 3, leaves, random, false);
         placeFruitLeafLayer(world, foliageCenter, -1, 3, leaves, random, false);
         placeFruitLeafLayer(world, foliageCenter, 0, 2, leaves, random, true);
+        return true;
     }
 
     private boolean canGenerate(World world, BlockPos pos, int trunkHeight) {

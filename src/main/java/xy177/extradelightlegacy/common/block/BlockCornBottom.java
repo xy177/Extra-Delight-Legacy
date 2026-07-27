@@ -25,6 +25,16 @@ public class BlockCornBottom extends BlockSimpleCrop {
     }
 
     @Override
+    public boolean canBlockStay(World world, BlockPos pos, IBlockState state) {
+        if (isMaxAge(state)
+            && (world.getLight(pos) >= 8 || world.canSeeSky(pos))
+            && CropSoilHelper.isGroundPlantSoil(world.getBlockState(pos.down()))) {
+            return true;
+        }
+        return super.canBlockStay(world, pos, state);
+    }
+
+    @Override
     public boolean canGrow(World world, BlockPos pos, IBlockState state, boolean isClient) {
         return !isMaxAge(state) || canGrowTop(world, pos);
     }

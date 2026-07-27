@@ -13,6 +13,7 @@ public final class EDLConfig {
     private static final String MODULE_CATEGORY = "modules";
     private static final String ENTRY_CATEGORY_PREFIX = "entries.";
     private static final String MINT_CATEGORY = "mint_spread";
+    private static final String WORLD_GENERATION_CATEGORY = "world_generation";
 
     private static final Map<EDLModule, Boolean> MODULE_ENABLED = new EnumMap<>(EDLModule.class);
     private static Configuration config;
@@ -20,6 +21,25 @@ public final class EDLConfig {
     private static int mintSpreadRate = 6;
     private static int mintSpreadMaxNearby = 16;
     private static int mintSpreadMaxPerChunk = 50;
+    private static boolean generateWildCrops = true;
+    private static boolean generateOrchardTrees = true;
+    private static int wildCornChance = 40;
+    private static int wildCoffeeChance = 40;
+    private static int wildGingerChance = 20;
+    private static int wildChiliChance = 50;
+    private static int wildPeanutChance = 50;
+    private static int wildMallowChance = 70;
+    private static int wildMintChance = 20;
+    private static int wildGarlicChance = 30;
+    private static int wildCucumberChance = 40;
+    private static int wildSoybeanChance = 80;
+    private static int cinnamonTreeChance = 10;
+    private static int hazelnutTreeChance = 50;
+    private static int appleTreeChance = 50;
+    private static int lemonTreeChance = 50;
+    private static int limeTreeChance = 50;
+    private static int orangeTreeChance = 50;
+    private static int grapefruitTreeChance = 50;
 
     private EDLConfig() {
     }
@@ -34,6 +54,7 @@ public final class EDLConfig {
         }
 
         loadMintSpreadConfig();
+        loadWorldGenerationConfig();
         saveIfChanged();
     }
 
@@ -70,6 +91,101 @@ public final class EDLConfig {
     public static int getMintSpreadMaxPerChunk() {
         ensureLoaded();
         return mintSpreadMaxPerChunk;
+    }
+
+    public static boolean shouldGenerateWildCrops() {
+        ensureLoaded();
+        return generateWildCrops;
+    }
+
+    public static boolean shouldGenerateOrchardTrees() {
+        ensureLoaded();
+        return generateOrchardTrees;
+    }
+
+    public static int getWildCornChance() {
+        ensureLoaded();
+        return wildCornChance;
+    }
+
+    public static int getWildCoffeeChance() {
+        ensureLoaded();
+        return wildCoffeeChance;
+    }
+
+    public static int getWildGingerChance() {
+        ensureLoaded();
+        return wildGingerChance;
+    }
+
+    public static int getWildChiliChance() {
+        ensureLoaded();
+        return wildChiliChance;
+    }
+
+    public static int getWildPeanutChance() {
+        ensureLoaded();
+        return wildPeanutChance;
+    }
+
+    public static int getWildMallowChance() {
+        ensureLoaded();
+        return wildMallowChance;
+    }
+
+    public static int getWildMintChance() {
+        ensureLoaded();
+        return wildMintChance;
+    }
+
+    public static int getWildGarlicChance() {
+        ensureLoaded();
+        return wildGarlicChance;
+    }
+
+    public static int getWildCucumberChance() {
+        ensureLoaded();
+        return wildCucumberChance;
+    }
+
+    public static int getWildSoybeanChance() {
+        ensureLoaded();
+        return wildSoybeanChance;
+    }
+
+    public static int getCinnamonTreeChance() {
+        ensureLoaded();
+        return cinnamonTreeChance;
+    }
+
+    public static int getHazelnutTreeChance() {
+        ensureLoaded();
+        return hazelnutTreeChance;
+    }
+
+    public static int getAppleTreeChance() {
+        ensureLoaded();
+        return appleTreeChance;
+    }
+
+    public static int getLemonTreeChance() {
+        ensureLoaded();
+        return lemonTreeChance;
+    }
+
+    public static int getLimeTreeChance() {
+        ensureLoaded();
+        return limeTreeChance;
+    }
+
+    public static int getOrangeTreeChance() {
+        ensureLoaded();
+        return orangeTreeChance;
+    }
+
+    public static int getGrapefruitTreeChance() {
+        ensureLoaded();
+        return grapefruitTreeChance;
     }
 
     public static void saveIfChanged() {
@@ -110,6 +226,50 @@ public final class EDLConfig {
             "薄荷单区块扩散上限，区块内达到该数量后停止继续扩散\nMaximum mint blocks per chunk before mint stops spreading in that chunk"
         );
         mintSpreadMaxPerChunk = Math.max(1, Math.min(4096, mintSpreadMaxPerChunkProperty.getInt(50)));
+    }
+
+    private static void loadWorldGenerationConfig() {
+        generateWildCrops = config.getBoolean(
+            "generateWildCrops",
+            WORLD_GENERATION_CATEGORY,
+            true,
+            "Generate Extra Delight wild crops in new Overworld chunks"
+        );
+        generateOrchardTrees = config.getBoolean(
+            "generateOrchardTrees",
+            WORLD_GENERATION_CATEGORY,
+            true,
+            "Generate Extra Delight orchard trees in new Overworld chunks"
+        );
+
+        wildCornChance = worldGenerationChance("wildCornChance", 40);
+        wildCoffeeChance = worldGenerationChance("wildCoffeeChance", 40);
+        wildGingerChance = worldGenerationChance("wildGingerChance", 20);
+        wildChiliChance = worldGenerationChance("wildChiliChance", 50);
+        wildPeanutChance = worldGenerationChance("wildPeanutChance", 50);
+        wildMallowChance = worldGenerationChance("wildMallowChance", 70);
+        wildMintChance = worldGenerationChance("wildMintChance", 20);
+        wildGarlicChance = worldGenerationChance("wildGarlicChance", 30);
+        wildCucumberChance = worldGenerationChance("wildCucumberChance", 40);
+        wildSoybeanChance = worldGenerationChance("wildSoybeanChance", 80);
+        cinnamonTreeChance = worldGenerationChance("cinnamonTreeChance", 10);
+        hazelnutTreeChance = worldGenerationChance("hazelnutTreeChance", 50);
+        appleTreeChance = worldGenerationChance("appleTreeChance", 50);
+        lemonTreeChance = worldGenerationChance("lemonTreeChance", 50);
+        limeTreeChance = worldGenerationChance("limeTreeChance", 50);
+        orangeTreeChance = worldGenerationChance("orangeTreeChance", 50);
+        grapefruitTreeChance = worldGenerationChance("grapefruitTreeChance", 50);
+    }
+
+    private static int worldGenerationChance(String name, int defaultValue) {
+        return config.getInt(
+            name,
+            WORLD_GENERATION_CATEGORY,
+            defaultValue,
+            0,
+            100000,
+            "Average qualifying chunks per generation attempt; lower is more common, 0 disables generation"
+        );
     }
 
     private static void ensureLoaded() {
