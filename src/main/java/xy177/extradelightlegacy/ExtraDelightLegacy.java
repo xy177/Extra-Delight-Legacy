@@ -70,12 +70,12 @@ import xy177.extradelightlegacy.common.world.EDLWorldGenerator;
     modid = ExtraDelightLegacy.MODID,
     name = ExtraDelightLegacy.NAME,
     version = ExtraDelightLegacy.VERSION,
-    dependencies = "required-after:farmersdelight;after:brewinandchewinlegacy;after:crafttweaker;after:jei;after:suikecherry"
+    dependencies = "required-after:farmersdelight;after:farmers_future_delight;after:brewinandchewinlegacy;after:crafttweaker;after:jei;after:suikecherry"
 )
 public class ExtraDelightLegacy {
     public static final String MODID = "extradelightlegacy";
     public static final String NAME = "ExtraDelight";
-    public static final String VERSION = "1.1.4";
+    public static final String VERSION = "1.1.5";
 
     @Mod.Instance(MODID)
     public static ExtraDelightLegacy instance;

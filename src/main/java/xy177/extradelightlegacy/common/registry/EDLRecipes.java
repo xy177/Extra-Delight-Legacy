@@ -13,6 +13,7 @@ import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 import net.minecraftforge.oredict.OreDictionary;
@@ -6837,7 +6838,18 @@ public final class EDLRecipes {
     }
 
     private static void registerDynamicJamCookingPotRecipes() {
-        registerDynamicJam("apple", ItemDynamicJam.Flavor.APPLE, "ore:processedApple");
+        if (Loader.isModLoaded("brewinandchewinlegacy")) {
+            registerCookingPot(
+                "cooking_pot/dynamic_jam_apple",
+                new String[]{"ore:processedApple", "ore:processedApple", "ore:processedApple", "ore:processedApple", "minecraft:sugar", "minecraft:sugar"},
+                ItemDynamicJam.stack(ItemDynamicJam.Flavor.APPLE, 1),
+                new ItemStack(Items.GLASS_BOTTLE),
+                800,
+                1.0F
+            );
+        } else {
+            registerDynamicJam("apple", ItemDynamicJam.Flavor.APPLE, "ore:processedApple");
+        }
         registerDynamicJam("carrot", ItemDynamicJam.Flavor.CARROT, "ore:processedCarrot");
         registerDynamicJam("chorus_fruit", ItemDynamicJam.Flavor.CHORUS_FRUIT, "minecraft:chorus_fruit");
         registerDynamicJam("glow_berries", ItemDynamicJam.Flavor.GLOW_BERRIES, "ore:cropBerryGlow");

@@ -281,7 +281,7 @@ public class ContainerChiller extends Container {
         }
     }
 
-    private final class ResultSlot extends Slot {
+    private final class ResultSlot extends ChillerSlot {
         private ResultSlot(InventoryBasic inventory, int index, int xPosition, int yPosition) {
             super(inventory, index, xPosition, yPosition);
         }

@@ -157,14 +157,18 @@ public final class EDLOreDictionary {
         optionalOre("processedVegetable", "farmersdelight:cabbage");
         ore("iceCubes", EDLItems.ICE_CUBES);
         ore("foodWheatSeedsCooked", EDLItems.COOKED_WHEAT_SEEDS);
+        optionalOreIfMissing("cropBerrySweet", "farmers_future_delight:sweet_berries");
         optionalOre("cropBerrySweet", "futuremc:sweet_berries");
         optionalOre("cropBerrySweet", "brewinandchewinlegacy:sweet_berries");
         optionalOre("cropBerrySweet", "brewinandchewinlegacy:sweet_berry");
+        optionalOreIfMissing("processedFruit", "farmers_future_delight:sweet_berries");
         optionalOre("processedFruit", "futuremc:sweet_berries");
         optionalOre("processedFruit", "brewinandchewinlegacy:sweet_berries");
         optionalOre("processedFruit", "brewinandchewinlegacy:sweet_berry");
+        optionalOreIfMissing("cropBerryGlow", "farmers_future_delight:glow_berries");
         optionalOre("cropBerryGlow", "brewinandchewinlegacy:glow_berries");
         optionalOre("cropBerryGlow", "da:glow_berry");
+        optionalOreIfMissing("processedFruit", "farmers_future_delight:glow_berries");
         optionalOre("processedFruit", "brewinandchewinlegacy:glow_berries");
         optionalOre("processedFruit", "da:glow_berry");
         ore("foodCarrotRoasted", EDLItems.ROASTED_CARROT);
@@ -521,8 +525,11 @@ public final class EDLOreDictionary {
         ore("foodGingerBeer", EDLItems.GINGER_BEER);
         ore("foodHorchata", EDLItems.HORCHATA);
         ore("foodXocolatl", EDLItems.XOCOLATL);
+        optionalOreIfMissing("cropKelp", "farmers_future_delight:kelp");
         optionalOre("cropKelp", "oceanicexpanse:kelp");
+        optionalOreIfMissing("foodKelp", "farmers_future_delight:kelp");
         optionalOre("foodKelp", "oceanicexpanse:kelp");
+        optionalOreIfMissing("foodKelpDried", "farmers_future_delight:dried_kelp");
         optionalOre("foodKelpDried", "oceanicexpanse:dried_kelp");
         ore("fishCooked", new ItemStack(Items.COOKED_FISH, 1, 0));
         ore("fishCooked", new ItemStack(Items.COOKED_FISH, 1, 1));
@@ -839,10 +846,14 @@ public final class EDLOreDictionary {
         for (ItemStack fruit : OreDictionary.getOres("processedFruit", false)) {
             ore("vinegarFermentable", fruit);
         }
+        optionalOreIfMissing("edlSweetener", "farmers_future_delight:honey_bottle");
         optionalOre("edlSweetener", "futuremc:honey_bottle");
+        optionalOreIfMissing("sweetener", "farmers_future_delight:honey_bottle");
         optionalOre("sweetener", "futuremc:honey_bottle");
         optionalOre("edlSweetener", "brewinandchewinlegacy:adulterated_honey");
         optionalOre("sweetener", "brewinandchewinlegacy:adulterated_honey");
+        optionalOreIfMissing("honeyBottle", "farmers_future_delight:honey_bottle");
+        optionalOreIfMissing("foodHoneyBottle", "farmers_future_delight:honey_bottle");
         optionalOre("honeyBottle", "futuremc:honey_bottle");
         optionalOre("foodHoneyBottle", "futuremc:honey_bottle");
         optionalOre("honeyBottle", "brewinandchewinlegacy:adulterated_honey");
@@ -1367,6 +1378,16 @@ public final class EDLOreDictionary {
         Item item = ForgeRegistries.ITEMS.getValue(new ResourceLocation(itemId));
         if (item != null && item != Items.AIR) {
             ore(name, new ItemStack(item));
+        }
+    }
+
+    private static void optionalOreIfMissing(String name, String itemId) {
+        Item item = ForgeRegistries.ITEMS.getValue(new ResourceLocation(itemId));
+        if (item != null && item != Items.AIR) {
+            ItemStack stack = new ItemStack(item);
+            if (!isOreRegistered(name, stack)) {
+                ore(name, stack);
+            }
         }
     }
 
