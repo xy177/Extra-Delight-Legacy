@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "color=white": { "model": "extradelightlegacy:gingham_carpet_white" },
+    "color=orange": { "model": "extradelightlegacy:gingham_carpet_orange" },
+    "color=magenta": { "model": "extradelightlegacy:gingham_carpet_magenta" },
+    "color=light_blue": { "model": "extradelightlegacy:gingham_carpet_light_blue" },
+    "color=yellow": { "model": "extradelightlegacy:gingham_carpet_yellow" },
+    "color=lime": { "model": "extradelightlegacy:gingham_carpet_lime" },
+    "color=pink": { "model": "extradelightlegacy:gingham_carpet_pink" },
+    "color=gray": { "model": "extradelightlegacy:gingham_carpet_gray" },
+    "color=silver": { "model": "extradelightlegacy:gingham_carpet_light_gray" },
+    "color=cyan": { "model": "extradelightlegacy:gingham_carpet_cyan" },
+    "color=purple": { "model": "extradelightlegacy:gingham_carpet_purple" },
+    "color=blue": { "model": "extradelightlegacy:gingham_carpet_blue" },
+    "color=brown": { "model": "extradelightlegacy:gingham_carpet_brown" },
+    "color=green": { "model": "extradelightlegacy:gingham_carpet_green" },
+    "color=red": { "model": "extradelightlegacy:gingham_carpet_red" },
+    "color=black": { "model": "extradelightlegacy:gingham_carpet_black" }
+  }
+}

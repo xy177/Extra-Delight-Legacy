@@ -91,6 +91,7 @@ import xy177.extradelightlegacy.common.creative.EDLCreativeTabs;
 import xy177.extradelightlegacy.common.item.ItemFoodBlock;
 import xy177.extradelightlegacy.common.item.ItemFeastBlock;
 import xy177.extradelightlegacy.common.item.ItemBlockTooltip;
+import xy177.extradelightlegacy.common.item.ItemGinghamCarpet;
 import xy177.extradelightlegacy.common.item.ItemJarBlock;
 import xy177.extradelightlegacy.common.item.ItemPickleJarBlock;
 import xy177.extradelightlegacy.common.item.ItemStyleableBlock;
@@ -621,7 +622,13 @@ public final class EDLBlocks {
     public static final List<BlockDefinition> DRIED_CORN_FENCE_BLOCKS = driedCornFenceBlocks();
     public static final BlockDefinition CORN_HUSK_DOLL = homeDecorBlock("corn_husk_doll", "Corn Husk Doll", BlockCornHuskDoll::new, "dried_corn_husk");
     public static final List<BlockDefinition> GINGHAM_BLOCKS = coloredDecorBlocks("gingham", "Gingham", Material.CLOTH, SoundType.CLOTH);
-    public static final List<BlockDefinition> GINGHAM_CARPET_BLOCKS = coloredCarpetBlocks();
+    public static final BlockDefinition GINGHAM_CARPET = simpleBlock(
+        EDLModule.HOME_DECOR,
+        "gingham_carpet",
+        "Gingham Carpet",
+        BlockDecorCarpet::new,
+        ItemGinghamCarpet::new
+    );
     public static final List<BlockDefinition> PICNIC_BASKET_BLOCKS = picnicBasketBlocks();
     public static final BlockDefinition GHERKINS_BLOCK = simpleBlock(EDLModule.PICKLING, "gherkins_block", "Jar of Pickled Cucumbers",
         () -> new BlockPickleJar(() -> EDLItems.GHERKIN_ITEM.getItem()),
@@ -846,7 +853,14 @@ public final class EDLBlocks {
     public static void registerCreativeStacks() {
         for (BlockDefinition definition : DEFINITIONS) {
             if (definition.itemBlock != null && !definition.hasVanillaCreativeTab()) {
-                EDLContentRegistry.addCreativeStack(definition.module, () -> new ItemStack(definition.itemBlock));
+                if (definition == GINGHAM_CARPET) {
+                    for (int meta = 0; meta < COLOR_IDS.length; meta++) {
+                        final int colorMeta = meta;
+                        EDLContentRegistry.addCreativeStack(definition.module, () -> definition.stack(1, colorMeta));
+                    }
+                } else {
+                    EDLContentRegistry.addCreativeStack(definition.module, () -> new ItemStack(definition.itemBlock));
+                }
                 logFondue("Added creative stack {}", definition);
             }
         }
@@ -1519,20 +1533,6 @@ public final class EDLBlocks {
         return Collections.unmodifiableList(definitions);
     }
 
-    private static List<BlockDefinition> coloredCarpetBlocks() {
-        List<BlockDefinition> definitions = new ArrayList<>();
-        for (String color : COLOR_IDS) {
-            definitions.add(simpleBlock(
-                EDLModule.HOME_DECOR,
-                "gingham_carpet_" + color,
-                toTitle(color) + " Gingham Carpet",
-                BlockDecorCarpet::new,
-                "gingham_" + color
-            ));
-        }
-        return Collections.unmodifiableList(definitions);
-    }
-
     private static List<BlockDefinition> picnicBasketBlocks() {
         List<BlockDefinition> definitions = new ArrayList<>();
         for (String color : COLOR_IDS) {
@@ -1541,7 +1541,7 @@ public final class EDLBlocks {
                 color + "_picnic_basket",
                 toTitle(color) + " Picnic Basket",
                 BlockPicnicBasket::new,
-                "gingham_carpet_" + color
+                "gingham_carpet"
             ));
         }
         return Collections.unmodifiableList(definitions);
@@ -1764,6 +1764,10 @@ public final class EDLBlocks {
 
         public ItemStack stack(int count) {
             return itemBlock == null ? ItemStack.EMPTY : new ItemStack(itemBlock, count);
+        }
+
+        public ItemStack stack(int count, int meta) {
+            return itemBlock == null ? ItemStack.EMPTY : new ItemStack(itemBlock, count, meta);
         }
 
         private CreativeTabs getCreativeTab() {

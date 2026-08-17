@@ -1038,8 +1038,8 @@ public final class EDLOreDictionary {
             ore("blockWallpaper" + color, EDLBlocks.WALLPAPER_BLOCKS.get(i));
             ore("blockGingham", EDLBlocks.GINGHAM_BLOCKS.get(i));
             ore("blockGingham" + color, EDLBlocks.GINGHAM_BLOCKS.get(i));
-            ore("carpetGingham", EDLBlocks.GINGHAM_CARPET_BLOCKS.get(i));
-            ore("carpetGingham" + color, EDLBlocks.GINGHAM_CARPET_BLOCKS.get(i));
+            ore("carpetGingham", EDLBlocks.GINGHAM_CARPET.stack(1, i));
+            ore("carpetGingham" + color, EDLBlocks.GINGHAM_CARPET.stack(1, i));
         }
     }
 

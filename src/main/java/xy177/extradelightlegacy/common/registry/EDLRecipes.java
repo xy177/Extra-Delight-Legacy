@@ -402,19 +402,19 @@ public final class EDLRecipes {
         registerCutting("cutting/peanuts", itemId("peanuts_in_shell"), itemId("peanuts"), 2, 1.0F);
         registerCutting("cutting/sausage_linked", itemId("sausage_linked"), itemId("sausage"), 8, 1.0F);
         registerPieCuttingRecipes();
-        registerCuttingWithTools(
+        registerWoodStrippingRecipe(
             "cutting/strip_cinnamon_log",
             EDLBlocks.CINNAMON_LOG.stack(1),
-            axeTools(),
-            new ItemStack[]{EDLBlocks.STRIPPED_CINNAMON_LOG.stack(1), EDLItems.CINNAMON_BARK.stack(1)},
-            new float[]{1.0F, 1.0F}
+            EDLBlocks.STRIPPED_CINNAMON_LOG.stack(1),
+            EDLBlocks.CINNAMON_PLANKS.stack(4),
+            EDLItems.CINNAMON_BARK.stack(1)
         );
-        registerCuttingWithTools(
+        registerWoodStrippingRecipe(
             "cutting/strip_cinnamon_wood",
             EDLBlocks.CINNAMON_WOOD.stack(1),
-            axeTools(),
-            new ItemStack[]{EDLBlocks.STRIPPED_CINNAMON_WOOD.stack(1), EDLItems.CINNAMON_BARK.stack(1)},
-            new float[]{1.0F, 1.0F}
+            EDLBlocks.STRIPPED_CINNAMON_WOOD.stack(1),
+            EDLBlocks.CINNAMON_PLANKS.stack(4),
+            EDLItems.CINNAMON_BARK.stack(1)
         );
         registerCuttingWithToolsSkippingMissingOutputs(
             "cutting/cinnamon_bark",
@@ -696,19 +696,19 @@ public final class EDLRecipes {
     }
 
     private static void registerSourceBuildingCuttingRecipes() {
-        registerCuttingWithTools(
+        registerWoodStrippingRecipe(
             "cutting/strip_fruit_log",
             EDLBlocks.FRUIT_LOG.stack(1),
-            axeTools(),
-            new ItemStack[]{EDLBlocks.STRIPPED_FRUIT_LOG.stack(1), itemStack("farmersdelight:tree_bark", 1)},
-            new float[]{1.0F, 1.0F}
+            EDLBlocks.STRIPPED_FRUIT_LOG.stack(1),
+            EDLBlocks.FRUIT_PLANKS.stack(4),
+            itemStack("farmersdelight:tree_bark", 1)
         );
-        registerCuttingWithTools(
+        registerWoodStrippingRecipe(
             "cutting/strip_fruit_wood",
             EDLBlocks.FRUIT_WOOD.stack(1),
-            axeTools(),
-            new ItemStack[]{EDLBlocks.STRIPPED_FRUIT_WOOD.stack(1), itemStack("farmersdelight:tree_bark", 1)},
-            new float[]{1.0F, 1.0F}
+            EDLBlocks.STRIPPED_FRUIT_WOOD.stack(1),
+            EDLBlocks.FRUIT_PLANKS.stack(4),
+            itemStack("farmersdelight:tree_bark", 1)
         );
         registerCuttingWithTools(
             "cutting/cinnamon_door_to_plank",
@@ -1123,7 +1123,7 @@ public final class EDLRecipes {
             EDLBlocks.BlockDefinition cherryMoldedWallpaper = EDLBlocks.CHERRY_MOLDED_WALLPAPER_BLOCKS.get(i);
             EDLBlocks.BlockDefinition ribbonBow = EDLBlocks.RIBBON_BOW_BLOCKS.get(i);
             EDLBlocks.BlockDefinition gingham = EDLBlocks.GINGHAM_BLOCKS.get(i);
-            EDLBlocks.BlockDefinition ginghamCarpet = EDLBlocks.GINGHAM_CARPET_BLOCKS.get(i);
+            ItemStack ginghamCarpet = EDLBlocks.GINGHAM_CARPET.stack(1, i);
 
             registerShapeless(registry, color + "_wallpaper", wallpaper.stack(4),
                 Items.PAPER, Items.PAPER, Items.PAPER, Items.PAPER, dye);
@@ -1156,12 +1156,12 @@ public final class EDLRecipes {
                 " w ", " w ", "w w", 'w', wool);
             registerShaped(registry, color + "_gingham", gingham.stack(4),
                 "cw", "wc", 'c', wool, 'w', new ItemStack(Blocks.WOOL, 1, 0));
-            registerShaped(registry, color + "_gingham_carpet", ginghamCarpet.stack(4),
+            registerShaped(registry, color + "_gingham_carpet", EDLBlocks.GINGHAM_CARPET.stack(4, i),
                 "cw", "wc", 'c', carpet, 'w', new ItemStack(Blocks.CARPET, 1, 0));
-            registerShaped(registry, color + "_gingham_carpet_from_block", ginghamCarpet.stack(3),
+            registerShaped(registry, color + "_gingham_carpet_from_block", EDLBlocks.GINGHAM_CARPET.stack(3, i),
                 "cc", 'c', gingham.getItemBlock());
             registerShaped(registry, color + "_picnic_basket", EDLBlocks.PICNIC_BASKET_BLOCKS.get(i).stack(1),
-                "s", "g", "b", 's', "stickWood", 'g', ginghamCarpet.stack(1), 'b', itemStack("farmersdelight:basket"));
+                "s", "g", "b", 's', "stickWood", 'g', ginghamCarpet, 'b', itemStack("farmersdelight:basket"));
         }
 
         registerVanillaWoodDecorRecipes(registry);
@@ -7163,6 +7163,18 @@ public final class EDLRecipes {
         }
 
         CuttingBoardRecipeApi.registerRecipe(recipeId(name), new ItemStack[]{input}, tools, outputs, chances);
+    }
+
+    private static void registerWoodStrippingRecipe(String name, ItemStack input, ItemStack strippedOutput,
+                                                     ItemStack fallbackPlanks, ItemStack barkOutput) {
+        if (input.isEmpty() || fallbackPlanks.isEmpty() || barkOutput.isEmpty()) {
+            return;
+        }
+
+        ItemStack[] outputs = strippedOutput.isEmpty()
+            ? new ItemStack[]{fallbackPlanks, barkOutput}
+            : new ItemStack[]{strippedOutput, barkOutput};
+        registerCuttingWithTools(name, input, axeTools(), outputs, new float[]{1.0F, 1.0F});
     }
 
     private static void registerCuttingWithToolsSkippingMissingOutputs(String name, ItemStack input, ItemStack[] tools, ItemStack[] outputs, float[] chances) {

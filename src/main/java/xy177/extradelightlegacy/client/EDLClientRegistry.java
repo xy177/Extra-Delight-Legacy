@@ -34,6 +34,7 @@ import xy177.extradelightlegacy.client.render.TileEntityWreathDisplayRenderer;
 import xy177.extradelightlegacy.common.block.BlockOrchardLeaves;
 import xy177.extradelightlegacy.common.item.ItemDynamicJam;
 import xy177.extradelightlegacy.common.item.ItemDynamicToast;
+import xy177.extradelightlegacy.common.item.ItemGinghamCarpet;
 import xy177.extradelightlegacy.common.registry.EDLBlocks;
 import xy177.extradelightlegacy.common.registry.EDLFluids;
 import xy177.extradelightlegacy.common.registry.EDLItems;
@@ -115,7 +116,18 @@ public final class EDLClientRegistry {
 
         for (Item item : EDLBlocks.getRegisteredItemBlocks()) {
             Block block = Block.getBlockFromItem(item);
-            if (block instanceof IStyleableBlock && item.getHasSubtypes()) {
+            if (item instanceof ItemGinghamCarpet) {
+                for (int meta = 0; meta < 16; meta++) {
+                    ModelLoader.setCustomModelResourceLocation(
+                        item,
+                        meta,
+                        new ModelResourceLocation(
+                            new ResourceLocation("extradelightlegacy", "gingham_carpet_" + ItemGinghamCarpet.getColorName(meta)),
+                            "inventory"
+                        )
+                    );
+                }
+            } else if (block instanceof IStyleableBlock && item.getHasSubtypes()) {
                 int styles = ((IStyleableBlock) block).getStyleCount();
                 for (int meta = 0; meta < styles; meta++) {
                     ModelLoader.setCustomModelResourceLocation(
